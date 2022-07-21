@@ -130,6 +130,12 @@
     <Compile Include="Service.cs" />
     <Compile Include="ServiceRequest.cs" />
     <Compile Include="Technician.cs" />
+    <EmbeddedResource Include="Forms\Calls.resx">
+      <DependentUpon>Calls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
