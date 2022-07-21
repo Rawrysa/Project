@@ -15,6 +15,7 @@ namespace Project
         public Form1()
         {
             InitializeComponent();
+            Text = "Home Page";
         }
 
         private void button1_Click(object sender, EventArgs e)
