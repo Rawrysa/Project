@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace Project
+namespace Project.DataLayer
 {
     class DataHandler
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace Project
+namespace Project.BusinessLayer
 {
     class Client 
     {

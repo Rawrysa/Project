@@ -1,4 +1,4 @@
-﻿namespace Project.Forms
+﻿namespace Project.PresentationLayer
 {
     partial class Login
     {
