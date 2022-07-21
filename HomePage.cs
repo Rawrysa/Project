@@ -15,7 +15,7 @@ namespace Project
         public HomePage()
         {
             InitializeComponent();
-            Text = "Home Page";
+            Text = "Home Page...";
         }
 
         private void button1_Click(object sender, EventArgs e)
