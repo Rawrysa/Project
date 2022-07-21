@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Project.PresentationLayer
 {
-    public partial class Employees : Form
+    public partial class FrmEmployees : Form
     {
-        public Employees()
+        public FrmEmployees()
         {
             InitializeComponent();
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            //dgrEmployee.DataSource = new DataHandler().AddEmployee();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            //dgrEmployee.DataSource = new DataHandler().DeleteEmployee();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //Environment.Exit(0);
         }
     }
 }

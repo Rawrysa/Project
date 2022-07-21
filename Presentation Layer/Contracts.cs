@@ -10,11 +10,36 @@ using System.Windows.Forms;
 
 namespace Project.PresentationLayer
 {
-    public partial class Contracts : Form
+    public partial class FrmContracts : Form
     {
-        public Contracts()
+        public FrmContracts()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewContracts_Click(object sender, EventArgs e)
+        {
+           // dgrContracts.DataSource = new DataHandler().ViewContracts();
+        }
+
+        private void btnContractAvailability_Click(object sender, EventArgs e)
+        {
+           // dgrContracts.DataSource = new DataHandler().ContractAvailability();
+        }
+
+        private void btnContractPerformance_Click(object sender, EventArgs e)
+        {
+           // dgrContracts.DataSource = new DataHandler().ContractPerformance();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //Environment.Exit(0);
         }
     }
 }

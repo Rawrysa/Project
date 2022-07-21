@@ -16,5 +16,10 @@ namespace Project.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void btnViewClients_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
