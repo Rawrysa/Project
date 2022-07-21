@@ -11,6 +11,22 @@ namespace Project
 {
     class DataHandler
     {
+        /*Forms:
+         
+        -Login
+        -Splashscreen
+
+        -Calls
+        -Requests
+        -Jobs
+        -Services
+        -Contracts
+        -Employee
+        -Agent
+        -Technician
+        -Clients
+        --Agreements*/
+
         private SqlConnection connection = new SqlConnection(@"Server= LAPTOP-MSQIEH6G\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
 
         public DataTable ViewCalls()

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project.Forms;
 
 namespace Project
 {
@@ -21,6 +22,9 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataHandler().ViewClients();
+            //Application.Run(new Forms.SplashScreen());
+            new SplashScreen().Show();
+            this.Hide();
         }
     }
 }

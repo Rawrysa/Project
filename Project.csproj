@@ -52,6 +52,72 @@
     <Compile Include="Contract.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Forms\Agents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Agents.Designer.cs">
+      <DependentUpon>Agents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Calls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Calls.Designer.cs">
+      <DependentUpon>Calls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts.Designer.cs">
+      <DependentUpon>Contracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Jobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Jobs.Designer.cs">
+      <DependentUpon>Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Requests.Designer.cs">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Technicians.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Technicians.Designer.cs">
+      <DependentUpon>Technicians.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +130,9 @@
     <Compile Include="Service.cs" />
     <Compile Include="ServiceRequest.cs" />
     <Compile Include="Technician.cs" />
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,5 +158,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
