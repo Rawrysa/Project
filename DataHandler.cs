@@ -13,19 +13,18 @@ namespace Project
     {
         /*Forms:
          
-        -Login
-        -Splashscreen
+        H -Login
+        H -Splashscreen
 
-        -Calls
-        -Requests
-        -Jobs
-        -Services
-        -Contracts
-        -Employee
-        -Agent
-        -Technician
-        -Clients
-        --Agreements*/
+        G -Requests
+        K -Services
+        K -Contracts
+        K -Employee
+        J -Jobs
+        J -Agent
+        J -Technician
+        S -Calls
+        S -Clients*/
 
         private SqlConnection connection = new SqlConnection(@"Server= LAPTOP-MSQIEH6G\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
 
