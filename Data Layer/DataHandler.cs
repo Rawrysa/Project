@@ -11,21 +11,6 @@ namespace Project.DataLayer
 {
     class DataHandler
     {
-        /*Forms:
-         
-        H -Login
-        H -Splashscreen
-
-        G -Requests
-        K -Services
-        K -Contracts
-        K -Employee
-        J -Jobs
-        J -Agent
-        J -Technician
-        S -Calls
-        S -Clients*/
-
         private SqlConnection connection = new SqlConnection(@"Server= LAPTOP-MSQIEH6G\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
 
         public DataTable ViewCalls()
@@ -734,6 +719,56 @@ namespace Project.DataLayer
             {
                 MessageBox.Show("Technician could not be updated");
             }
+        }
+
+        public DataTable ClientPriority(int clientid)
+        {
+            DataTable table = new DataTable();
+
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("spClientPriority", connection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ClientID", clientid);
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable tb = new DataTable();
+                tb.Load(reader);
+                table = tb;
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show($"{clientid} could not be found");
+            }
+
+            return table;
+        }
+
+        public DataTable ServiceLevel(int serviceid)
+        {
+            DataTable table = new DataTable();
+
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("spServiceLevel", connection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ServiceID", serviceid);
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable tb = new DataTable();
+                tb.Load(reader);
+                table = tb;
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show($"{serviceid} could not be found");
+            }
+
+            return table;
         }
     }
 }

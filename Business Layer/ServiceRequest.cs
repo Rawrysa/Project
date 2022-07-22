@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using Project.DataLayer;
 
 namespace Project.BusinessLayer
 {
@@ -16,7 +17,7 @@ namespace Project.BusinessLayer
         private int client_id;
         public int Client_ID { get; set; }
 
-        public DataTable ViewRequest()
+        public DataTable ViewRequests()
         {
             return new DataHandler().ViewRequests();
         }
