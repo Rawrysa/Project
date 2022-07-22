@@ -133,6 +133,9 @@
     <EmbeddedResource Include="Presentation Layer\Contracts.resx">
       <DependentUpon>Contracts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

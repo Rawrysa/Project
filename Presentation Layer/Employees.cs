@@ -31,5 +31,15 @@ namespace Project.PresentationLayer
         {
             //Environment.Exit(0);
         }
+
+        private void FrmEmployees_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgrEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
