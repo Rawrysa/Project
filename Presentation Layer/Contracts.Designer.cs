@@ -91,7 +91,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(689, 296);
+            this.btnExit.Location = new System.Drawing.Point(689, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(98, 41);
             this.btnExit.TabIndex = 5;
