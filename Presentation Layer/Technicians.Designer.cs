@@ -43,9 +43,28 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
+            this.lblTechnicianID = new System.Windows.Forms.Label();
+            this.txtSearchTechnicians = new System.Windows.Forms.TextBox();
+            this.btnSearchTechnician = new System.Windows.Forms.Button();
+            this.cbUnavailableTechnicians = new System.Windows.Forms.CheckBox();
+            this.cbAvailableTechnicians = new System.Windows.Forms.CheckBox();
+            this.dgvTechnicians = new System.Windows.Forms.DataGridView();
+            this.lblTechnicians = new System.Windows.Forms.Label();
+            this.btnDeleteTechnician = new System.Windows.Forms.Button();
+            this.btnAddTechnician = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -98,6 +117,7 @@
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnTechnicians
             // 
@@ -253,12 +273,216 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
+            // lblTechnicianID
+            // 
+            this.lblTechnicianID.AutoSize = true;
+            this.lblTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblTechnicianID.Location = new System.Drawing.Point(495, 97);
+            this.lblTechnicianID.Name = "lblTechnicianID";
+            this.lblTechnicianID.Size = new System.Drawing.Size(116, 21);
+            this.lblTechnicianID.TabIndex = 26;
+            this.lblTechnicianID.Text = "Technician ID:";
+            // 
+            // txtSearchTechnicians
+            // 
+            this.txtSearchTechnicians.Location = new System.Drawing.Point(617, 97);
+            this.txtSearchTechnicians.Name = "txtSearchTechnicians";
+            this.txtSearchTechnicians.Size = new System.Drawing.Size(126, 20);
+            this.txtSearchTechnicians.TabIndex = 25;
+            // 
+            // btnSearchTechnician
+            // 
+            this.btnSearchTechnician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnSearchTechnician.FlatAppearance.BorderSize = 0;
+            this.btnSearchTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnSearchTechnician.Location = new System.Drawing.Point(753, 84);
+            this.btnSearchTechnician.Name = "btnSearchTechnician";
+            this.btnSearchTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnSearchTechnician.TabIndex = 24;
+            this.btnSearchTechnician.Text = "Search";
+            this.btnSearchTechnician.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSearchTechnician.UseVisualStyleBackColor = false;
+            // 
+            // cbUnavailableTechnicians
+            // 
+            this.cbUnavailableTechnicians.AutoSize = true;
+            this.cbUnavailableTechnicians.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cbUnavailableTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.cbUnavailableTechnicians.Location = new System.Drawing.Point(418, 493);
+            this.cbUnavailableTechnicians.Name = "cbUnavailableTechnicians";
+            this.cbUnavailableTechnicians.Size = new System.Drawing.Size(213, 25);
+            this.cbUnavailableTechnicians.TabIndex = 23;
+            this.cbUnavailableTechnicians.Text = "Unavailable Technicians";
+            this.cbUnavailableTechnicians.UseVisualStyleBackColor = true;
+            // 
+            // cbAvailableTechnicians
+            // 
+            this.cbAvailableTechnicians.AutoSize = true;
+            this.cbAvailableTechnicians.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cbAvailableTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.cbAvailableTechnicians.Location = new System.Drawing.Point(199, 493);
+            this.cbAvailableTechnicians.Name = "cbAvailableTechnicians";
+            this.cbAvailableTechnicians.Size = new System.Drawing.Size(193, 25);
+            this.cbAvailableTechnicians.TabIndex = 22;
+            this.cbAvailableTechnicians.Text = "Available Technicians";
+            this.cbAvailableTechnicians.UseVisualStyleBackColor = true;
+            // 
+            // dgvTechnicians
+            // 
+            this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTechnicians.Location = new System.Drawing.Point(199, 132);
+            this.dgvTechnicians.Name = "dgvTechnicians";
+            this.dgvTechnicians.Size = new System.Drawing.Size(544, 336);
+            this.dgvTechnicians.TabIndex = 21;
+            // 
+            // lblTechnicians
+            // 
+            this.lblTechnicians.AutoSize = true;
+            this.lblTechnicians.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblTechnicians.Location = new System.Drawing.Point(192, 21);
+            this.lblTechnicians.Name = "lblTechnicians";
+            this.lblTechnicians.Size = new System.Drawing.Size(162, 37);
+            this.lblTechnicians.TabIndex = 27;
+            this.lblTechnicians.Text = "Technicians";
+            // 
+            // btnDeleteTechnician
+            // 
+            this.btnDeleteTechnician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnDeleteTechnician.FlatAppearance.BorderSize = 0;
+            this.btnDeleteTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnDeleteTechnician.Location = new System.Drawing.Point(753, 426);
+            this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteTechnician.Name = "btnDeleteTechnician";
+            this.btnDeleteTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnDeleteTechnician.TabIndex = 29;
+            this.btnDeleteTechnician.Text = "Delete Technician";
+            this.btnDeleteTechnician.UseVisualStyleBackColor = false;
+            // 
+            // btnAddTechnician
+            // 
+            this.btnAddTechnician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnAddTechnician.FlatAppearance.BorderSize = 0;
+            this.btnAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnAddTechnician.Location = new System.Drawing.Point(753, 380);
+            this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddTechnician.Name = "btnAddTechnician";
+            this.btnAddTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnAddTechnician.TabIndex = 28;
+            this.btnAddTechnician.Text = "Add Technician";
+            this.btnAddTechnician.UseVisualStyleBackColor = false;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(753, 154);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(141, 20);
+            this.txtName.TabIndex = 33;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblName.Location = new System.Drawing.Point(749, 132);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(60, 21);
+            this.lblName.TabIndex = 32;
+            this.lblName.Text = "Name:";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(753, 211);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(141, 20);
+            this.txtSurname.TabIndex = 35;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblSurname.Location = new System.Drawing.Point(749, 187);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(82, 21);
+            this.lblSurname.TabIndex = 34;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(753, 271);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(141, 20);
+            this.txtNumber.TabIndex = 37;
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblNumber.Location = new System.Drawing.Point(749, 247);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(78, 21);
+            this.lblNumber.TabIndex = 36;
+            this.lblNumber.Text = "Number:";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(753, 334);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(141, 20);
+            this.txtDescription.TabIndex = 39;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblDescription.Location = new System.Drawing.Point(749, 310);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(133, 21);
+            this.lblDescription.TabIndex = 38;
+            this.lblDescription.Text = "Job Description:";
+            // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 100);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 40;
+            // 
             // Technicians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.pnlNav);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.txtNumber);
+            this.Controls.Add(this.lblNumber);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.btnDeleteTechnician);
+            this.Controls.Add(this.btnAddTechnician);
+            this.Controls.Add(this.lblTechnicians);
+            this.Controls.Add(this.lblTechnicianID);
+            this.Controls.Add(this.txtSearchTechnicians);
+            this.Controls.Add(this.btnSearchTechnician);
+            this.Controls.Add(this.cbUnavailableTechnicians);
+            this.Controls.Add(this.cbAvailableTechnicians);
+            this.Controls.Add(this.dgvTechnicians);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Technicians";
@@ -268,7 +492,9 @@
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,5 +514,23 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
+        private System.Windows.Forms.Label lblTechnicianID;
+        private System.Windows.Forms.TextBox txtSearchTechnicians;
+        private System.Windows.Forms.Button btnSearchTechnician;
+        private System.Windows.Forms.CheckBox cbUnavailableTechnicians;
+        private System.Windows.Forms.CheckBox cbAvailableTechnicians;
+        private System.Windows.Forms.DataGridView dgvTechnicians;
+        private System.Windows.Forms.Label lblTechnicians;
+        private System.Windows.Forms.Button btnDeleteTechnician;
+        private System.Windows.Forms.Button btnAddTechnician;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Panel pnlNav;
     }
 }

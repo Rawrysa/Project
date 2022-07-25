@@ -22,7 +22,7 @@ namespace Project.BusinessLayer
 
         public int AddTechnician()
         {
-            return new DataHandler().AddTechnician(Name,Surname,PhoneNumber,Job_Description,Employee_ID);
+            return new DataHandler().AddTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
         }
 
         public DataTable SearchTechnician()
@@ -32,12 +32,12 @@ namespace Project.BusinessLayer
 
         public void UpdateTechnician()
         {
-            new DataHandler().UpdateTechnician(Name,Surname,PhoneNumber,Job_Description,Employee_ID);
+            new DataHandler().UpdateTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
         }
 
         public void TechnicianAvailability()
         {
-            new DataHandler().TechnicianAvailability(Employee_ID,Availability);
+            new DataHandler().TechnicianAvailability(Employee_ID, Availability);
         }
     }
 }

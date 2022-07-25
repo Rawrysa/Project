@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+//using Project.PresentationLayer;
 
 namespace Project.PresentationLayer
 {
@@ -51,6 +52,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnAgents.Top;
             pnlNav.Left = btnAgents.Left;
             btnAgents.BackColor = Color.FromArgb(46,51,73);
+
+            new Agents().Show();
+            this.Hide();
         }
 
         private void btnCalls_Click(object sender, EventArgs e)
@@ -59,6 +63,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnCalls.Top;
             pnlNav.Left = btnCalls.Left;
             btnCalls.BackColor = Color.FromArgb(46, 51, 73);
+
+            new Calls().Show();
+            this.Hide();
         }
 
         private void btnClients_Click(object sender, EventArgs e)
@@ -67,6 +74,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnClients.Top;
             pnlNav.Left = btnClients.Left;
             btnClients.BackColor = Color.FromArgb(46, 51, 73);
+
+            new Clients().Show();
+            this.Hide();
         }
 
         private void btnContracts_Click(object sender, EventArgs e)
@@ -75,6 +85,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnContracts.Top;
             pnlNav.Left = btnContracts.Left;
             btnContracts.BackColor = Color.FromArgb(46, 51, 73);
+
+            new Contracts().Show();
+            this.Hide();
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
@@ -83,6 +96,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnEmployees.Top;
             pnlNav.Left = btnEmployees.Left;
             btnEmployees.BackColor = Color.FromArgb(46, 51, 73);
+
+            new Employees().Show();
+            this.Hide();
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
@@ -91,6 +107,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnJobs.Top;
             pnlNav.Left = btnJobs.Left;
             btnJobs.BackColor = Color.FromArgb(46, 51, 73); pnlNav.Height = btnCalls.Height;
+
+            new Jobs().Show();
+            this.Hide();
         }
 
         private void btnRequests_Click(object sender, EventArgs e)
@@ -99,6 +118,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnRequests.Top;
             pnlNav.Left = btnRequests.Left;
             btnRequests.BackColor = Color.FromArgb(46, 51, 73); pnlNav.Height = btnCalls.Height;
+
+            new Requests().Show();
+            this.Hide();
         }
 
         private void btnTechnicians_Click(object sender, EventArgs e)
@@ -107,6 +129,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnTechnicians.Top;
             pnlNav.Left = btnTechnicians.Left;
             btnTechnicians.BackColor = Color.FromArgb(46, 51, 73); pnlNav.Height = btnCalls.Height;
+
+            new Technicians().Show();
+            this.Hide();
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {

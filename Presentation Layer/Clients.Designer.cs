@@ -45,10 +45,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMainPage = new System.Windows.Forms.Button();
-            this.btnViewClients = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -64,9 +60,9 @@
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblClients = new System.Windows.Forms.Label();
+            this.pnlNav = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -84,10 +80,10 @@
             this.Address,
             this.phoneNumber,
             this.clientType});
-            this.dataGridView1.Location = new System.Drawing.Point(196, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(192, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 266);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 336);
             this.dataGridView1.TabIndex = 0;
             // 
             // clientID
@@ -142,7 +138,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(802, 64);
+            this.txtSearch.Location = new System.Drawing.Point(802, 106);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(137, 20);
             this.txtSearch.TabIndex = 1;
@@ -150,7 +146,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(736, 67);
+            this.lblID.Location = new System.Drawing.Point(737, 106);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(49, 13);
             this.lblID.TabIndex = 2;
@@ -160,7 +156,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnSearch.Location = new System.Drawing.Point(3, 26);
+            this.btnSearch.Location = new System.Drawing.Point(3, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(143, 42);
             this.btnSearch.TabIndex = 3;
@@ -176,15 +172,15 @@
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Location = new System.Drawing.Point(192, 466);
+            this.panel1.Location = new System.Drawing.Point(192, 493);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 99);
+            this.panel1.Size = new System.Drawing.Size(747, 69);
             this.panel1.TabIndex = 4;
             // 
             // btnClientAgreement
             // 
             this.btnClientAgreement.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnClientAgreement.Location = new System.Drawing.Point(599, 26);
+            this.btnClientAgreement.Location = new System.Drawing.Point(599, 11);
             this.btnClientAgreement.Name = "btnClientAgreement";
             this.btnClientAgreement.Size = new System.Drawing.Size(143, 42);
             this.btnClientAgreement.TabIndex = 7;
@@ -194,9 +190,9 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDelete.Location = new System.Drawing.Point(450, 29);
+            this.btnDelete.Location = new System.Drawing.Point(450, 11);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(143, 40);
+            this.btnDelete.Size = new System.Drawing.Size(143, 42);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -204,9 +200,9 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(301, 26);
+            this.btnUpdate.Location = new System.Drawing.Point(301, 11);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(143, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(143, 42);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -214,55 +210,12 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnAdd.Location = new System.Drawing.Point(152, 27);
+            this.btnAdd.Location = new System.Drawing.Point(152, 11);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(143, 42);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnMainPage);
-            this.panel2.Controls.Add(this.btnViewClients);
-            this.panel2.Location = new System.Drawing.Point(196, 384);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(745, 75);
-            this.panel2.TabIndex = 5;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnExit.Location = new System.Drawing.Point(629, 11);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 43);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // btnMainPage
-            // 
-            this.btnMainPage.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnMainPage.Location = new System.Drawing.Point(488, 11);
-            this.btnMainPage.Name = "btnMainPage";
-            this.btnMainPage.Size = new System.Drawing.Size(123, 43);
-            this.btnMainPage.TabIndex = 1;
-            this.btnMainPage.Text = "Main Page";
-            this.btnMainPage.UseVisualStyleBackColor = false;
-            // 
-            // btnViewClients
-            // 
-            this.btnViewClients.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnViewClients.Location = new System.Drawing.Point(16, 11);
-            this.btnViewClients.Name = "btnViewClients";
-            this.btnViewClients.Size = new System.Drawing.Size(106, 43);
-            this.btnViewClients.TabIndex = 0;
-            this.btnViewClients.Text = "View Clients";
-            this.btnViewClients.UseVisualStyleBackColor = false;
-            this.btnViewClients.Click += new System.EventHandler(this.btnViewClients_Click);
             // 
             // pnlSidebar
             // 
@@ -314,6 +267,7 @@
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnTechnicians
             // 
@@ -480,15 +434,23 @@
             this.lblClients.TabIndex = 14;
             this.lblClients.Text = "Clients";
             // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 100);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 15;
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblClients);
             this.Controls.Add(this.pnlSidebar);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtSearch);
@@ -499,7 +461,6 @@
             this.Text = "Clients";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
@@ -527,10 +488,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClientAgreement;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnMainPage;
-        private System.Windows.Forms.Button btnViewClients;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnQuit;
@@ -546,5 +503,6 @@
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
         private System.Windows.Forms.Label lblClients;
+        private System.Windows.Forms.Panel pnlNav;
     }
 }

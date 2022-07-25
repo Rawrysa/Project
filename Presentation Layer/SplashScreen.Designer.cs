@@ -45,9 +45,12 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.lblDashoard = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPremierServiceSolutions = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -292,12 +295,36 @@
             this.lblDashoard.TabIndex = 14;
             this.lblDashoard.Text = "Dashboard";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(338, 87);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(436, 288);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblPremierServiceSolutions
+            // 
+            this.lblPremierServiceSolutions.AutoSize = true;
+            this.lblPremierServiceSolutions.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblPremierServiceSolutions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblPremierServiceSolutions.Location = new System.Drawing.Point(383, 389);
+            this.lblPremierServiceSolutions.Name = "lblPremierServiceSolutions";
+            this.lblPremierServiceSolutions.Size = new System.Drawing.Size(346, 37);
+            this.lblPremierServiceSolutions.TabIndex = 16;
+            this.lblPremierServiceSolutions.Text = "Premier Service Solutions";
+            this.lblPremierServiceSolutions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblPremierServiceSolutions);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDashoard);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlSidebar);
@@ -310,6 +337,7 @@
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +361,7 @@
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Label lblDashoard;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPremierServiceSolutions;
     }
 }

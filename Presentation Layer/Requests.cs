@@ -8,14 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project.BusinessLayer;
+using System.Runtime.InteropServices;
 
 namespace Project.PresentationLayer
 {
     public partial class Requests : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightWllipse
+        );
+
         public Requests()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            pnlNav.Height = 0;
+            pnlNav.Top = 0;
+            pnlNav.Left = 0;
+            //lblLoginUsername.Text = username;
+
             Text = "Service Requests";
 
             dgvRequests.DataSource = new ServiceRequest().ViewRequests();
@@ -106,7 +125,6 @@ namespace Project.PresentationLayer
                     newrequest.RemoveRequest();
                     dgvRequests.DataSource = new ServiceRequest().ViewRequests();
                 }
-
             }
             catch
             {

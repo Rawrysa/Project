@@ -55,8 +55,8 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.lblRequestsTitle = new System.Windows.Forms.Label();
+            this.lblRequests = new System.Windows.Forms.Label();
+            this.pnlNav = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // txtClientID
             // 
-            this.txtClientID.Location = new System.Drawing.Point(780, 112);
+            this.txtClientID.Location = new System.Drawing.Point(724, 156);
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.Size = new System.Drawing.Size(141, 20);
             this.txtClientID.TabIndex = 5;
@@ -74,18 +74,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(714, 115);
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label1.Location = new System.Drawing.Point(720, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Client ID:";
             // 
             // dgvRequests
             // 
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRequests.Location = new System.Drawing.Point(199, 87);
+            this.dgvRequests.Location = new System.Drawing.Point(199, 132);
             this.dgvRequests.Name = "dgvRequests";
-            this.dgvRequests.Size = new System.Drawing.Size(495, 381);
+            this.dgvRequests.Size = new System.Drawing.Size(515, 336);
             this.dgvRequests.TabIndex = 3;
             // 
             // panel1
@@ -103,8 +105,11 @@
             // btnLast
             // 
             this.btnLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnLast.FlatAppearance.BorderSize = 0;
+            this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnLast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLast.Location = new System.Drawing.Point(386, 15);
+            this.btnLast.Location = new System.Drawing.Point(399, 14);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(51, 40);
             this.btnLast.TabIndex = 12;
@@ -115,8 +120,11 @@
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnNext.Location = new System.Drawing.Point(250, 15);
+            this.btnNext.Location = new System.Drawing.Point(281, 14);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(51, 40);
             this.btnNext.TabIndex = 11;
@@ -127,8 +135,11 @@
             // btnBefore
             // 
             this.btnBefore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnBefore.FlatAppearance.BorderSize = 0;
+            this.btnBefore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBefore.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnBefore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnBefore.Location = new System.Drawing.Point(168, 15);
+            this.btnBefore.Location = new System.Drawing.Point(163, 14);
             this.btnBefore.Name = "btnBefore";
             this.btnBefore.Size = new System.Drawing.Size(51, 40);
             this.btnBefore.TabIndex = 10;
@@ -139,8 +150,11 @@
             // btnFirst
             // 
             this.btnFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnFirst.FlatAppearance.BorderSize = 0;
+            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirst.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnFirst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnFirst.Location = new System.Drawing.Point(30, 15);
+            this.btnFirst.Location = new System.Drawing.Point(45, 14);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(51, 40);
             this.btnFirst.TabIndex = 9;
@@ -150,7 +164,7 @@
             // 
             // txtServiceID
             // 
-            this.txtServiceID.Location = new System.Drawing.Point(780, 154);
+            this.txtServiceID.Location = new System.Drawing.Point(724, 209);
             this.txtServiceID.Name = "txtServiceID";
             this.txtServiceID.Size = new System.Drawing.Size(141, 20);
             this.txtServiceID.TabIndex = 8;
@@ -158,17 +172,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(714, 157);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label2.Location = new System.Drawing.Point(720, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(91, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Service ID:";
             // 
             // btnNewRequest
             // 
             this.btnNewRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnNewRequest.FlatAppearance.BorderSize = 0;
+            this.btnNewRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewRequest.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNewRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnNewRequest.Location = new System.Drawing.Point(720, 206);
+            this.btnNewRequest.Location = new System.Drawing.Point(724, 342);
             this.btnNewRequest.Name = "btnNewRequest";
             this.btnNewRequest.Size = new System.Drawing.Size(201, 42);
             this.btnNewRequest.TabIndex = 9;
@@ -179,8 +198,11 @@
             // btnRemoveRequest
             // 
             this.btnRemoveRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnRemoveRequest.FlatAppearance.BorderSize = 0;
+            this.btnRemoveRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveRequest.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnRemoveRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnRemoveRequest.Location = new System.Drawing.Point(723, 272);
+            this.btnRemoveRequest.Location = new System.Drawing.Point(724, 394);
             this.btnRemoveRequest.Name = "btnRemoveRequest";
             this.btnRemoveRequest.Size = new System.Drawing.Size(201, 42);
             this.btnRemoveRequest.TabIndex = 10;
@@ -394,28 +416,24 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
-            // btnMenu
+            // lblRequests
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnMenu.Location = new System.Drawing.Point(813, 512);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(108, 50);
-            this.btnMenu.TabIndex = 11;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.lblRequests.AutoSize = true;
+            this.lblRequests.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblRequests.Location = new System.Drawing.Point(192, 21);
+            this.lblRequests.Name = "lblRequests";
+            this.lblRequests.Size = new System.Drawing.Size(132, 37);
+            this.lblRequests.TabIndex = 13;
+            this.lblRequests.Text = "Requests";
             // 
-            // lblRequestsTitle
+            // pnlNav
             // 
-            this.lblRequestsTitle.AutoSize = true;
-            this.lblRequestsTitle.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblRequestsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblRequestsTitle.Location = new System.Drawing.Point(192, 21);
-            this.lblRequestsTitle.Name = "lblRequestsTitle";
-            this.lblRequestsTitle.Size = new System.Drawing.Size(132, 37);
-            this.lblRequestsTitle.TabIndex = 13;
-            this.lblRequestsTitle.Text = "Requests";
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 100);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 14;
             // 
             // Requests
             // 
@@ -423,9 +441,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.lblRequestsTitle);
+            this.Controls.Add(this.pnlNav);
+            this.Controls.Add(this.lblRequests);
             this.Controls.Add(this.pnlSidebar);
-            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.btnRemoveRequest);
             this.Controls.Add(this.btnNewRequest);
             this.Controls.Add(this.txtServiceID);
@@ -477,7 +495,7 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Label lblRequestsTitle;
+        private System.Windows.Forms.Label lblRequests;
+        private System.Windows.Forms.Panel pnlNav;
     }
 }
