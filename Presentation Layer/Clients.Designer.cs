@@ -63,6 +63,7 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
+            this.lblClients = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -468,12 +469,24 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
+            // lblClients
+            // 
+            this.lblClients.AutoSize = true;
+            this.lblClients.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblClients.Location = new System.Drawing.Point(192, 21);
+            this.lblClients.Name = "lblClients";
+            this.lblClients.Size = new System.Drawing.Size(104, 37);
+            this.lblClients.TabIndex = 14;
+            this.lblClients.Text = "Clients";
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblClients);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -532,5 +545,6 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
+        private System.Windows.Forms.Label lblClients;
     }
 }

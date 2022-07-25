@@ -43,7 +43,6 @@
             this.panelControls = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
+            this.lblCalls = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelControls.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -77,9 +77,9 @@
             this.clientProblem,
             this.clientID,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(281, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(649, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(726, 336);
             this.dataGridView1.TabIndex = 0;
             // 
             // CallDate
@@ -119,7 +119,7 @@
             // btnNewCall
             // 
             this.btnNewCall.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNewCall.Location = new System.Drawing.Point(281, 110);
+            this.btnNewCall.Location = new System.Drawing.Point(758, 68);
             this.btnNewCall.Name = "btnNewCall";
             this.btnNewCall.Size = new System.Drawing.Size(167, 54);
             this.btnNewCall.TabIndex = 1;
@@ -129,7 +129,7 @@
             // btnViewCalls
             // 
             this.btnViewCalls.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnViewCalls.Location = new System.Drawing.Point(470, 110);
+            this.btnViewCalls.Location = new System.Drawing.Point(595, 68);
             this.btnViewCalls.Name = "btnViewCalls";
             this.btnViewCalls.Size = new System.Drawing.Size(157, 54);
             this.btnViewCalls.TabIndex = 2;
@@ -139,7 +139,7 @@
             // btnMainPage
             // 
             this.btnMainPage.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnMainPage.Location = new System.Drawing.Point(371, 21);
+            this.btnMainPage.Location = new System.Drawing.Point(223, 13);
             this.btnMainPage.Name = "btnMainPage";
             this.btnMainPage.Size = new System.Drawing.Size(138, 45);
             this.btnMainPage.TabIndex = 3;
@@ -149,7 +149,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnExit.Location = new System.Drawing.Point(526, 21);
+            this.btnExit.Location = new System.Drawing.Point(367, 13);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(117, 45);
             this.btnExit.TabIndex = 4;
@@ -165,15 +165,15 @@
             this.panelControls.Controls.Add(this.btnExit);
             this.panelControls.Controls.Add(this.btnMainPage);
             this.panelControls.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelControls.Location = new System.Drawing.Point(281, 446);
+            this.panelControls.Location = new System.Drawing.Point(199, 493);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(649, 85);
+            this.panelControls.Size = new System.Drawing.Size(726, 72);
             this.panelControls.TabIndex = 5;
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(131, 21);
+            this.btnUpdate.Location = new System.Drawing.Point(13, 13);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 45);
             this.btnUpdate.TabIndex = 6;
@@ -183,22 +183,12 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDelete.Location = new System.Drawing.Point(252, 21);
+            this.btnDelete.Location = new System.Drawing.Point(115, 13);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 45);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(504, 86);
-            this.lblTitle.MinimumSize = new System.Drawing.Size(10, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(100, 13);
-            this.lblTitle.TabIndex = 6;
-            this.lblTitle.Text = "Call Log Information";
             // 
             // pnlSidebar
             // 
@@ -405,15 +395,26 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
+            // lblCalls
+            // 
+            this.lblCalls.AutoSize = true;
+            this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblCalls.Location = new System.Drawing.Point(192, 21);
+            this.lblCalls.Name = "lblCalls";
+            this.lblCalls.Size = new System.Drawing.Size(77, 37);
+            this.lblCalls.TabIndex = 14;
+            this.lblCalls.Text = "Calls";
+            // 
             // Calls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblCalls);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.btnNewCall);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnViewCalls);
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.dataGridView1);
@@ -446,7 +447,6 @@
         private System.Windows.Forms.Button btnMainPage;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel pnlSidebar;
@@ -463,5 +463,6 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
+        private System.Windows.Forms.Label lblCalls;
     }
 }
