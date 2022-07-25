@@ -43,9 +43,22 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
+            this.gbSearchJobs = new System.Windows.Forms.GroupBox();
+            this.btnTechnicianID = new System.Windows.Forms.Button();
+            this.btnPriorityAscending = new System.Windows.Forms.Button();
+            this.btnServiceID = new System.Windows.Forms.Button();
+            this.btnPriorityDescending = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblJobs = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            this.gbSearchJobs.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -253,12 +266,153 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
+            // gbSearchJobs
+            // 
+            this.gbSearchJobs.Controls.Add(this.btnPriorityDescending);
+            this.gbSearchJobs.Controls.Add(this.btnServiceID);
+            this.gbSearchJobs.Controls.Add(this.btnPriorityAscending);
+            this.gbSearchJobs.Controls.Add(this.btnTechnicianID);
+            this.gbSearchJobs.Location = new System.Drawing.Point(763, 132);
+            this.gbSearchJobs.Name = "gbSearchJobs";
+            this.gbSearchJobs.Size = new System.Drawing.Size(176, 336);
+            this.gbSearchJobs.TabIndex = 14;
+            this.gbSearchJobs.TabStop = false;
+            this.gbSearchJobs.Text = "Search By";
+            // 
+            // btnTechnicianID
+            // 
+            this.btnTechnicianID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnTechnicianID.FlatAppearance.BorderSize = 0;
+            this.btnTechnicianID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnTechnicianID.Location = new System.Drawing.Point(18, 42);
+            this.btnTechnicianID.Name = "btnTechnicianID";
+            this.btnTechnicianID.Size = new System.Drawing.Size(141, 42);
+            this.btnTechnicianID.TabIndex = 19;
+            this.btnTechnicianID.Text = "Technician ID";
+            this.btnTechnicianID.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnTechnicianID.UseVisualStyleBackColor = false;
+            this.btnTechnicianID.Click += new System.EventHandler(this.btnSearchAgent_Click);
+            // 
+            // btnPriorityAscending
+            // 
+            this.btnPriorityAscending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnPriorityAscending.FlatAppearance.BorderSize = 0;
+            this.btnPriorityAscending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriorityAscending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPriorityAscending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnPriorityAscending.Location = new System.Drawing.Point(18, 112);
+            this.btnPriorityAscending.Name = "btnPriorityAscending";
+            this.btnPriorityAscending.Size = new System.Drawing.Size(141, 42);
+            this.btnPriorityAscending.TabIndex = 19;
+            this.btnPriorityAscending.Text = "Priority Ascending";
+            this.btnPriorityAscending.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnPriorityAscending.UseVisualStyleBackColor = false;
+            this.btnPriorityAscending.Click += new System.EventHandler(this.btnSearchAgent_Click);
+            // 
+            // btnServiceID
+            // 
+            this.btnServiceID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnServiceID.FlatAppearance.BorderSize = 0;
+            this.btnServiceID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServiceID.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServiceID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnServiceID.Location = new System.Drawing.Point(18, 252);
+            this.btnServiceID.Name = "btnServiceID";
+            this.btnServiceID.Size = new System.Drawing.Size(141, 42);
+            this.btnServiceID.TabIndex = 19;
+            this.btnServiceID.Text = "Service ID";
+            this.btnServiceID.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnServiceID.UseVisualStyleBackColor = false;
+            this.btnServiceID.Click += new System.EventHandler(this.btnSearchAgent_Click);
+            // 
+            // btnPriorityDescending
+            // 
+            this.btnPriorityDescending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnPriorityDescending.FlatAppearance.BorderSize = 0;
+            this.btnPriorityDescending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriorityDescending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPriorityDescending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnPriorityDescending.Location = new System.Drawing.Point(18, 182);
+            this.btnPriorityDescending.Name = "btnPriorityDescending";
+            this.btnPriorityDescending.Size = new System.Drawing.Size(141, 42);
+            this.btnPriorityDescending.TabIndex = 19;
+            this.btnPriorityDescending.Text = "Priority Descending";
+            this.btnPriorityDescending.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnPriorityDescending.UseVisualStyleBackColor = false;
+            this.btnPriorityDescending.Click += new System.EventHandler(this.btnSearchAgent_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Location = new System.Drawing.Point(202, 493);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(418, 72);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search By";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.button3.Location = new System.Drawing.Point(211, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(186, 42);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Priority Ascending";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.button4.Location = new System.Drawing.Point(19, 15);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(186, 42);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Technician ID";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(192, 132);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(545, 336);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // lblJobs
+            // 
+            this.lblJobs.AutoSize = true;
+            this.lblJobs.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblJobs.Location = new System.Drawing.Point(192, 21);
+            this.lblJobs.Name = "lblJobs";
+            this.lblJobs.Size = new System.Drawing.Size(75, 37);
+            this.lblJobs.TabIndex = 17;
+            this.lblJobs.Text = "Jobs";
+            // 
             // Jobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblJobs);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbSearchJobs);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Jobs";
@@ -268,7 +422,11 @@
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            this.gbSearchJobs.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,5 +446,15 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
+        private System.Windows.Forms.GroupBox gbSearchJobs;
+        private System.Windows.Forms.Button btnTechnicianID;
+        private System.Windows.Forms.Button btnPriorityDescending;
+        private System.Windows.Forms.Button btnServiceID;
+        private System.Windows.Forms.Button btnPriorityAscending;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblJobs;
     }
 }

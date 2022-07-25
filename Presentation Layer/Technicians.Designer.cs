@@ -43,9 +43,17 @@
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
+            this.lblTechnicians = new System.Windows.Forms.Label();
+            this.lblAgentID = new System.Windows.Forms.Label();
+            this.txtSearchAgent = new System.Windows.Forms.TextBox();
+            this.btnSearchAgent = new System.Windows.Forms.Button();
+            this.cbUnavailableAgents = new System.Windows.Forms.CheckBox();
+            this.cbAvailableAgent = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -253,12 +261,89 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
+            // lblTechnicians
+            // 
+            this.lblTechnicians.AutoSize = true;
+            this.lblTechnicians.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblTechnicians.Location = new System.Drawing.Point(192, 21);
+            this.lblTechnicians.Name = "lblTechnicians";
+            this.lblTechnicians.Size = new System.Drawing.Size(162, 37);
+            this.lblTechnicians.TabIndex = 15;
+            this.lblTechnicians.Text = "Technicians";
+            // 
+            // lblAgentID
+            // 
+            this.lblAgentID.AutoSize = true;
+            this.lblAgentID.Location = new System.Drawing.Point(487, 100);
+            this.lblAgentID.Name = "lblAgentID";
+            this.lblAgentID.Size = new System.Drawing.Size(52, 13);
+            this.lblAgentID.TabIndex = 26;
+            this.lblAgentID.Text = "Agent ID:";
+            // 
+            // txtSearchAgent
+            // 
+            this.txtSearchAgent.Location = new System.Drawing.Point(583, 97);
+            this.txtSearchAgent.Name = "txtSearchAgent";
+            this.txtSearchAgent.Size = new System.Drawing.Size(126, 20);
+            this.txtSearchAgent.TabIndex = 25;
+            // 
+            // btnSearchAgent
+            // 
+            this.btnSearchAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnSearchAgent.FlatAppearance.BorderSize = 0;
+            this.btnSearchAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchAgent.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnSearchAgent.Location = new System.Drawing.Point(753, 84);
+            this.btnSearchAgent.Name = "btnSearchAgent";
+            this.btnSearchAgent.Size = new System.Drawing.Size(186, 42);
+            this.btnSearchAgent.TabIndex = 24;
+            this.btnSearchAgent.Text = "Search";
+            this.btnSearchAgent.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSearchAgent.UseVisualStyleBackColor = false;
+            // 
+            // cbUnavailableAgents
+            // 
+            this.cbUnavailableAgents.AutoSize = true;
+            this.cbUnavailableAgents.Location = new System.Drawing.Point(449, 508);
+            this.cbUnavailableAgents.Name = "cbUnavailableAgents";
+            this.cbUnavailableAgents.Size = new System.Drawing.Size(118, 17);
+            this.cbUnavailableAgents.TabIndex = 23;
+            this.cbUnavailableAgents.Text = "Unavailable Agents";
+            this.cbUnavailableAgents.UseVisualStyleBackColor = true;
+            // 
+            // cbAvailableAgent
+            // 
+            this.cbAvailableAgent.AutoSize = true;
+            this.cbAvailableAgent.Location = new System.Drawing.Point(293, 508);
+            this.cbAvailableAgent.Name = "cbAvailableAgent";
+            this.cbAvailableAgent.Size = new System.Drawing.Size(105, 17);
+            this.cbAvailableAgent.TabIndex = 22;
+            this.cbAvailableAgent.Text = "Available Agents";
+            this.cbAvailableAgent.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(192, 132);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(747, 336);
+            this.dataGridView1.TabIndex = 21;
+            // 
             // Technicians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblAgentID);
+            this.Controls.Add(this.txtSearchAgent);
+            this.Controls.Add(this.btnSearchAgent);
+            this.Controls.Add(this.cbUnavailableAgents);
+            this.Controls.Add(this.cbAvailableAgent);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblTechnicians);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Technicians";
@@ -268,7 +353,9 @@
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,5 +375,12 @@
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.PictureBox pbLoginIcon;
+        private System.Windows.Forms.Label lblTechnicians;
+        private System.Windows.Forms.Label lblAgentID;
+        private System.Windows.Forms.TextBox txtSearchAgent;
+        private System.Windows.Forms.Button btnSearchAgent;
+        private System.Windows.Forms.CheckBox cbUnavailableAgents;
+        private System.Windows.Forms.CheckBox cbAvailableAgent;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -49,6 +49,7 @@
             this.cbUnavailableAgents = new System.Windows.Forms.CheckBox();
             this.btnSearchAgent = new System.Windows.Forms.Button();
             this.txtSearchAgent = new System.Windows.Forms.TextBox();
+            this.lblAgentID = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -321,12 +322,22 @@
             this.txtSearchAgent.Size = new System.Drawing.Size(126, 20);
             this.txtSearchAgent.TabIndex = 19;
             // 
+            // lblAgentID
+            // 
+            this.lblAgentID.AutoSize = true;
+            this.lblAgentID.Location = new System.Drawing.Point(487, 100);
+            this.lblAgentID.Name = "lblAgentID";
+            this.lblAgentID.Size = new System.Drawing.Size(52, 13);
+            this.lblAgentID.TabIndex = 20;
+            this.lblAgentID.Text = "Agent ID:";
+            // 
             // Agents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblAgentID);
             this.Controls.Add(this.txtSearchAgent);
             this.Controls.Add(this.btnSearchAgent);
             this.Controls.Add(this.cbUnavailableAgents);
@@ -370,5 +381,6 @@
         private System.Windows.Forms.CheckBox cbUnavailableAgents;
         private System.Windows.Forms.Button btnSearchAgent;
         private System.Windows.Forms.TextBox txtSearchAgent;
+        private System.Windows.Forms.Label lblAgentID;
     }
 }
