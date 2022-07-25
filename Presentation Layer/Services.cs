@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace Project.PresentationLayer
 {
-    public partial class ViewServices : Form
+    public partial class Services : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -25,7 +25,7 @@ namespace Project.PresentationLayer
             int nHeightWllipse
         );
 
-        public ViewServices()
+        public Services()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -111,6 +111,12 @@ namespace Project.PresentationLayer
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             new Login().Show();
+            this.Hide();
+        }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            new Services().Show();
             this.Hide();
         }
     }
