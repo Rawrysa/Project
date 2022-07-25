@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContracts));
             this.btnViewContracts = new System.Windows.Forms.Button();
             this.btnContractAvailability = new System.Windows.Forms.Button();
             this.btnContractPerformance = new System.Windows.Forms.Button();
@@ -339,6 +340,7 @@
             // 
             // pbLoginIcon
             // 
+            this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
             this.pbLoginIcon.Location = new System.Drawing.Point(28, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
