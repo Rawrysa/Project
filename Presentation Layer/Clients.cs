@@ -44,5 +44,59 @@ namespace Project.PresentationLayer
         {
             Environment.Exit(0);
         }
+
+        private void btnAgents_Click(object sender, EventArgs e)
+        {
+            new Agents().Show();
+            this.Hide();
+        }
+
+        private void btnCalls_Click(object sender, EventArgs e)
+        {
+            new Calls().Show();
+            this.Hide();
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            new Clients().Show();
+            this.Hide();
+        }
+
+        private void btnContracts_Click(object sender, EventArgs e)
+        {
+            new Contracts().Show();
+            this.Hide();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            new Employees().Show();
+            this.Hide();
+        }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            new Jobs().Show();
+            this.Hide();
+        }
+
+        private void btnRequests_Click(object sender, EventArgs e)
+        {
+            new Requests().Show();
+            this.Hide();
+        }
+
+        private void btnTechnicians_Click(object sender, EventArgs e)
+        {
+            new Technicians().Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }

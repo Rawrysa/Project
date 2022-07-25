@@ -56,7 +56,7 @@
             // 
             this.dgrViewServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrViewServices.Location = new System.Drawing.Point(198, 132);
-            this.dgrViewServices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgrViewServices.Margin = new System.Windows.Forms.Padding(2);
             this.dgrViewServices.Name = "dgrViewServices";
             this.dgrViewServices.RowHeadersWidth = 51;
             this.dgrViewServices.RowTemplate.Height = 24;
@@ -118,6 +118,7 @@
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnQuit
             // 
@@ -149,6 +150,7 @@
             this.btnTechnicians.Text = "Technicians";
             this.btnTechnicians.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnTechnicians.UseVisualStyleBackColor = true;
+            this.btnTechnicians.Click += new System.EventHandler(this.btnTechnicians_Click);
             // 
             // btnRequests
             // 
@@ -164,6 +166,7 @@
             this.btnRequests.Text = "Requests";
             this.btnRequests.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRequests.UseVisualStyleBackColor = true;
+            this.btnRequests.Click += new System.EventHandler(this.btnRequests_Click);
             // 
             // btnJobs
             // 
@@ -179,6 +182,7 @@
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
             // 
             // btnEmployees
             // 
@@ -194,6 +198,7 @@
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnContracts
             // 
@@ -209,6 +214,7 @@
             this.btnContracts.Text = "Contracts";
             this.btnContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // btnClients
             // 
@@ -224,6 +230,7 @@
             this.btnClients.Text = "Clients";
             this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // btnCalls
             // 
@@ -239,6 +246,7 @@
             this.btnCalls.Text = "Calls";
             this.btnCalls.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCalls.UseVisualStyleBackColor = true;
+            this.btnCalls.Click += new System.EventHandler(this.btnCalls_Click);
             // 
             // btnAgents
             // 
@@ -254,6 +262,7 @@
             this.btnAgents.Text = "Agents";
             this.btnAgents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAgents.UseVisualStyleBackColor = true;
+            this.btnAgents.Click += new System.EventHandler(this.btnAgents_Click);
             // 
             // pnlLoginUser
             // 
@@ -267,8 +276,8 @@
             // 
             // lblLoginUsername
             // 
-            this.lblLoginUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblLoginUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,7 +298,7 @@
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
             // 
-            // FrmViewServices
+            // ViewServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -300,8 +309,8 @@
             this.Controls.Add(this.lblServices);
             this.Controls.Add(this.dgrViewServices);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FrmViewServices";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ViewServices";
             this.Text = "ViewServices";
             this.Load += new System.EventHandler(this.ViewServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrViewServices)).EndInit();

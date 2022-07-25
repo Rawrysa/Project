@@ -156,6 +156,7 @@
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnQuit
             // 
@@ -187,6 +188,7 @@
             this.btnTechnicians.Text = "Technicians";
             this.btnTechnicians.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnTechnicians.UseVisualStyleBackColor = true;
+            this.btnTechnicians.Click += new System.EventHandler(this.btnTechnicians_Click);
             // 
             // btnRequests
             // 
@@ -202,6 +204,7 @@
             this.btnRequests.Text = "Requests";
             this.btnRequests.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRequests.UseVisualStyleBackColor = true;
+            this.btnRequests.Click += new System.EventHandler(this.btnRequests_Click);
             // 
             // btnJobs
             // 
@@ -217,6 +220,7 @@
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
             // 
             // btnEmployees
             // 
@@ -232,6 +236,7 @@
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnContracts
             // 
@@ -247,6 +252,7 @@
             this.btnContracts.Text = "Contracts";
             this.btnContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // btnClients
             // 
@@ -262,6 +268,7 @@
             this.btnClients.Text = "Clients";
             this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // btnCalls
             // 
@@ -277,6 +284,7 @@
             this.btnCalls.Text = "Calls";
             this.btnCalls.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCalls.UseVisualStyleBackColor = true;
+            this.btnCalls.Click += new System.EventHandler(this.btnCalls_Click);
             // 
             // btnAgents
             // 
@@ -292,6 +300,7 @@
             this.btnAgents.Text = "Agents";
             this.btnAgents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAgents.UseVisualStyleBackColor = true;
+            this.btnAgents.Click += new System.EventHandler(this.btnAgents_Click);
             // 
             // pnlLoginUser
             // 
