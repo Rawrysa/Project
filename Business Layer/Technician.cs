@@ -20,9 +20,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewTechnicians();
         }
 
-        public int AddTechnician()
+        public void AddTechnician()
         {
-            return new DataHandler().AddTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
+            new DataHandler().AddTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
         }
 
         public DataTable SearchTechnician()

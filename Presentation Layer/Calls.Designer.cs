@@ -38,6 +38,8 @@
             this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnNewCall = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -59,8 +61,8 @@
             this.txtProblem = new System.Windows.Forms.TextBox();
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtNumber = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnServices = new System.Windows.Forms.Button();
+            this.txtClientID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
@@ -125,12 +127,13 @@
             this.btnNewCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewCall.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNewCall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnNewCall.Location = new System.Drawing.Point(753, 73);
+            this.btnNewCall.Location = new System.Drawing.Point(726, 73);
             this.btnNewCall.Name = "btnNewCall";
             this.btnNewCall.Size = new System.Drawing.Size(186, 42);
             this.btnNewCall.TabIndex = 1;
             this.btnNewCall.Text = "New Call";
             this.btnNewCall.UseVisualStyleBackColor = false;
+            this.btnNewCall.Click += new System.EventHandler(this.btnNewCall_Click);
             // 
             // pnlSidebar
             // 
@@ -154,6 +157,31 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 13;
+            // 
+            // btnServices
+            // 
+            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServices.FlatAppearance.BorderSize = 0;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnServices.Location = new System.Drawing.Point(0, 468);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(186, 42);
+            this.btnServices.TabIndex = 6;
+            this.btnServices.Text = "Services";
+            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnServices.UseVisualStyleBackColor = true;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 514);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(186, 3);
+            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -373,7 +401,7 @@
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDuration.Location = new System.Drawing.Point(768, 174);
+            this.lblDuration.Location = new System.Drawing.Point(749, 174);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(115, 21);
             this.lblDuration.TabIndex = 40;
@@ -381,7 +409,7 @@
             // 
             // txtDuration
             // 
-            this.txtDuration.Location = new System.Drawing.Point(772, 196);
+            this.txtDuration.Location = new System.Drawing.Point(753, 196);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(141, 20);
             this.txtDuration.TabIndex = 41;
@@ -391,7 +419,7 @@
             this.lblProblem.AutoSize = true;
             this.lblProblem.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblProblem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblProblem.Location = new System.Drawing.Point(768, 310);
+            this.lblProblem.Location = new System.Drawing.Point(749, 310);
             this.lblProblem.Name = "lblProblem";
             this.lblProblem.Size = new System.Drawing.Size(79, 21);
             this.lblProblem.TabIndex = 42;
@@ -399,7 +427,7 @@
             // 
             // txtProblem
             // 
-            this.txtProblem.Location = new System.Drawing.Point(772, 334);
+            this.txtProblem.Location = new System.Drawing.Point(753, 334);
             this.txtProblem.Name = "txtProblem";
             this.txtProblem.Size = new System.Drawing.Size(141, 20);
             this.txtProblem.TabIndex = 43;
@@ -409,7 +437,7 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblNumber.Location = new System.Drawing.Point(768, 237);
+            this.lblNumber.Location = new System.Drawing.Point(749, 237);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(78, 21);
             this.lblNumber.TabIndex = 44;
@@ -417,35 +445,28 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(772, 261);
+            this.txtNumber.Location = new System.Drawing.Point(753, 261);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(141, 20);
             this.txtNumber.TabIndex = 45;
             // 
-            // panel1
+            // txtClientID
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
+            this.txtClientID.Location = new System.Drawing.Point(752, 408);
+            this.txtClientID.Name = "txtClientID";
+            this.txtClientID.Size = new System.Drawing.Size(141, 20);
+            this.txtClientID.TabIndex = 47;
             // 
-            // btnServices
+            // label1
             // 
-            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServices.FlatAppearance.BorderSize = 0;
-            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnServices.Location = new System.Drawing.Point(0, 468);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(186, 42);
-            this.btnServices.TabIndex = 6;
-            this.btnServices.Text = "Services";
-            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnServices.UseVisualStyleBackColor = true;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label1.Location = new System.Drawing.Point(748, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Client ID:";
             // 
             // Calls
             // 
@@ -453,6 +474,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.txtClientID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.txtProblem);
@@ -513,5 +536,7 @@
         private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.TextBox txtClientID;
+        private System.Windows.Forms.Label label1;
     }
 }

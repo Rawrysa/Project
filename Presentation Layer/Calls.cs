@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -34,6 +35,8 @@ namespace Project.PresentationLayer
             pnlNav.Left = btnAgents.Left;
             btnAgents.BackColor = Color.FromArgb(46, 51, 73);
             //lblLoginUsername.Text = username;
+
+            dataGridView1.DataSource = new Call().ViewCalls();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -104,6 +107,38 @@ namespace Project.PresentationLayer
         {
             new Services().Show();
             this.Hide();
+        }
+
+        private void btnNewCall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Call call = new Call();
+
+                call.Call_Date = DateTime.Today.ToString();
+                call.Call_Duration = txtDuration.Text;
+                call.Client_Phonenumber = txtNumber.Text;
+                call.Client_Problem = txtProblem.Text;
+                call.Client_ID = Convert.ToInt32(txtClientID.Text);
+
+                if (new Validator().NotNull(call))
+                {
+                    call.NewCall();
+
+                    dataGridView1.DataSource = new ServiceRequest().ViewRequests();
+
+                    MessageBox.Show("Call added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to add Call", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

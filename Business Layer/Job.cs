@@ -27,9 +27,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewJobs();
         }
 
-        public int NewJob()
+        public void NewJob()
         {
-            return new DataHandler().NewJob(Priority,Technician_ID,Client_ID,Service_ID);
+            new DataHandler().NewJob(Priority,Technician_ID,Client_ID,Service_ID);
         }
 
         public void CloseJob()

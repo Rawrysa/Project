@@ -30,9 +30,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewClients();
         }
 
-        public int AddClient()
+        public void AddClient()
         {
-            return new DataHandler().AddClient(Name,Surname,Phonenumber,Address,Client_Type,Contract_ID);
+            new DataHandler().AddClient(Name,Surname,Phonenumber,Address,Client_Type,Contract_ID);
         }
 
         public DataTable SearchClient()

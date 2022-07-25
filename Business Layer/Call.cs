@@ -26,9 +26,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewCalls();
         }
 
-        public int NewCall()
+        public void NewCall()
         {
-            return new DataHandler().NewCall(Call_Date,Call_Duration,Client_Phonenumber,Client_Problem,Client_ID);
+            new DataHandler().NewCall(Call_Date,Call_Duration,Client_Phonenumber,Client_Problem,Client_ID);
         }
     }
 }

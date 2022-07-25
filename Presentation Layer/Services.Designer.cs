@@ -57,7 +57,7 @@
             // dgrViewServices
             // 
             this.dgrViewServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrViewServices.Location = new System.Drawing.Point(198, 132);
+            this.dgrViewServices.Location = new System.Drawing.Point(247, 135);
             this.dgrViewServices.Margin = new System.Windows.Forms.Padding(2);
             this.dgrViewServices.Name = "dgrViewServices";
             this.dgrViewServices.RowHeadersWidth = 51;
@@ -341,7 +341,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Services";
             this.Text = "ViewServices";
-            this.Load += new System.EventHandler(this.ViewServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrViewServices)).EndInit();
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);

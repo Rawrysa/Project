@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,27 +34,10 @@ namespace Project.PresentationLayer
             pnlNav.Top = 0;
             pnlNav.Left = 0;
             //lblLoginUsername.Text = username;
+
+            dgrViewServices.DataSource = new Service().ViewServices();
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            //Environment.Exit(0);
-        }
-
-        private void BtnViewServices_Click(object sender, EventArgs e)
-        {
-            //dgrViewServices.DataSource = new DataHandler().ViewServices();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ViewServices_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {

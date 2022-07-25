@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,6 +34,8 @@ namespace Project.PresentationLayer
             pnlNav.Top = 0;
             pnlNav.Left = 0;
             //lblLoginUsername.Text = username;
+
+            dgvJobs.DataSource = new Job().ViewJobs();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -98,6 +101,11 @@ namespace Project.PresentationLayer
         {
             new Services().Show();
             this.Hide();
+        }
+
+        private void btnEscalateJob_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,6 +34,8 @@ namespace Project.PresentationLayer
             pnlNav.Top = 0;
             pnlNav.Left = 0;
             //lblLoginUsername.Text = username;
+
+            dataGridView1.DataSource = new Client().ViewClients();
         }
 
         private void btnViewClients_Click(object sender, EventArgs e)
@@ -103,6 +106,28 @@ namespace Project.PresentationLayer
         {
             new Services().Show();
             this.Hide();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = new Client();
+                client.Client_ID = Convert.ToInt32(txtSearch.Text);
+
+                if (new Validator().NotNull(client))
+                {
+                    dataGridView1.DataSource = client.SearchClient();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to find client", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,9 +34,28 @@ namespace Project.PresentationLayer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            new SplashScreen(username).Show();
-            this.Hide();
+            try
+            {
+                Logins logins = new Logins();
+
+                logins.username = txtUsername.Text;
+                logins.password = txtPassword.Text;
+
+                if (logins.ValidateUser())
+                {
+                    new SplashScreen(txtUsername.Text).Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid credentials");
+                }
+            }
+            catch
+            {
+            }
+
+
         }
 
         private void Login_Load(object sender, EventArgs e)

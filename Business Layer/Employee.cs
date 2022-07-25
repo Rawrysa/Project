@@ -20,9 +20,9 @@ namespace Project.BusinessLayer
         private int employee_id;
         public int Employee_ID { get; set; }
 
-        public int AddEmployee()
+        public void AddEmployee()
         {
-            return new DataHandler().AddEmployee(Employee_ID, Branch);
+            new DataHandler().AddEmployee(Employee_ID, Branch);
         }
 
         public void DeleteEmployee()

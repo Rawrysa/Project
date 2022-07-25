@@ -50,6 +50,8 @@
     <Compile Include="Business Layer\CallAgent.cs" />
     <Compile Include="Business Layer\Client.cs" />
     <Compile Include="Business Layer\Contract.cs" />
+    <Compile Include="Business Layer\Logins.cs" />
+    <Compile Include="Business Layer\Validator.cs" />
     <Compile Include="Data Layer\DataHandler.cs" />
     <Compile Include="Business Layer\Employee.cs" />
     <Compile Include="Presentation Layer\Agents.cs">
@@ -75,12 +77,6 @@
     </Compile>
     <Compile Include="Presentation Layer\Contracts.Designer.cs">
       <DependentUpon>Contracts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\Employees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\Employees.Designer.cs">
-      <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Jobs.cs">
       <SubType>Form</SubType>
@@ -135,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Contracts.resx">
       <DependentUpon>Contracts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\Employees.resx">
-      <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Jobs.resx">
       <DependentUpon>Jobs.cs</DependentUpon>

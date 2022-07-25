@@ -33,10 +33,8 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int NewCall(string CallDate, string CallDuration, string CallNumber, string ClientProblem, int ClientID)
+        public void NewCall(string CallDate, string CallDuration, string CallNumber, string ClientProblem, int ClientID)
         {
-            int rows;
-
             try
             {
                 connection.Open();
@@ -47,15 +45,13 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@CallNumber", CallNumber);
                 cmd.Parameters.AddWithValue("@ClientProblem", ClientProblem);
                 cmd.Parameters.AddWithValue("@ClientID", ClientID);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public DataTable ViewServices()
@@ -98,26 +94,22 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int NewRequest(int ClientID, int ServiceID)
+        public void NewRequest(int ClientID, int ServiceID)
         {
-            int rows;
-
-            try
+           try
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("spNewRequest", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ClientID", ClientID);
                 cmd.Parameters.AddWithValue("@ServiceID", ServiceID);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public void RemoveRequest(int requestid)
@@ -160,10 +152,8 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int NewJob(string jobpriority, int technicianid, int ClientID, int ServiceID)
+        public void NewJob(string jobpriority, int technicianid, int ClientID, int ServiceID)
         {
-            int rows;
-
             try
             {
                 connection.Open();
@@ -173,15 +163,13 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@TechnicianID", technicianid);
                 cmd.Parameters.AddWithValue("@ClientID", ClientID);
                 cmd.Parameters.AddWithValue("@ServiceID", ServiceID);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public void CloseJob(int jobid)
@@ -289,7 +277,7 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int AddClient(string clientname, string clientsurname, string clientnumber, string clientaddress, string clienttype, int contractid)
+        public void AddClient(string clientname, string clientsurname, string clientnumber, string clientaddress, string clienttype, int contractid)
         {
             int rows;
 
@@ -309,10 +297,8 @@ namespace Project.DataLayer
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public void DeleteClient(int clientid)
@@ -441,12 +427,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@Availability", availability);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{contractid} has been updated");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Contract could not be updated");
+                throw;
             }
         }
 
@@ -475,10 +459,8 @@ namespace Project.DataLayer
             return table;
         }
 
-        public int AddEmployee(int employeeid, int branchid)
+        public void AddEmployee(int employeeid, int branchid)
         {
-            int rows;
-
             try
             {
                 connection.Open();
@@ -486,15 +468,13 @@ namespace Project.DataLayer
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmployeeID", employeeid);
                 cmd.Parameters.AddWithValue("@BranchID", branchid);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public void DeleteEmployee(int employeeid)
@@ -537,10 +517,8 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int AddAgent(string agentname, string agentsurname, string phonenumber, int agentid)
+        public void AddAgent(string agentname, string agentsurname, string phonenumber, int agentid)
         {
-            int rows;
-
             try
             {
                 connection.Open();
@@ -550,15 +528,13 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@AgentSurname", agentsurname);
                 cmd.Parameters.AddWithValue("@PhoneNumber", phonenumber);
                 cmd.Parameters.AddWithValue("@AgentID", agentid);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public DataTable SearchAgent(int agentid)
@@ -628,10 +604,8 @@ namespace Project.DataLayer
             return tb;
         }
 
-        public int AddTechnician(string technicianname, string techniciansurname, string phonenumber, string jobdescription, int technicianid)
+        public void AddTechnician(string technicianname, string techniciansurname, string phonenumber, string jobdescription, int technicianid)
         {
-            int rows;
-
             try
             {
                 connection.Open();
@@ -642,15 +616,13 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@PhoneNumber", phonenumber);
                 cmd.Parameters.AddWithValue("@JobDescription", jobdescription);
                 cmd.Parameters.AddWithValue("@TechnicianID", technicianid);
-                rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 connection.Close();
             }
             catch
             {
-                rows = 0;
+                throw;
             }
-
-            return rows;
         }
 
         public DataTable SearchTechnician(int technicianid)
@@ -692,12 +664,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@TechnicianID", technicianid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{technicianid} has been updated");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Technician could not be updated");
+                throw;
             }
         }
 
@@ -715,7 +685,7 @@ namespace Project.DataLayer
 
                 MessageBox.Show($"{technicianid} has been assigned");
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("Technician could not be updated");
             }
@@ -766,6 +736,30 @@ namespace Project.DataLayer
             catch
             {
                 MessageBox.Show($"{serviceid} could not be found");
+            }
+
+            return table;
+        }
+
+        public DataTable ClientNumber(string number)
+        {
+            DataTable table = new DataTable();
+
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("spClientNumber", connection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@PhoneNumber", number);
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable tb = new DataTable();
+                tb.Load(reader);
+                table = tb;
+                connection.Close();
+            }
+            catch
+            {
             }
 
             return table;

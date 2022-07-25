@@ -16,9 +16,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewAgents();
         }
 
-        public int AddTechnician()
+        public void AddTechnician()
         {
-            return new DataHandler().AddAgent(Name, Surname, PhoneNumber, Employee_ID);
+            new DataHandler().AddAgent(Name, Surname, PhoneNumber, Employee_ID);
         }
 
         public DataTable SearchTechnician()

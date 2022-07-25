@@ -22,9 +22,9 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewRequests();
         }
 
-        public int NewRequest()
+        public void NewRequest()
         {
-            return new DataHandler().NewRequest(Client_ID,Service_ID);
+            new DataHandler().NewRequest(Client_ID,Service_ID);
         }
 
         public void RemoveRequest()

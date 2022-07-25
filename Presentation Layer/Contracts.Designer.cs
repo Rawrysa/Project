@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Contracts));
-            this.btnViewContracts = new System.Windows.Forms.Button();
             this.btnContractAvailability = new System.Windows.Forms.Button();
             this.btnContractPerformance = new System.Windows.Forms.Button();
             this.dgrContracts = new System.Windows.Forms.DataGridView();
-            this.lblContract = new System.Windows.Forms.Label();
-            this.TxtContracts = new System.Windows.Forms.TextBox();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -51,28 +50,15 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblContracts = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnServices = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrContracts)).BeginInit();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnViewContracts
-            // 
-            this.btnViewContracts.Location = new System.Drawing.Point(298, 512);
-            this.btnViewContracts.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViewContracts.Name = "btnViewContracts";
-            this.btnViewContracts.Size = new System.Drawing.Size(102, 33);
-            this.btnViewContracts.TabIndex = 0;
-            this.btnViewContracts.Text = "View Contracts";
-            this.btnViewContracts.UseVisualStyleBackColor = true;
-            this.btnViewContracts.Click += new System.EventHandler(this.btnViewContracts_Click);
-            // 
             // btnContractAvailability
             // 
-            this.btnContractAvailability.Location = new System.Drawing.Point(472, 512);
+            this.btnContractAvailability.Location = new System.Drawing.Point(412, 500);
             this.btnContractAvailability.Margin = new System.Windows.Forms.Padding(2);
             this.btnContractAvailability.Name = "btnContractAvailability";
             this.btnContractAvailability.Size = new System.Drawing.Size(115, 33);
@@ -83,7 +69,7 @@
             // 
             // btnContractPerformance
             // 
-            this.btnContractPerformance.Location = new System.Drawing.Point(652, 512);
+            this.btnContractPerformance.Location = new System.Drawing.Point(592, 500);
             this.btnContractPerformance.Margin = new System.Windows.Forms.Padding(2);
             this.btnContractPerformance.Name = "btnContractPerformance";
             this.btnContractPerformance.Size = new System.Drawing.Size(126, 33);
@@ -95,33 +81,13 @@
             // dgrContracts
             // 
             this.dgrContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrContracts.Location = new System.Drawing.Point(224, 158);
+            this.dgrContracts.Location = new System.Drawing.Point(254, 110);
             this.dgrContracts.Margin = new System.Windows.Forms.Padding(2);
             this.dgrContracts.Name = "dgrContracts";
             this.dgrContracts.RowHeadersWidth = 51;
             this.dgrContracts.RowTemplate.Height = 24;
             this.dgrContracts.Size = new System.Drawing.Size(606, 329);
             this.dgrContracts.TabIndex = 3;
-            // 
-            // lblContract
-            // 
-            this.lblContract.AutoSize = true;
-            this.lblContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContract.Location = new System.Drawing.Point(351, 124);
-            this.lblContract.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblContract.Name = "lblContract";
-            this.lblContract.Size = new System.Drawing.Size(134, 18);
-            this.lblContract.TabIndex = 6;
-            this.lblContract.Text = "Enter Contract ID : ";
-            this.lblContract.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // TxtContracts
-            // 
-            this.TxtContracts.Location = new System.Drawing.Point(508, 124);
-            this.TxtContracts.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtContracts.Name = "TxtContracts";
-            this.TxtContracts.Size = new System.Drawing.Size(207, 20);
-            this.TxtContracts.TabIndex = 7;
             // 
             // pnlSidebar
             // 
@@ -145,6 +111,31 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 13;
+            // 
+            // btnServices
+            // 
+            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServices.FlatAppearance.BorderSize = 0;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnServices.Location = new System.Drawing.Point(0, 468);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(186, 42);
+            this.btnServices.TabIndex = 6;
+            this.btnServices.Text = "Services";
+            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnServices.UseVisualStyleBackColor = true;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 514);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(186, 3);
+            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -359,31 +350,6 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 15;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnServices
-            // 
-            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServices.FlatAppearance.BorderSize = 0;
-            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnServices.Location = new System.Drawing.Point(0, 468);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(186, 42);
-            this.btnServices.TabIndex = 6;
-            this.btnServices.Text = "Services";
-            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnServices.UseVisualStyleBackColor = true;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
-            // 
             // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,12 +359,9 @@
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblContracts);
             this.Controls.Add(this.pnlSidebar);
-            this.Controls.Add(this.TxtContracts);
-            this.Controls.Add(this.lblContract);
             this.Controls.Add(this.dgrContracts);
             this.Controls.Add(this.btnContractPerformance);
             this.Controls.Add(this.btnContractAvailability);
-            this.Controls.Add(this.btnViewContracts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Contracts";
@@ -415,13 +378,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnViewContracts;
         private System.Windows.Forms.Button btnContractAvailability;
         private System.Windows.Forms.Button btnContractPerformance;
         private System.Windows.Forms.DataGridView dgrContracts;
-        private System.Windows.Forms.Label lblContract;
-        private System.Windows.Forms.TextBox TxtContracts;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnQuit;

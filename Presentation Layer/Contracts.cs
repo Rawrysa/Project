@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,6 +34,8 @@ namespace Project.PresentationLayer
             pnlNav.Top = 0;
             pnlNav.Left = 0;
             //lblLoginUsername.Text = username;
+
+            dgrContracts.DataSource = new Contract().ViewContracts();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,12 +50,41 @@ namespace Project.PresentationLayer
 
         private void btnContractAvailability_Click(object sender, EventArgs e)
         {
-           // dgrContracts.DataSource = new DataHandler().ContractAvailability();
+            try
+            {
+                Contract contract = new Contract();
+                contract.Contract_ID = Convert.ToInt32(dgrContracts.CurrentRow.Cells[0].Value);
+
+                if (dgrContracts.CurrentRow.Cells[5].Value.ToString() != "Available")
+                {
+                    contract.Availability = "Available";
+                    contract.ContractAvailability();
+                }
+                else
+                {
+                    contract.Availability = "Unavailable";
+                    contract.ContractAvailability();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to change availability", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnContractPerformance_Click(object sender, EventArgs e)
         {
-           // dgrContracts.DataSource = new DataHandler().ContractPerformance();
+            try
+            {
+                Contract contract = new Contract();
+                contract.Contract_ID = Convert.ToInt32(dgrContracts.CurrentRow.Cells[0].Value);
+
+                MessageBox.Show($"This contract has {contract.ContractPerformance().Rows[0].ItemArray[0].ToString()} sales",null,MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Failed to retrieve contract information", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

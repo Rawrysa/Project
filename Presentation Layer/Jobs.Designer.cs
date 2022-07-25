@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jobs));
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -44,25 +46,23 @@
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.gbSearchJob = new System.Windows.Forms.GroupBox();
-            this.lblJobs = new System.Windows.Forms.Label();
-            this.btnTechnicianID = new System.Windows.Forms.Button();
-            this.btnPriorityAscending = new System.Windows.Forms.Button();
-            this.btnPriorityDescending = new System.Windows.Forms.Button();
-            this.btnServiceID = new System.Windows.Forms.Button();
-            this.dgvTechnicians = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblJobID = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnServiceID = new System.Windows.Forms.Button();
+            this.btnPriorityDescending = new System.Windows.Forms.Button();
+            this.btnPriorityAscending = new System.Windows.Forms.Button();
+            this.btnTechnicianID = new System.Windows.Forms.Button();
+            this.lblJobs = new System.Windows.Forms.Label();
+            this.dgvJobs = new System.Windows.Forms.DataGridView();
             this.gbServiceManagement = new System.Windows.Forms.GroupBox();
             this.btnCloseJob = new System.Windows.Forms.Button();
             this.btnEscalateJob = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnServices = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
             this.gbSearchJob.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
             this.gbServiceManagement.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,31 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 13;
+            // 
+            // btnServices
+            // 
+            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServices.FlatAppearance.BorderSize = 0;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnServices.Location = new System.Drawing.Point(0, 468);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(186, 42);
+            this.btnServices.TabIndex = 6;
+            this.btnServices.Text = "Services";
+            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnServices.UseVisualStyleBackColor = true;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 514);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(186, 3);
+            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -300,61 +325,23 @@
             this.gbSearchJob.TabStop = false;
             this.gbSearchJob.Text = "Search By:";
             // 
-            // lblJobs
+            // lblJobID
             // 
-            this.lblJobs.AutoSize = true;
-            this.lblJobs.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblJobs.Location = new System.Drawing.Point(192, 21);
-            this.lblJobs.Name = "lblJobs";
-            this.lblJobs.Size = new System.Drawing.Size(75, 37);
-            this.lblJobs.TabIndex = 15;
-            this.lblJobs.Text = "Jobs";
+            this.lblJobID.AutoSize = true;
+            this.lblJobID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblJobID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblJobID.Location = new System.Drawing.Point(11, 40);
+            this.lblJobID.Name = "lblJobID";
+            this.lblJobID.Size = new System.Drawing.Size(62, 21);
+            this.lblJobID.TabIndex = 23;
+            this.lblJobID.Text = "Job ID:";
             // 
-            // btnTechnicianID
+            // textBox1
             // 
-            this.btnTechnicianID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.btnTechnicianID.FlatAppearance.BorderSize = 0;
-            this.btnTechnicianID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnTechnicianID.Location = new System.Drawing.Point(15, 108);
-            this.btnTechnicianID.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTechnicianID.Name = "btnTechnicianID";
-            this.btnTechnicianID.Size = new System.Drawing.Size(170, 42);
-            this.btnTechnicianID.TabIndex = 29;
-            this.btnTechnicianID.Text = "Technician ID";
-            this.btnTechnicianID.UseVisualStyleBackColor = false;
-            // 
-            // btnPriorityAscending
-            // 
-            this.btnPriorityAscending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.btnPriorityAscending.FlatAppearance.BorderSize = 0;
-            this.btnPriorityAscending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPriorityAscending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPriorityAscending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnPriorityAscending.Location = new System.Drawing.Point(15, 168);
-            this.btnPriorityAscending.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPriorityAscending.Name = "btnPriorityAscending";
-            this.btnPriorityAscending.Size = new System.Drawing.Size(170, 42);
-            this.btnPriorityAscending.TabIndex = 29;
-            this.btnPriorityAscending.Text = "Priority Ascending";
-            this.btnPriorityAscending.UseVisualStyleBackColor = false;
-            // 
-            // btnPriorityDescending
-            // 
-            this.btnPriorityDescending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.btnPriorityDescending.FlatAppearance.BorderSize = 0;
-            this.btnPriorityDescending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPriorityDescending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPriorityDescending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnPriorityDescending.Location = new System.Drawing.Point(15, 224);
-            this.btnPriorityDescending.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPriorityDescending.Name = "btnPriorityDescending";
-            this.btnPriorityDescending.Size = new System.Drawing.Size(170, 42);
-            this.btnPriorityDescending.TabIndex = 29;
-            this.btnPriorityDescending.Text = "Priority Descending";
-            this.btnPriorityDescending.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(15, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(170, 29);
+            this.textBox1.TabIndex = 30;
             // 
             // btnServiceID
             // 
@@ -371,31 +358,69 @@
             this.btnServiceID.Text = "Service ID";
             this.btnServiceID.UseVisualStyleBackColor = false;
             // 
-            // dgvTechnicians
+            // btnPriorityDescending
             // 
-            this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTechnicians.Location = new System.Drawing.Point(199, 132);
-            this.dgvTechnicians.Name = "dgvTechnicians";
-            this.dgvTechnicians.Size = new System.Drawing.Size(537, 336);
-            this.dgvTechnicians.TabIndex = 22;
+            this.btnPriorityDescending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnPriorityDescending.FlatAppearance.BorderSize = 0;
+            this.btnPriorityDescending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriorityDescending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnPriorityDescending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnPriorityDescending.Location = new System.Drawing.Point(15, 224);
+            this.btnPriorityDescending.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPriorityDescending.Name = "btnPriorityDescending";
+            this.btnPriorityDescending.Size = new System.Drawing.Size(170, 42);
+            this.btnPriorityDescending.TabIndex = 29;
+            this.btnPriorityDescending.Text = "Priority Descending";
+            this.btnPriorityDescending.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // btnPriorityAscending
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 29);
-            this.textBox1.TabIndex = 30;
+            this.btnPriorityAscending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnPriorityAscending.FlatAppearance.BorderSize = 0;
+            this.btnPriorityAscending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriorityAscending.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnPriorityAscending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnPriorityAscending.Location = new System.Drawing.Point(15, 168);
+            this.btnPriorityAscending.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPriorityAscending.Name = "btnPriorityAscending";
+            this.btnPriorityAscending.Size = new System.Drawing.Size(170, 42);
+            this.btnPriorityAscending.TabIndex = 29;
+            this.btnPriorityAscending.Text = "Priority Ascending";
+            this.btnPriorityAscending.UseVisualStyleBackColor = false;
             // 
-            // lblJobID
+            // btnTechnicianID
             // 
-            this.lblJobID.AutoSize = true;
-            this.lblJobID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblJobID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblJobID.Location = new System.Drawing.Point(11, 40);
-            this.lblJobID.Name = "lblJobID";
-            this.lblJobID.Size = new System.Drawing.Size(62, 21);
-            this.lblJobID.TabIndex = 23;
-            this.lblJobID.Text = "Job ID:";
+            this.btnTechnicianID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnTechnicianID.FlatAppearance.BorderSize = 0;
+            this.btnTechnicianID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnTechnicianID.Location = new System.Drawing.Point(15, 108);
+            this.btnTechnicianID.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTechnicianID.Name = "btnTechnicianID";
+            this.btnTechnicianID.Size = new System.Drawing.Size(170, 42);
+            this.btnTechnicianID.TabIndex = 29;
+            this.btnTechnicianID.Text = "Technician ID";
+            this.btnTechnicianID.UseVisualStyleBackColor = false;
+            // 
+            // lblJobs
+            // 
+            this.lblJobs.AutoSize = true;
+            this.lblJobs.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblJobs.Location = new System.Drawing.Point(192, 21);
+            this.lblJobs.Name = "lblJobs";
+            this.lblJobs.Size = new System.Drawing.Size(75, 37);
+            this.lblJobs.TabIndex = 15;
+            this.lblJobs.Text = "Jobs";
+            // 
+            // dgvJobs
+            // 
+            this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobs.Location = new System.Drawing.Point(199, 132);
+            this.dgvJobs.Name = "dgvJobs";
+            this.dgvJobs.Size = new System.Drawing.Size(537, 336);
+            this.dgvJobs.TabIndex = 22;
             // 
             // gbServiceManagement
             // 
@@ -439,6 +464,7 @@
             this.btnEscalateJob.TabIndex = 29;
             this.btnEscalateJob.Text = "Escalate";
             this.btnEscalateJob.UseVisualStyleBackColor = false;
+            this.btnEscalateJob.Click += new System.EventHandler(this.btnEscalateJob_Click);
             // 
             // pnlNav
             // 
@@ -448,31 +474,6 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 32;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnServices
-            // 
-            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServices.FlatAppearance.BorderSize = 0;
-            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnServices.Location = new System.Drawing.Point(0, 468);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(186, 42);
-            this.btnServices.TabIndex = 6;
-            this.btnServices.Text = "Services";
-            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnServices.UseVisualStyleBackColor = true;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
-            // 
             // Jobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,7 +482,7 @@
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.gbServiceManagement);
-            this.Controls.Add(this.dgvTechnicians);
+            this.Controls.Add(this.dgvJobs);
             this.Controls.Add(this.lblJobs);
             this.Controls.Add(this.gbSearchJob);
             this.Controls.Add(this.pnlSidebar);
@@ -495,7 +496,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
             this.gbSearchJob.ResumeLayout(false);
             this.gbSearchJob.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTechnicians)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
             this.gbServiceManagement.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -526,7 +527,7 @@
         private System.Windows.Forms.Button btnTechnicianID;
         private System.Windows.Forms.Label lblJobID;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dgvTechnicians;
+        private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.GroupBox gbServiceManagement;
         private System.Windows.Forms.Button btnCloseJob;
         private System.Windows.Forms.Button btnEscalateJob;
