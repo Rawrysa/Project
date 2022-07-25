@@ -44,6 +44,7 @@
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.lblDashoard = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -280,12 +281,24 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 2;
             // 
+            // lblDashoard
+            // 
+            this.lblDashoard.AutoSize = true;
+            this.lblDashoard.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblDashoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblDashoard.Location = new System.Drawing.Point(192, 21);
+            this.lblDashoard.Name = "lblDashoard";
+            this.lblDashoard.Size = new System.Drawing.Size(157, 37);
+            this.lblDashoard.TabIndex = 14;
+            this.lblDashoard.Text = "Dashboard";
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.lblDashoard);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -298,6 +311,7 @@
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,5 +332,6 @@
         private System.Windows.Forms.Button btnTechnicians;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Label lblDashoard;
     }
 }

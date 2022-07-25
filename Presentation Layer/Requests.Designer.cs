@@ -83,9 +83,9 @@
             // dgvRequests
             // 
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRequests.Location = new System.Drawing.Point(222, 87);
+            this.dgvRequests.Location = new System.Drawing.Point(199, 87);
             this.dgvRequests.Name = "dgvRequests";
-            this.dgvRequests.Size = new System.Drawing.Size(472, 285);
+            this.dgvRequests.Size = new System.Drawing.Size(495, 381);
             this.dgvRequests.TabIndex = 3;
             // 
             // panel1
@@ -95,9 +95,9 @@
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnBefore);
             this.panel1.Controls.Add(this.btnFirst);
-            this.panel1.Location = new System.Drawing.Point(225, 426);
+            this.panel1.Location = new System.Drawing.Point(199, 493);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 69);
+            this.panel1.Size = new System.Drawing.Size(495, 69);
             this.panel1.TabIndex = 6;
             // 
             // btnLast
@@ -398,7 +398,7 @@
             // 
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnMenu.Location = new System.Drawing.Point(813, 436);
+            this.btnMenu.Location = new System.Drawing.Point(813, 512);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(108, 50);
             this.btnMenu.TabIndex = 11;
@@ -411,7 +411,7 @@
             this.lblRequestsTitle.AutoSize = true;
             this.lblRequestsTitle.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblRequestsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblRequestsTitle.Location = new System.Drawing.Point(218, 21);
+            this.lblRequestsTitle.Location = new System.Drawing.Point(192, 21);
             this.lblRequestsTitle.Name = "lblRequestsTitle";
             this.lblRequestsTitle.Size = new System.Drawing.Size(132, 37);
             this.lblRequestsTitle.TabIndex = 13;

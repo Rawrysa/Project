@@ -31,12 +31,6 @@ namespace Project.PresentationLayer
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
-        private void btnJobs_Click(object sender, EventArgs e)
-        {
-            new Jobs().Show();
-            this.Hide();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
