@@ -32,12 +32,13 @@
             this.dgrViewServices = new System.Windows.Forms.DataGridView();
             this.BtnExit = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrViewServices)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnViewServices
             // 
-            this.BtnViewServices.Location = new System.Drawing.Point(114, 350);
+            this.BtnViewServices.Location = new System.Drawing.Point(370, 563);
             this.BtnViewServices.Name = "BtnViewServices";
             this.BtnViewServices.Size = new System.Drawing.Size(169, 41);
             this.BtnViewServices.TabIndex = 0;
@@ -48,16 +49,16 @@
             // dgrViewServices
             // 
             this.dgrViewServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrViewServices.Location = new System.Drawing.Point(62, 29);
+            this.dgrViewServices.Location = new System.Drawing.Point(261, 74);
             this.dgrViewServices.Name = "dgrViewServices";
             this.dgrViewServices.RowHeadersWidth = 51;
             this.dgrViewServices.RowTemplate.Height = 24;
-            this.dgrViewServices.Size = new System.Drawing.Size(697, 264);
+            this.dgrViewServices.Size = new System.Drawing.Size(860, 462);
             this.dgrViewServices.TabIndex = 1;
             // 
             // BtnExit
             // 
-            this.BtnExit.Location = new System.Drawing.Point(563, 350);
+            this.BtnExit.Location = new System.Drawing.Point(870, 563);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(147, 41);
             this.BtnExit.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(334, 350);
+            this.btnBack.Location = new System.Drawing.Point(632, 563);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(158, 41);
             this.btnBack.TabIndex = 3;
@@ -75,19 +76,32 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(274, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "SERVICES";
+            // 
             // FrmViewServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 429);
+            this.ClientSize = new System.Drawing.Size(1354, 648);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.dgrViewServices);
             this.Controls.Add(this.BtnViewServices);
             this.Name = "FrmViewServices";
             this.Text = "ViewServices";
+            this.Load += new System.EventHandler(this.FrmViewServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrViewServices)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -97,5 +111,6 @@
         private System.Windows.Forms.DataGridView dgrViewServices;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label1;
     }
 }

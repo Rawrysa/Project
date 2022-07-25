@@ -31,5 +31,10 @@ namespace Project.PresentationLayer
         {
 
         }
+
+        private void FrmViewServices_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
