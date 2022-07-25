@@ -124,6 +124,9 @@
     <Compile Include="Business Layer\Service.cs" />
     <Compile Include="Business Layer\ServiceRequest.cs" />
     <Compile Include="Business Layer\Technician.cs" />
+    <EmbeddedResource Include="Presentation Layer\Agents.resx">
+      <DependentUpon>Agents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Calls.resx">
       <DependentUpon>Calls.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +139,9 @@
     <EmbeddedResource Include="Presentation Layer\Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Jobs.resx">
+      <DependentUpon>Jobs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Technicians.resx">
+      <DependentUpon>Technicians.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

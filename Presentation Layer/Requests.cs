@@ -118,5 +118,10 @@ namespace Project.PresentationLayer
             new SplashScreen().Show();
             this.Hide();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
