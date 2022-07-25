@@ -29,9 +29,10 @@ namespace Project.PresentationLayer
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            pnlNav.Height = 0;
-            pnlNav.Top = 0;
-            pnlNav.Left = 0;
+            pnlNav.Height = btnAgents.Height;
+            pnlNav.Top = btnAgents.Top;
+            pnlNav.Left = btnAgents.Left;
+            btnAgents.BackColor = Color.FromArgb(46, 51, 73);
             //lblLoginUsername.Text = username;
         }
 

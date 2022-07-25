@@ -68,49 +68,49 @@ namespace Project.PresentationLayer
 
         private void btnCalls_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Calls().Show();
             this.Hide();
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Clients().Show();
             this.Hide();
         }
 
         private void btnContracts_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Contracts().Show();
             this.Hide();
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Employees().Show();
             this.Hide();
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Jobs().Show();
             this.Hide();
         }
 
         private void btnRequests_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Requests().Show();
             this.Hide();
         }
 
         private void btnTechnicians_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Technicians().Show();
             this.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            new Agents().Show();
+            new Login().Show();
             this.Hide();
         }
     }
