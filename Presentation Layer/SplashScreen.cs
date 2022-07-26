@@ -26,11 +26,6 @@ namespace Project.PresentationLayer
             int nHeightWllipse
         );
 
-        public SplashScreen()
-        {
-            InitializeComponent();
-        }
-
         public SplashScreen(string username)
         {
             InitializeComponent();
@@ -87,17 +82,6 @@ namespace Project.PresentationLayer
             btnContracts.BackColor = Color.FromArgb(46, 51, 73);
 
             new Contracts().Show();
-            this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            pnlNav.Height = btnEmployees.Height;
-            pnlNav.Top = btnEmployees.Top;
-            pnlNav.Left = btnEmployees.Left;
-            btnEmployees.BackColor = Color.FromArgb(46, 51, 73);
-
-            new Employees().Show();
             this.Hide();
         }
 
@@ -161,11 +145,6 @@ namespace Project.PresentationLayer
         private void btnContracts_Leave(object sender, EventArgs e)
         {
             btnContracts.BackColor = Color.FromArgb(41, 50, 65);
-        }
-
-        private void btnEmployees_Leave(object sender, EventArgs e)
-        {
-            btnEmployees.BackColor = Color.FromArgb(41, 50, 65);
         }
 
         private void btnJobs_Leave(object sender, EventArgs e)

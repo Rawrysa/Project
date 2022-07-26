@@ -11,12 +11,12 @@ namespace Project.BusinessLayer
         public string username { get; set; }
         public string password { get; set; }
 
-        private List<object> myusers = new List<object>();
+        static List<object> myusers = new List<object>();
 
-       public Logins()
+        public void Populate()
         {
             Logins user1 = new Logins(); user1.username = "test"; user1.password = "password";
-            Logins user2 = new Logins(); user1.username = "admin"; user1.password = "password";
+            Logins user2 = new Logins(); user2.username = "admin"; user2.password = "password";
 
             myusers.Add(user1);
             myusers.Add(user2);

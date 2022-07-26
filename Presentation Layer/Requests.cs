@@ -30,9 +30,10 @@ namespace Project.PresentationLayer
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            pnlNav.Height = 0;
-            pnlNav.Top = 0;
-            pnlNav.Left = 0;
+            pnlNav.Height = btnRequests.Height;
+            pnlNav.Top = btnRequests.Top;
+            pnlNav.Left = btnRequests.Left;
+            btnRequests.BackColor = Color.FromArgb(46, 51, 73);
             //lblLoginUsername.Text = username;
 
             Text = "Service Requests";
@@ -131,12 +132,6 @@ namespace Project.PresentationLayer
             }
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            new SplashScreen().Show();
-            this.Hide();
-        }
-
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -163,12 +158,6 @@ namespace Project.PresentationLayer
         private void btnContracts_Click(object sender, EventArgs e)
         {
             new Contracts().Show();
-            this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            new Employees().Show();
             this.Hide();
         }
 

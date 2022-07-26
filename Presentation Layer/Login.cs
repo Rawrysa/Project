@@ -30,6 +30,8 @@ namespace Project.PresentationLayer
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            
+            new Logins().Populate();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -37,7 +39,6 @@ namespace Project.PresentationLayer
             try
             {
                 Logins logins = new Logins();
-
                 logins.username = txtUsername.Text;
                 logins.password = txtPassword.Text;
 

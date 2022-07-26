@@ -30,9 +30,10 @@ namespace Project.PresentationLayer
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            pnlNav.Height = 0;
-            pnlNav.Top = 0;
-            pnlNav.Left = 0;
+            pnlNav.Height = btnJobs.Height;
+            pnlNav.Top = btnJobs.Top;
+            pnlNav.Left = btnJobs.Left;
+            btnJobs.BackColor = Color.FromArgb(46, 51, 73);
             //lblLoginUsername.Text = username;
 
             dgvJobs.DataSource = new Job().ViewJobs();
@@ -64,12 +65,6 @@ namespace Project.PresentationLayer
         private void btnContracts_Click(object sender, EventArgs e)
         {
             new Contracts().Show();
-            this.Hide();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            new Employees().Show();
             this.Hide();
         }
 

@@ -65,12 +65,6 @@ namespace Project.PresentationLayer
             this.Hide();
         }
 
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            new Employees().Show();
-            this.Hide();
-        }
-
         private void btnJobs_Click(object sender, EventArgs e)
         {
             new Jobs().Show();

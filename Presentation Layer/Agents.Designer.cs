@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
             this.btnRequests = new System.Windows.Forms.Button();
             this.btnJobs = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
             this.btnContracts = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnCalls = new System.Windows.Forms.Button();
@@ -50,8 +51,6 @@
             this.btnSearchAgent = new System.Windows.Forms.Button();
             this.txtSearchAgent = new System.Windows.Forms.TextBox();
             this.pnlNav = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnServices = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -68,7 +67,6 @@
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
             this.pnlSidebar.Controls.Add(this.btnRequests);
             this.pnlSidebar.Controls.Add(this.btnJobs);
-            this.pnlSidebar.Controls.Add(this.btnEmployees);
             this.pnlSidebar.Controls.Add(this.btnContracts);
             this.pnlSidebar.Controls.Add(this.btnClients);
             this.pnlSidebar.Controls.Add(this.btnCalls);
@@ -80,6 +78,31 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 13;
+            // 
+            // btnServices
+            // 
+            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServices.FlatAppearance.BorderSize = 0;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnServices.Location = new System.Drawing.Point(0, 426);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(186, 42);
+            this.btnServices.TabIndex = 6;
+            this.btnServices.Text = "Services";
+            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnServices.UseVisualStyleBackColor = true;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 514);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(186, 3);
+            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -120,7 +143,7 @@
             this.btnTechnicians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTechnicians.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnTechnicians.Location = new System.Drawing.Point(0, 426);
+            this.btnTechnicians.Location = new System.Drawing.Point(0, 384);
             this.btnTechnicians.Name = "btnTechnicians";
             this.btnTechnicians.Size = new System.Drawing.Size(186, 42);
             this.btnTechnicians.TabIndex = 1;
@@ -136,7 +159,7 @@
             this.btnRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequests.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnRequests.Location = new System.Drawing.Point(0, 384);
+            this.btnRequests.Location = new System.Drawing.Point(0, 342);
             this.btnRequests.Name = "btnRequests";
             this.btnRequests.Size = new System.Drawing.Size(186, 42);
             this.btnRequests.TabIndex = 1;
@@ -152,7 +175,7 @@
             this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobs.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnJobs.Location = new System.Drawing.Point(0, 342);
+            this.btnJobs.Location = new System.Drawing.Point(0, 300);
             this.btnJobs.Name = "btnJobs";
             this.btnJobs.Size = new System.Drawing.Size(186, 42);
             this.btnJobs.TabIndex = 1;
@@ -160,22 +183,6 @@
             this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnJobs.UseVisualStyleBackColor = true;
             this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployees.FlatAppearance.BorderSize = 0;
-            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnEmployees.Location = new System.Drawing.Point(0, 300);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(186, 42);
-            this.btnEmployees.TabIndex = 1;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEmployees.UseVisualStyleBackColor = true;
-            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnContracts
             // 
@@ -344,31 +351,6 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 20;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnServices
-            // 
-            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServices.FlatAppearance.BorderSize = 0;
-            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnServices.Location = new System.Drawing.Point(0, 468);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(186, 42);
-            this.btnServices.TabIndex = 6;
-            this.btnServices.Text = "Services";
-            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnServices.UseVisualStyleBackColor = true;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
-            // 
             // Agents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,7 +387,6 @@
         private System.Windows.Forms.Button btnTechnicians;
         private System.Windows.Forms.Button btnRequests;
         private System.Windows.Forms.Button btnJobs;
-        private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnContracts;
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.Button btnCalls;
