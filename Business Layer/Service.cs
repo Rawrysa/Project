@@ -10,8 +10,8 @@ namespace Project.BusinessLayer
 {
     class Service
     {
-        private int service_id;
-        public int Service_ID { get; set; }
+        private string service_id;
+        public string Service_ID { get; set; }
 
         public DataTable ViewServices()
         {
@@ -20,7 +20,7 @@ namespace Project.BusinessLayer
 
         public DataTable ServiceLevel()
         {
-            return new DataHandler().ServiceLevel(Service_ID);
+            return new DataHandler().ServiceLevel(Convert.ToInt32(Service_ID));
         }
     }
 }

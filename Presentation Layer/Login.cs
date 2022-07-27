@@ -69,22 +69,6 @@ namespace Project.PresentationLayer
             txtUsername.Text = "";
         }
 
-        private void txtUsername_MouseLeave(object sender, EventArgs e)
-        {
-            if (txtUsername.Text == "")
-            {
-                txtUsername.Text = "Username";
-            }
-        }
-
-        private void txtPassword_MouseLeave(object sender, EventArgs e)
-        {
-            if (txtPassword.Text == "")
-            {
-                txtPassword.Text = "Password";
-            }
-        }
-
         private void txtPassword_MouseEnter(object sender, EventArgs e)
         {
             txtPassword.Text = "";

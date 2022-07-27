@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Contracts));
-            this.btnContractAvailability = new System.Windows.Forms.Button();
-            this.btnContractPerformance = new System.Windows.Forms.Button();
             this.dgrContracts = new System.Windows.Forms.DataGridView();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -49,33 +46,13 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblContracts = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnContractPerformance = new System.Windows.Forms.Button();
+            this.btnContractAvailability = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrContracts)).BeginInit();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnContractAvailability
-            // 
-            this.btnContractAvailability.Location = new System.Drawing.Point(412, 500);
-            this.btnContractAvailability.Margin = new System.Windows.Forms.Padding(2);
-            this.btnContractAvailability.Name = "btnContractAvailability";
-            this.btnContractAvailability.Size = new System.Drawing.Size(115, 33);
-            this.btnContractAvailability.TabIndex = 1;
-            this.btnContractAvailability.Text = "Contract Availability";
-            this.btnContractAvailability.UseVisualStyleBackColor = true;
-            this.btnContractAvailability.Click += new System.EventHandler(this.btnContractAvailability_Click);
-            // 
-            // btnContractPerformance
-            // 
-            this.btnContractPerformance.Location = new System.Drawing.Point(592, 500);
-            this.btnContractPerformance.Margin = new System.Windows.Forms.Padding(2);
-            this.btnContractPerformance.Name = "btnContractPerformance";
-            this.btnContractPerformance.Size = new System.Drawing.Size(126, 33);
-            this.btnContractPerformance.TabIndex = 2;
-            this.btnContractPerformance.Text = "Contract Performance";
-            this.btnContractPerformance.UseVisualStyleBackColor = true;
-            this.btnContractPerformance.Click += new System.EventHandler(this.btnContractPerformance_Click);
             // 
             // dgrContracts
             // 
@@ -92,7 +69,6 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.pnlSidebar.Controls.Add(this.btnServices);
-            this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
@@ -125,15 +101,6 @@
             this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnServices.UseVisualStyleBackColor = true;
             this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 480);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -297,7 +264,7 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(52, 87);
+            this.lblLoginUsername.Location = new System.Drawing.Point(56, 87);
             this.lblLoginUsername.Name = "lblLoginUsername";
             this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
@@ -306,7 +273,7 @@
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(55, 21);
+            this.pbLoginIcon.Location = new System.Drawing.Point(59, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,18 +299,50 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 15;
             // 
+            // btnContractPerformance
+            // 
+            this.btnContractPerformance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnContractPerformance.FlatAppearance.BorderSize = 0;
+            this.btnContractPerformance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContractPerformance.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnContractPerformance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnContractPerformance.Location = new System.Drawing.Point(561, 483);
+            this.btnContractPerformance.Margin = new System.Windows.Forms.Padding(2);
+            this.btnContractPerformance.Name = "btnContractPerformance";
+            this.btnContractPerformance.Size = new System.Drawing.Size(163, 42);
+            this.btnContractPerformance.TabIndex = 46;
+            this.btnContractPerformance.Text = "Contract Performance";
+            this.btnContractPerformance.UseVisualStyleBackColor = false;
+            this.btnContractPerformance.Click += new System.EventHandler(this.btnContractPerformance_Click_1);
+            // 
+            // btnContractAvailability
+            // 
+            this.btnContractAvailability.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnContractAvailability.FlatAppearance.BorderSize = 0;
+            this.btnContractAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContractAvailability.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnContractAvailability.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnContractAvailability.Location = new System.Drawing.Point(376, 483);
+            this.btnContractAvailability.Margin = new System.Windows.Forms.Padding(2);
+            this.btnContractAvailability.Name = "btnContractAvailability";
+            this.btnContractAvailability.Size = new System.Drawing.Size(163, 42);
+            this.btnContractAvailability.TabIndex = 45;
+            this.btnContractAvailability.Text = "Contract Availability";
+            this.btnContractAvailability.UseVisualStyleBackColor = false;
+            this.btnContractAvailability.Click += new System.EventHandler(this.btnContractAvailability_Click_1);
+            // 
             // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.btnContractPerformance);
+            this.Controls.Add(this.btnContractAvailability);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblContracts);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.dgrContracts);
-            this.Controls.Add(this.btnContractPerformance);
-            this.Controls.Add(this.btnContractAvailability);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Contracts";
@@ -360,8 +359,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnContractAvailability;
-        private System.Windows.Forms.Button btnContractPerformance;
         private System.Windows.Forms.DataGridView dgrContracts;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogOut;
@@ -378,7 +375,8 @@
         private System.Windows.Forms.PictureBox pbLoginIcon;
         private System.Windows.Forms.Label lblContracts;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnContractPerformance;
+        private System.Windows.Forms.Button btnContractAvailability;
     }
 }

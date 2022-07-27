@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Project.BusinessLayer
 {
@@ -12,11 +13,14 @@ namespace Project.BusinessLayer
         {
             bool notnull = true;
 
-            foreach (var item in thisobject.GetType().GetProperties())
+            foreach (PropertyInfo item in thisobject.GetType().GetProperties())
             {
-                if (item.GetValue(item, null).ToString() == "")
+                if (item.GetValue(thisobject, null) != null)
                 {
-                    notnull = false;
+                    if (String.IsNullOrEmpty(item.GetValue(thisobject, null).ToString()))
+                    {
+                        notnull = false;
+                    }
                 }
             }
 

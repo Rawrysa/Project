@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jobs));
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -58,7 +57,7 @@
             this.btnTrackJob = new System.Windows.Forms.Button();
             this.btnReassignJob = new System.Windows.Forms.Button();
             this.btnAddJob = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchJob = new System.Windows.Forms.TextBox();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -69,7 +68,6 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.pnlSidebar.Controls.Add(this.btnServices);
-            this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
@@ -103,15 +101,6 @@
             this.btnServices.UseVisualStyleBackColor = true;
             this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
-            // 
             // btnLogOut
             // 
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -119,9 +108,9 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 517);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 483);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(186, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 47);
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -135,9 +124,9 @@
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnQuit.Location = new System.Drawing.Point(0, 547);
+            this.btnQuit.Location = new System.Drawing.Point(0, 530);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(186, 30);
+            this.btnQuit.Size = new System.Drawing.Size(186, 47);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -274,7 +263,7 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(25, 87);
+            this.lblLoginUsername.Location = new System.Drawing.Point(56, 95);
             this.lblLoginUsername.Name = "lblLoginUsername";
             this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
@@ -283,7 +272,7 @@
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(28, 21);
+            this.pbLoginIcon.Location = new System.Drawing.Point(59, 29);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -308,7 +297,7 @@
             this.dgvJobs.Name = "dgvJobs";
             this.dgvJobs.Size = new System.Drawing.Size(530, 336);
             this.dgvJobs.TabIndex = 22;
-            this.dgvJobs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
+            this.dgvJobs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
             // 
             // pnlNav
             // 
@@ -452,12 +441,12 @@
             this.btnAddJob.UseVisualStyleBackColor = false;
             this.btnAddJob.Click += new System.EventHandler(this.btnAddJob_Click);
             // 
-            // textBox1
+            // txtSearchJob
             // 
-            this.textBox1.Location = new System.Drawing.Point(574, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 42;
+            this.txtSearchJob.Location = new System.Drawing.Point(574, 72);
+            this.txtSearchJob.Name = "txtSearchJob";
+            this.txtSearchJob.Size = new System.Drawing.Size(170, 20);
+            this.txtSearchJob.TabIndex = 42;
             // 
             // Jobs
             // 
@@ -465,7 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchJob);
             this.Controls.Add(this.btnAddJob);
             this.Controls.Add(this.btnReassignJob);
             this.Controls.Add(this.btnTrackJob);
@@ -513,7 +502,6 @@
         private System.Windows.Forms.Label lblJobs;
         private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.Button btnEscalateJob;
         private System.Windows.Forms.Button btnCloseJob;
@@ -526,6 +514,6 @@
         private System.Windows.Forms.Button btnTrackJob;
         private System.Windows.Forms.Button btnReassignJob;
         private System.Windows.Forms.Button btnAddJob;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchJob;
     }
 }

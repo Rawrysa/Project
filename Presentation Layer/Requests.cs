@@ -34,9 +34,24 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnRequests.Top;
             pnlNav.Left = btnRequests.Left;
             btnRequests.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
 
-            Text = "Service Requests";
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dgvRequests.DataSource = new ServiceRequest().ViewRequests();
         }
@@ -104,14 +119,14 @@ namespace Project.PresentationLayer
                 Client client = new Client();
                 Service service = new Service();
 
-                client.Client_ID = Convert.ToInt32(txtClientID.Text);
-                service.Service_ID = Convert.ToInt32(txtServiceID.Text);
+                client.Client_ID = txtClientID.Text;
+                service.Service_ID = txtServiceID.Text;
 
                 if (Convert.ToInt32(client.ClientAgreement().Rows[0].ItemArray[0]) >= Convert.ToInt32(service.ServiceLevel().Rows[0].ItemArray[0]))
                 {
                     ServiceRequest newrequest = new ServiceRequest();
-                    newrequest.Client_ID = Convert.ToInt32(txtClientID.Text);
-                    newrequest.Service_ID = Convert.ToInt32(txtServiceID.Text);
+                    newrequest.Client_ID = txtClientID.Text;
+                    newrequest.Service_ID = txtServiceID.Text;
 
                     newrequest.NewRequest();
                     dgvRequests.DataSource = newrequest.ViewRequests();
@@ -136,7 +151,7 @@ namespace Project.PresentationLayer
                 if (MessageBox.Show($"Are you sure you want to remove {dgvRequests.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
                     ServiceRequest newrequest = new ServiceRequest();
-                    newrequest.Request_ID = Convert.ToInt32(dgvRequests.CurrentRow.Cells[0].Value);
+                    newrequest.Request_ID = dgvRequests.CurrentRow.Cells[0].Value.ToString();
 
                     newrequest.RemoveRequest();
                     dgvRequests.DataSource = newrequest.ViewRequests();

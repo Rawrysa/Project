@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.btnServices);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
@@ -75,15 +73,6 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 4;
             // 
             // btnServices
             // 
@@ -108,9 +97,9 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 517);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 483);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(186, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 47);
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -124,9 +113,9 @@
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnQuit.Location = new System.Drawing.Point(0, 547);
+            this.btnQuit.Location = new System.Drawing.Point(0, 530);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(186, 30);
+            this.btnQuit.Size = new System.Drawing.Size(186, 47);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -270,7 +259,7 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(25, 87);
+            this.lblLoginUsername.Location = new System.Drawing.Point(52, 87);
             this.lblLoginUsername.Name = "lblLoginUsername";
             this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
@@ -279,7 +268,7 @@
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(28, 21);
+            this.pbLoginIcon.Location = new System.Drawing.Point(55, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -371,7 +360,6 @@
         private System.Windows.Forms.Label lblDashoard;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblPremierServiceSolutions;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
     }
 }

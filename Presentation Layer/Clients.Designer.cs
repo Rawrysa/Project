@@ -29,25 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClientAgreement = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -62,168 +45,35 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblClients = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblJobID = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtClientType = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtContractID = new System.Windows.Forms.TextBox();
+            this.btnSearchClient = new System.Windows.Forms.Button();
+            this.btnUpdateClient = new System.Windows.Forms.Button();
+            this.btnClientAgreement = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
+            this.txtSearchClient = new System.Windows.Forms.TextBox();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clientID,
-            this.name,
-            this.surname,
-            this.contractID,
-            this.Address,
-            this.phoneNumber,
-            this.clientType});
-            this.dataGridView1.Location = new System.Drawing.Point(192, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 336);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // clientID
-            // 
-            this.clientID.HeaderText = "Client ID";
-            this.clientID.MinimumWidth = 6;
-            this.clientID.Name = "clientID";
-            this.clientID.ReadOnly = true;
-            this.clientID.Width = 125;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.Width = 125;
-            // 
-            // surname
-            // 
-            this.surname.HeaderText = "Surname";
-            this.surname.MinimumWidth = 6;
-            this.surname.Name = "surname";
-            this.surname.Width = 125;
-            // 
-            // contractID
-            // 
-            this.contractID.HeaderText = "Contract ID";
-            this.contractID.MinimumWidth = 6;
-            this.contractID.Name = "contractID";
-            this.contractID.Width = 125;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.Width = 125;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.HeaderText = "Phone Number";
-            this.phoneNumber.MinimumWidth = 6;
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.Width = 125;
-            // 
-            // clientType
-            // 
-            this.clientType.HeaderText = "Client Type";
-            this.clientType.MinimumWidth = 6;
-            this.clientType.Name = "clientType";
-            this.clientType.Width = 125;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(802, 106);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(137, 20);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(737, 106);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(49, 13);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "Enter ID:";
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnSearch.Location = new System.Drawing.Point(3, 11);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(143, 42);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnClientAgreement);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Location = new System.Drawing.Point(192, 493);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 69);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnClientAgreement
-            // 
-            this.btnClientAgreement.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnClientAgreement.Location = new System.Drawing.Point(599, 11);
-            this.btnClientAgreement.Name = "btnClientAgreement";
-            this.btnClientAgreement.Size = new System.Drawing.Size(143, 42);
-            this.btnClientAgreement.TabIndex = 7;
-            this.btnClientAgreement.Text = "Client Agreement";
-            this.btnClientAgreement.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDelete.Location = new System.Drawing.Point(450, 11);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(143, 42);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(301, 11);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(143, 42);
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnAdd.Location = new System.Drawing.Point(152, 11);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(143, 42);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.pnlSidebar.Controls.Add(this.btnServices);
-            this.pnlSidebar.Controls.Add(this.panel2);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
@@ -257,15 +107,6 @@
             this.btnServices.UseVisualStyleBackColor = true;
             this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 514);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 3);
-            this.panel2.TabIndex = 5;
-            // 
             // btnLogOut
             // 
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -273,9 +114,9 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 517);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 483);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(186, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 47);
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -289,14 +130,13 @@
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnQuit.Location = new System.Drawing.Point(0, 547);
+            this.btnQuit.Location = new System.Drawing.Point(0, 530);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(186, 30);
+            this.btnQuit.Size = new System.Drawing.Size(186, 47);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnTechnicians
             // 
@@ -428,7 +268,7 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(25, 87);
+            this.lblLoginUsername.Location = new System.Drawing.Point(52, 87);
             this.lblLoginUsername.Name = "lblLoginUsername";
             this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
@@ -437,7 +277,7 @@
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(28, 21);
+            this.pbLoginIcon.Location = new System.Drawing.Point(55, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -449,7 +289,7 @@
             this.lblClients.AutoSize = true;
             this.lblClients.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblClients.Location = new System.Drawing.Point(192, 21);
+            this.lblClients.Location = new System.Drawing.Point(204, 36);
             this.lblClients.Name = "lblClients";
             this.lblClients.Size = new System.Drawing.Size(104, 37);
             this.lblClients.TabIndex = 14;
@@ -463,52 +303,253 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 15;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(211, 100);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(519, 368);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label3.Location = new System.Drawing.Point(749, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 21);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Surname:";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(753, 198);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(170, 20);
+            this.txtSurname.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label2.Location = new System.Drawing.Point(749, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 21);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Name:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(753, 141);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(170, 20);
+            this.txtName.TabIndex = 42;
+            // 
+            // lblJobID
+            // 
+            this.lblJobID.AutoSize = true;
+            this.lblJobID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblJobID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblJobID.Location = new System.Drawing.Point(749, 226);
+            this.lblJobID.Name = "lblJobID";
+            this.lblJobID.Size = new System.Drawing.Size(126, 21);
+            this.lblJobID.TabIndex = 39;
+            this.lblJobID.Text = "Phone Number";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(753, 255);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(170, 20);
+            this.txtPhoneNumber.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label1.Location = new System.Drawing.Point(749, 397);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 21);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Contract ID:";
+            // 
+            // txtClientType
+            // 
+            this.txtClientType.Location = new System.Drawing.Point(753, 369);
+            this.txtClientType.Name = "txtClientType";
+            this.txtClientType.Size = new System.Drawing.Size(170, 20);
+            this.txtClientType.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label4.Location = new System.Drawing.Point(749, 283);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 21);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Address:";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(753, 312);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(170, 20);
+            this.txtAddress.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label5.Location = new System.Drawing.Point(749, 340);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 21);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Client Type:";
+            // 
+            // txtContractID
+            // 
+            this.txtContractID.Location = new System.Drawing.Point(753, 426);
+            this.txtContractID.Name = "txtContractID";
+            this.txtContractID.Size = new System.Drawing.Size(170, 20);
+            this.txtContractID.TabIndex = 46;
+            // 
+            // btnSearchClient
+            // 
+            this.btnSearchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnSearchClient.FlatAppearance.BorderSize = 0;
+            this.btnSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSearchClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnSearchClient.Location = new System.Drawing.Point(762, 36);
+            this.btnSearchClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearchClient.Name = "btnSearchClient";
+            this.btnSearchClient.Size = new System.Drawing.Size(143, 48);
+            this.btnSearchClient.TabIndex = 51;
+            this.btnSearchClient.Text = "Search Client";
+            this.btnSearchClient.UseVisualStyleBackColor = false;
+            this.btnSearchClient.Click += new System.EventHandler(this.btnSearchClient_Click);
+            // 
+            // btnUpdateClient
+            // 
+            this.btnUpdateClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnUpdateClient.FlatAppearance.BorderSize = 0;
+            this.btnUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnUpdateClient.Location = new System.Drawing.Point(358, 499);
+            this.btnUpdateClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateClient.Name = "btnUpdateClient";
+            this.btnUpdateClient.Size = new System.Drawing.Size(143, 48);
+            this.btnUpdateClient.TabIndex = 52;
+            this.btnUpdateClient.Text = "Update Client";
+            this.btnUpdateClient.UseVisualStyleBackColor = false;
+            this.btnUpdateClient.Click += new System.EventHandler(this.btnUpdateClient_Click);
+            // 
+            // btnClientAgreement
+            // 
+            this.btnClientAgreement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnClientAgreement.FlatAppearance.BorderSize = 0;
+            this.btnClientAgreement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientAgreement.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnClientAgreement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnClientAgreement.Location = new System.Drawing.Point(652, 499);
+            this.btnClientAgreement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClientAgreement.Name = "btnClientAgreement";
+            this.btnClientAgreement.Size = new System.Drawing.Size(143, 48);
+            this.btnClientAgreement.TabIndex = 53;
+            this.btnClientAgreement.Text = "Client Agreement";
+            this.btnClientAgreement.UseVisualStyleBackColor = false;
+            this.btnClientAgreement.Click += new System.EventHandler(this.btnClientAgreement_Click);
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnAddClient.FlatAppearance.BorderSize = 0;
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnAddClient.Location = new System.Drawing.Point(211, 499);
+            this.btnAddClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(143, 48);
+            this.btnAddClient.TabIndex = 54;
+            this.btnAddClient.Text = "Add Client";
+            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // btnDeleteClient
+            // 
+            this.btnDeleteClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnDeleteClient.FlatAppearance.BorderSize = 0;
+            this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnDeleteClient.Location = new System.Drawing.Point(505, 499);
+            this.btnDeleteClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(143, 48);
+            this.btnDeleteClient.TabIndex = 55;
+            this.btnDeleteClient.Text = "Delete Client";
+            this.btnDeleteClient.UseVisualStyleBackColor = false;
+            this.btnDeleteClient.Click += new System.EventHandler(this.btnDeleteClient_Click);
+            // 
+            // txtSearchClient
+            // 
+            this.txtSearchClient.Location = new System.Drawing.Point(560, 52);
+            this.txtSearchClient.Name = "txtSearchClient";
+            this.txtSearchClient.Size = new System.Drawing.Size(170, 20);
+            this.txtSearchClient.TabIndex = 56;
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.txtSearchClient);
+            this.Controls.Add(this.btnDeleteClient);
+            this.Controls.Add(this.btnAddClient);
+            this.Controls.Add(this.btnClientAgreement);
+            this.Controls.Add(this.btnUpdateClient);
+            this.Controls.Add(this.btnSearchClient);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtClientType);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtContractID);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblJobID);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblClients);
             this.Controls.Add(this.pnlSidebar);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clients";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contractID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientType;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClientAgreement;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnQuit;
@@ -524,7 +565,25 @@
         private System.Windows.Forms.PictureBox pbLoginIcon;
         private System.Windows.Forms.Label lblClients;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblJobID;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtClientType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtContractID;
+        private System.Windows.Forms.Button btnSearchClient;
+        private System.Windows.Forms.Button btnUpdateClient;
+        private System.Windows.Forms.Button btnClientAgreement;
+        private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button btnDeleteClient;
+        private System.Windows.Forms.TextBox txtSearchClient;
     }
 }

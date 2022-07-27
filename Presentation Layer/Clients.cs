@@ -34,19 +34,26 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnClients.Top;
             pnlNav.Left = btnClients.Left;
             btnClients.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dataGridView1.DataSource = new Client().ViewClients();
-        }
-
-        private void btnViewClients_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
         }
 
         private void btnAgents_Click(object sender, EventArgs e)
@@ -103,12 +110,12 @@ namespace Project.PresentationLayer
             this.Hide();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearchClient_Click(object sender, EventArgs e)
         {
             try
             {
                 Client client = new Client();
-                client.Client_ID = Convert.ToInt32(txtSearch.Text);
+                client.Client_ID = txtSearchClient.Text;
 
                 if (new Validator().NotNull(client))
                 {
@@ -122,6 +129,127 @@ namespace Project.PresentationLayer
             catch
             {
                 MessageBox.Show("Failed to find client", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = new Client();
+                Contract contract = new Contract();
+
+                client.Name = txtName.Text;
+                client.Surname = txtSurname.Text;
+                client.Phonenumber = txtPhoneNumber.Text;
+                client.Address = txtAddress.Text;
+                client.Client_Type = txtClientType.Text;
+                client.Contract_ID = txtContractID.Text;
+
+                contract.Contract_ID = txtContractID.Text;
+
+                if (new Validator().NotNull(client))
+                {
+                    client.AddClient();
+                    contract.ContractSale();
+
+                    dataGridView1.DataSource = client.ViewClients();
+
+                    MessageBox.Show("Client added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to add client", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = new Client();
+                client.Client_ID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+                if (MessageBox.Show($"Are you sure you want to close {dataGridView1.CurrentRow.Cells[1].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
+                {
+                    client.DeleteClient();
+
+                    dataGridView1.DataSource = client.ViewClients();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to delete client", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtSurname.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtPhoneNumber.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtAddress.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtClientType.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtContractID.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void btnUpdateClient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = new Client();
+                Contract contract = new Contract();
+
+                client.Client_ID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                client.Name = txtName.Text;
+                client.Surname = txtSurname.Text;
+                client.Phonenumber = txtPhoneNumber.Text;
+                client.Address = txtAddress.Text;
+                client.Client_Type = txtClientType.Text;
+                client.Contract_ID = txtContractID.Text;
+
+                if (new Validator().NotNull(client))
+                {
+                    if (dataGridView1.CurrentRow.Cells[6].Value.ToString() != txtContractID.Text)
+                    {
+                        contract.Contract_ID = txtContractID.Text;
+                        contract.ContractSale();
+                    }
+
+                    client.UpdateClient();
+
+                    dataGridView1.DataSource = client.ViewClients();
+
+                    MessageBox.Show("Client updated successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to update client", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClientAgreement_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = new Client();
+                client.Client_ID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+                new Contracts(client.ClientAgreement()).Show();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to find client agreement", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

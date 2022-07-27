@@ -16,19 +16,19 @@ namespace Project.BusinessLayer
             return new DataHandler().ViewAgents();
         }
 
-        public void AddTechnician()
+        public void AddAgent()
         {
-            new DataHandler().AddAgent(Name, Surname, PhoneNumber, Employee_ID);
+            new DataHandler().AddAgent(Name, Surname, PhoneNumber, Convert.ToInt32(Employee_ID));
         }
 
-        public DataTable SearchTechnician()
+        public DataTable SearchAgent()
         {
-            return new DataHandler().SearchAgent(Employee_ID);
+            return new DataHandler().SearchAgent(Convert.ToInt32(Employee_ID));
         }
 
-        public void UpdateTechnician()
+        public void UpdateAgent()
         {
-            new DataHandler().UpdateAgent(Name, Surname, PhoneNumber, Employee_ID);
+            new DataHandler().UpdateAgent(Name, Surname, PhoneNumber, Convert.ToInt32(Employee_ID));
         }
     }
 }

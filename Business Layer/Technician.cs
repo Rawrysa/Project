@@ -22,22 +22,22 @@ namespace Project.BusinessLayer
 
         public void AddTechnician()
         {
-            new DataHandler().AddTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
+            new DataHandler().AddTechnician(Name, Surname, PhoneNumber, Job_Description, Convert.ToInt32(Employee_ID));
         }
 
         public DataTable SearchTechnician()
         {
-            return new DataHandler().SearchTechnician(Employee_ID);
+            return new DataHandler().SearchTechnician(Convert.ToInt32(Employee_ID));
         }
 
         public void UpdateTechnician()
         {
-            new DataHandler().UpdateTechnician(Name, Surname, PhoneNumber, Job_Description, Employee_ID);
+            new DataHandler().UpdateTechnician(Name, Surname, PhoneNumber, Job_Description, Convert.ToInt32(Employee_ID));
         }
 
         public void TechnicianAvailability()
         {
-            new DataHandler().TechnicianAvailability(Employee_ID, Availability);
+            new DataHandler().TechnicianAvailability(Convert.ToInt32(Employee_ID), Availability);
         }
     }
 }

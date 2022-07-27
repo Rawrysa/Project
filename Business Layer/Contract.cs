@@ -10,8 +10,8 @@ namespace Project.BusinessLayer
 {
     class Contract : Call
     {
-        private int contract_id;
-        public int Contract_ID { get; set; }
+        private string contract_id;
+        public string Contract_ID { get; set; }
         private string availability;
         public string Availability { get; set; }
 
@@ -22,12 +22,17 @@ namespace Project.BusinessLayer
 
         public void ContractAvailability()
         {
-            new DataHandler().ContractAvailability(Contract_ID, Availability);
+            new DataHandler().ContractAvailability(Convert.ToInt32(Contract_ID), Availability);
         }
 
         public DataTable ContractPerformance()
         {
-            return new DataHandler().ContractPerformance(Contract_ID);
+            return new DataHandler().ContractPerformance(Convert.ToInt32(Contract_ID));
+        }
+
+        public void ContractSale()
+        {
+            new DataHandler().ContractSale(Convert.ToInt32(Contract_ID));
         }
     }
 }

@@ -10,14 +10,14 @@ namespace Project.BusinessLayer
 {
     class Job
     {
-        private int job_id;
-        public int Job_ID { get; set; }
-        private int service_id;
-        public int Service_ID { get; set; }
-        private int client_id;
-        public int Client_ID { get; set; }
-        private int technician_id;
-        public int Technician_ID { get; set; }
+        private string job_id;
+        public string Job_ID { get; set; }
+        private string service_id;
+        public string Service_ID { get; set; }
+        private string client_id;
+        public string Client_ID { get; set; }
+        private string technician_id;
+        public string Technician_ID { get; set; }
         private string priority;
         public string Priority { get; set; }
 
@@ -29,27 +29,27 @@ namespace Project.BusinessLayer
 
         public void NewJob()
         {
-            new DataHandler().NewJob(Priority,Technician_ID,Client_ID,Service_ID);
+            new DataHandler().NewJob(Priority,Convert.ToInt32(Technician_ID),Convert.ToInt32(Client_ID),Convert.ToInt32(Service_ID));
         }
 
         public void CloseJob()
         {
-            new DataHandler().CloseJob(Job_ID);
+            new DataHandler().CloseJob(Convert.ToInt32(Job_ID));
         }
 
         public DataTable TrackJob()
         {
-            return new DataHandler().TrackJob(Job_ID);
+            return new DataHandler().TrackJob(Convert.ToInt32(Job_ID));
         }
 
         public void EscalateJob()
         {
-            new DataHandler().EscalateJob(Job_ID,Priority);
+            new DataHandler().EscalateJob(Convert.ToInt32(Job_ID),Priority);
         }
 
         public void ReassignJob()
         {
-            new DataHandler().ReassignJob(Job_ID,Technician_ID);
+            new DataHandler().ReassignJob(Convert.ToInt32(Job_ID),Convert.ToInt32(Technician_ID));
         }
     }
 }

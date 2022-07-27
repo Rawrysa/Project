@@ -10,12 +10,12 @@ namespace Project.BusinessLayer
 {
     class ServiceRequest
     {
-        private int request_id;
-        public int Request_ID { get; set; }
-        private int service_id;
-        public int Service_ID { get; set; }
-        private int client_id;
-        public int Client_ID { get; set; }
+        private string request_id;
+        public string Request_ID { get; set; }
+        private string service_id;
+        public string Service_ID { get; set; }
+        private string client_id;
+        public string Client_ID { get; set; }
 
         public DataTable ViewRequests()
         {
@@ -24,12 +24,12 @@ namespace Project.BusinessLayer
 
         public void NewRequest()
         {
-            new DataHandler().NewRequest(Client_ID,Service_ID);
+            new DataHandler().NewRequest(Convert.ToInt32(Client_ID),Convert.ToInt32(Service_ID));
         }
 
         public void RemoveRequest()
         {
-            new DataHandler().RemoveRequest(Request_ID);
+            new DataHandler().RemoveRequest(Convert.ToInt32(Request_ID));
         }
     }
 }

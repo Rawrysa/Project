@@ -34,7 +34,24 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnTechnicians.Top;
             pnlNav.Left = btnTechnicians.Left;
             btnTechnicians.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dgvTechnicians.DataSource = new Technician().ViewTechnicians();
         }
@@ -108,13 +125,13 @@ namespace Project.PresentationLayer
                 technician.Surname = txtSurname.Text;
                 technician.PhoneNumber = txtNumber.Text;
                 technician.Job_Description = txtDescription.Text;
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
-                technician.Branch = Convert.ToInt32(txtBranch.Text);
+                technician.Employee_ID = txtTechnicianID.Text;
+                technician.Branch = txtBranch.Text;
 
                 if (new Validator().NotNull(technician))
                 {
-                    technician.AddTechnician();
                     technician.AddEmployee();
+                    technician.AddTechnician();
 
                     dgvTechnicians.DataSource = technician.ViewTechnicians();
 
@@ -141,7 +158,7 @@ namespace Project.PresentationLayer
                 technician.Surname = txtSurname.Text;
                 technician.PhoneNumber = txtNumber.Text;
                 technician.Job_Description = txtDescription.Text;
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
+                technician.Employee_ID = txtTechnicianID.Text;
 
                 if (new Validator().NotNull(technician))
                 {
@@ -167,7 +184,7 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(dgvTechnicians.CurrentRow.Cells[5].Value);
+                technician.Employee_ID = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
 
                 if (MessageBox.Show($"Are you sure you want to remove {dgvTechnicians.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
@@ -187,10 +204,9 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(txtSearchTechnician.Text.ToString());
+                technician.Employee_ID = txtSearchTechnician.Text;
 
-                //ERROR
-                if (!String.IsNullOrEmpty(txtSearchTechnician.Text))
+                if (new Validator().NotNull(technician))
                 {
                     dgvTechnicians.DataSource = technician.SearchTechnician();
                 }
@@ -199,9 +215,9 @@ namespace Project.PresentationLayer
                     MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception f)
+            catch
             {
-                MessageBox.Show($"{f}", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Failed to search for technician", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -210,7 +226,7 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(dgvTechnicians.CurrentRow.Cells[5].Value);
+                technician.Employee_ID = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
 
                 if (MessageBox.Show($"Are you sure you want to change {dgvTechnicians.CurrentRow.Cells[0].Value}'s availability", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
@@ -236,21 +252,11 @@ namespace Project.PresentationLayer
 
         private void dgvTechnicians_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtName.Text = Convert.ToString(dgvTechnicians.CurrentRow.Cells[0].Value);
+            txtName.Text = dgvTechnicians.CurrentRow.Cells[0].Value.ToString();
             txtSurname.Text = dgvTechnicians.CurrentRow.Cells[1].Value.ToString();
             txtNumber.Text = dgvTechnicians.CurrentRow.Cells[2].Value.ToString();
             txtDescription.Text = dgvTechnicians.CurrentRow.Cells[3].Value.ToString();
             txtTechnicianID.Text = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
-        }
-
-        private void dgvTechnicians_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            txtName.Text = Convert.ToString(dgvTechnicians.CurrentRow.Cells[0].Value);
-            txtSurname.Text = dgvTechnicians.CurrentRow.Cells[1].Value.ToString();
-            txtNumber.Text = dgvTechnicians.CurrentRow.Cells[2].Value.ToString();
-            txtDescription.Text = dgvTechnicians.CurrentRow.Cells[3].Value.ToString();
-            txtTechnicianID.Text = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
-
         }
     }
 }

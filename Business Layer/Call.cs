@@ -18,8 +18,8 @@ namespace Project.BusinessLayer
         public string Client_Phonenumber { get; set; }
         private string client_problem;
         public string Client_Problem { get; set; }
-        private int client_id;
-        public int Client_ID { get; set; }
+        private string client_id;
+        public string Client_ID { get; set; }
 
         public DataTable ViewCalls()
         {
@@ -28,7 +28,7 @@ namespace Project.BusinessLayer
 
         public void NewCall()
         {
-            new DataHandler().NewCall(Call_Date,Call_Duration,Client_Phonenumber,Client_Problem,Client_ID);
+            new DataHandler().NewCall(Call_Date,Call_Duration,Client_Phonenumber,Client_Problem,Convert.ToInt32(Client_ID));
         }
     }
 }

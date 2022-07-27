@@ -34,7 +34,24 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnServices.Top;
             pnlNav.Left = btnServices.Left;
             btnServices.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dgrViewServices.DataSource = new Service().ViewServices();
         }

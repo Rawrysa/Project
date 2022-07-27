@@ -33,7 +33,24 @@ namespace Project.PresentationLayer
             pnlNav.Height = 0;
             pnlNav.Top = 0;
             pnlNav.Left = 0;
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
         }
 
         private void btnAgents_Click(object sender, EventArgs e)

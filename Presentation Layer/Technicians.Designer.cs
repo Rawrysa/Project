@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Technicians));
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -75,7 +74,6 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.pnlSidebar.Controls.Add(this.btnServices);
-            this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
@@ -89,9 +87,8 @@
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
-            this.pnlSidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(248, 710);
+            this.pnlSidebar.Size = new System.Drawing.Size(186, 577);
             this.pnlSidebar.TabIndex = 13;
             // 
             // btnServices
@@ -101,25 +98,14 @@
             this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServices.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnServices.Location = new System.Drawing.Point(0, 526);
-            this.btnServices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnServices.Location = new System.Drawing.Point(0, 426);
             this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(248, 52);
+            this.btnServices.Size = new System.Drawing.Size(186, 42);
             this.btnServices.TabIndex = 6;
             this.btnServices.Text = "Services";
             this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnServices.UseVisualStyleBackColor = true;
             this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 632);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 4);
-            this.panel1.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -128,10 +114,9 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 636);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 483);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(248, 37);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 47);
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -145,10 +130,9 @@
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnQuit.Location = new System.Drawing.Point(0, 673);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuit.Location = new System.Drawing.Point(0, 530);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(248, 37);
+            this.btnQuit.Size = new System.Drawing.Size(186, 47);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -162,10 +146,9 @@
             this.btnTechnicians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTechnicians.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnTechnicians.Location = new System.Drawing.Point(0, 474);
-            this.btnTechnicians.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTechnicians.Location = new System.Drawing.Point(0, 384);
             this.btnTechnicians.Name = "btnTechnicians";
-            this.btnTechnicians.Size = new System.Drawing.Size(248, 52);
+            this.btnTechnicians.Size = new System.Drawing.Size(186, 42);
             this.btnTechnicians.TabIndex = 1;
             this.btnTechnicians.Text = "Technicians";
             this.btnTechnicians.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -179,10 +162,9 @@
             this.btnRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequests.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnRequests.Location = new System.Drawing.Point(0, 422);
-            this.btnRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRequests.Location = new System.Drawing.Point(0, 342);
             this.btnRequests.Name = "btnRequests";
-            this.btnRequests.Size = new System.Drawing.Size(248, 52);
+            this.btnRequests.Size = new System.Drawing.Size(186, 42);
             this.btnRequests.TabIndex = 1;
             this.btnRequests.Text = "Requests";
             this.btnRequests.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -196,10 +178,9 @@
             this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobs.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnJobs.Location = new System.Drawing.Point(0, 370);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnJobs.Location = new System.Drawing.Point(0, 300);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(248, 52);
+            this.btnJobs.Size = new System.Drawing.Size(186, 42);
             this.btnJobs.TabIndex = 1;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -213,10 +194,9 @@
             this.btnContracts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContracts.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContracts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnContracts.Location = new System.Drawing.Point(0, 318);
-            this.btnContracts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContracts.Location = new System.Drawing.Point(0, 258);
             this.btnContracts.Name = "btnContracts";
-            this.btnContracts.Size = new System.Drawing.Size(248, 52);
+            this.btnContracts.Size = new System.Drawing.Size(186, 42);
             this.btnContracts.TabIndex = 1;
             this.btnContracts.Text = "Contracts";
             this.btnContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -230,10 +210,9 @@
             this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClients.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnClients.Location = new System.Drawing.Point(0, 266);
-            this.btnClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClients.Location = new System.Drawing.Point(0, 216);
             this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(248, 52);
+            this.btnClients.Size = new System.Drawing.Size(186, 42);
             this.btnClients.TabIndex = 1;
             this.btnClients.Text = "Clients";
             this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -247,10 +226,9 @@
             this.btnCalls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalls.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnCalls.Location = new System.Drawing.Point(0, 214);
-            this.btnCalls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalls.Location = new System.Drawing.Point(0, 174);
             this.btnCalls.Name = "btnCalls";
-            this.btnCalls.Size = new System.Drawing.Size(248, 52);
+            this.btnCalls.Size = new System.Drawing.Size(186, 42);
             this.btnCalls.TabIndex = 1;
             this.btnCalls.Text = "Calls";
             this.btnCalls.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -264,10 +242,9 @@
             this.btnAgents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgents.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAgents.Location = new System.Drawing.Point(0, 162);
-            this.btnAgents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgents.Location = new System.Drawing.Point(0, 132);
             this.btnAgents.Name = "btnAgents";
-            this.btnAgents.Size = new System.Drawing.Size(248, 52);
+            this.btnAgents.Size = new System.Drawing.Size(186, 42);
             this.btnAgents.TabIndex = 1;
             this.btnAgents.Text = "Agents";
             this.btnAgents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -280,9 +257,8 @@
             this.pnlLoginUser.Controls.Add(this.pbLoginIcon);
             this.pnlLoginUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLoginUser.Location = new System.Drawing.Point(0, 0);
-            this.pnlLoginUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLoginUser.Name = "pnlLoginUser";
-            this.pnlLoginUser.Size = new System.Drawing.Size(248, 162);
+            this.pnlLoginUser.Size = new System.Drawing.Size(186, 132);
             this.pnlLoginUser.TabIndex = 0;
             // 
             // lblLoginUsername
@@ -293,20 +269,18 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(33, 107);
-            this.lblLoginUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLoginUsername.Location = new System.Drawing.Point(56, 87);
             this.lblLoginUsername.Name = "lblLoginUsername";
-            this.lblLoginUsername.Size = new System.Drawing.Size(94, 20);
+            this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
             this.lblLoginUsername.Text = "Username";
             // 
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(37, 26);
-            this.pbLoginIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLoginIcon.Location = new System.Drawing.Point(59, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
-            this.pbLoginIcon.Size = new System.Drawing.Size(84, 78);
+            this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLoginIcon.TabIndex = 0;
             this.pbLoginIcon.TabStop = false;
@@ -316,19 +290,17 @@
             this.lblTechnicianID.AutoSize = true;
             this.lblTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblTechnicianID.Location = new System.Drawing.Point(1031, 149);
-            this.lblTechnicianID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTechnicianID.Location = new System.Drawing.Point(773, 121);
             this.lblTechnicianID.Name = "lblTechnicianID";
-            this.lblTechnicianID.Size = new System.Drawing.Size(144, 28);
+            this.lblTechnicianID.Size = new System.Drawing.Size(116, 21);
             this.lblTechnicianID.TabIndex = 26;
             this.lblTechnicianID.Text = "Technician ID:";
             // 
             // txtTechnicianID
             // 
-            this.txtTechnicianID.Location = new System.Drawing.Point(1036, 178);
-            this.txtTechnicianID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTechnicianID.Location = new System.Drawing.Point(777, 150);
             this.txtTechnicianID.Name = "txtTechnicianID";
-            this.txtTechnicianID.Size = new System.Drawing.Size(187, 22);
+            this.txtTechnicianID.Size = new System.Drawing.Size(141, 20);
             this.txtTechnicianID.TabIndex = 25;
             // 
             // btnSearchTechnician
@@ -338,10 +310,9 @@
             this.btnSearchTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnSearchTechnician.Location = new System.Drawing.Point(1036, 52);
-            this.btnSearchTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchTechnician.Location = new System.Drawing.Point(777, 42);
             this.btnSearchTechnician.Name = "btnSearchTechnician";
-            this.btnSearchTechnician.Size = new System.Drawing.Size(188, 52);
+            this.btnSearchTechnician.Size = new System.Drawing.Size(141, 42);
             this.btnSearchTechnician.TabIndex = 24;
             this.btnSearchTechnician.Text = "Search";
             this.btnSearchTechnician.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -351,24 +322,21 @@
             // dgvTechnicians
             // 
             this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTechnicians.Location = new System.Drawing.Point(281, 145);
-            this.dgvTechnicians.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTechnicians.Location = new System.Drawing.Point(211, 118);
             this.dgvTechnicians.Name = "dgvTechnicians";
             this.dgvTechnicians.RowHeadersWidth = 51;
-            this.dgvTechnicians.Size = new System.Drawing.Size(725, 431);
+            this.dgvTechnicians.Size = new System.Drawing.Size(544, 350);
             this.dgvTechnicians.TabIndex = 21;
-            this.dgvTechnicians.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellContentClick);
-            this.dgvTechnicians.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTechnicians_RowHeaderMouseClick);
+            this.dgvTechnicians.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellContentClick);
             // 
             // lblTechnicians
             // 
             this.lblTechnicians.AutoSize = true;
             this.lblTechnicians.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblTechnicians.Location = new System.Drawing.Point(272, 47);
-            this.lblTechnicians.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTechnicians.Location = new System.Drawing.Point(204, 38);
             this.lblTechnicians.Name = "lblTechnicians";
-            this.lblTechnicians.Size = new System.Drawing.Size(201, 46);
+            this.lblTechnicians.Size = new System.Drawing.Size(162, 37);
             this.lblTechnicians.TabIndex = 27;
             this.lblTechnicians.Text = "Technicians";
             // 
@@ -379,10 +347,10 @@
             this.btnDeleteTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnDeleteTechnician.Location = new System.Drawing.Point(772, 622);
-            this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteTechnician.Location = new System.Drawing.Point(583, 505);
+            this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTechnician.Name = "btnDeleteTechnician";
-            this.btnDeleteTechnician.Size = new System.Drawing.Size(217, 52);
+            this.btnDeleteTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnDeleteTechnician.TabIndex = 29;
             this.btnDeleteTechnician.Text = "Delete Technician";
             this.btnDeleteTechnician.UseVisualStyleBackColor = false;
@@ -395,10 +363,10 @@
             this.btnAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAddTechnician.Location = new System.Drawing.Point(265, 622);
-            this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddTechnician.Location = new System.Drawing.Point(199, 505);
+            this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTechnician.Name = "btnAddTechnician";
-            this.btnAddTechnician.Size = new System.Drawing.Size(217, 52);
+            this.btnAddTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnAddTechnician.TabIndex = 28;
             this.btnAddTechnician.Text = "Add Technician";
             this.btnAddTechnician.UseVisualStyleBackColor = false;
@@ -406,10 +374,9 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(1036, 246);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(777, 207);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(187, 22);
+            this.txtName.Size = new System.Drawing.Size(141, 20);
             this.txtName.TabIndex = 33;
             // 
             // lblName
@@ -417,19 +384,17 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblName.Location = new System.Drawing.Point(1031, 219);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(773, 178);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(73, 28);
+            this.lblName.Size = new System.Drawing.Size(60, 21);
             this.lblName.TabIndex = 32;
             this.lblName.Text = "Name:";
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(1036, 316);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Location = new System.Drawing.Point(777, 264);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(187, 22);
+            this.txtSurname.Size = new System.Drawing.Size(141, 20);
             this.txtSurname.TabIndex = 35;
             // 
             // lblSurname
@@ -437,19 +402,17 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblSurname.Location = new System.Drawing.Point(1031, 287);
-            this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSurname.Location = new System.Drawing.Point(773, 235);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(100, 28);
+            this.lblSurname.Size = new System.Drawing.Size(82, 21);
             this.lblSurname.TabIndex = 34;
             this.lblSurname.Text = "Surname:";
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(1036, 390);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumber.Location = new System.Drawing.Point(777, 321);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(187, 22);
+            this.txtNumber.Size = new System.Drawing.Size(141, 20);
             this.txtNumber.TabIndex = 37;
             // 
             // lblNumber
@@ -457,19 +420,17 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblNumber.Location = new System.Drawing.Point(1031, 361);
-            this.lblNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumber.Location = new System.Drawing.Point(773, 292);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(95, 28);
+            this.lblNumber.Size = new System.Drawing.Size(78, 21);
             this.lblNumber.TabIndex = 36;
             this.lblNumber.Text = "Number:";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(1036, 468);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Location = new System.Drawing.Point(777, 378);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(187, 22);
+            this.txtDescription.Size = new System.Drawing.Size(141, 20);
             this.txtDescription.TabIndex = 39;
             // 
             // lblDescription
@@ -477,20 +438,18 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDescription.Location = new System.Drawing.Point(1031, 438);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescription.Location = new System.Drawing.Point(773, 349);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(165, 28);
+            this.lblDescription.Size = new System.Drawing.Size(133, 21);
             this.lblDescription.TabIndex = 38;
             this.lblDescription.Text = "Job Description:";
             // 
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 123);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlNav.Location = new System.Drawing.Point(0, 100);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(4, 123);
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 40;
             // 
             // btnUpdateTechnician
@@ -500,10 +459,10 @@
             this.btnUpdateTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdateTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnUpdateTechnician.Location = new System.Drawing.Point(519, 622);
-            this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateTechnician.Location = new System.Drawing.Point(391, 505);
+            this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateTechnician.Name = "btnUpdateTechnician";
-            this.btnUpdateTechnician.Size = new System.Drawing.Size(217, 52);
+            this.btnUpdateTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnUpdateTechnician.TabIndex = 41;
             this.btnUpdateTechnician.Text = "Update Technician";
             this.btnUpdateTechnician.UseVisualStyleBackColor = false;
@@ -511,18 +470,16 @@
             // 
             // txtSearchTechnician
             // 
-            this.txtSearchTechnician.Location = new System.Drawing.Point(705, 68);
-            this.txtSearchTechnician.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchTechnician.Location = new System.Drawing.Point(529, 55);
             this.txtSearchTechnician.Name = "txtSearchTechnician";
-            this.txtSearchTechnician.Size = new System.Drawing.Size(300, 22);
+            this.txtSearchTechnician.Size = new System.Drawing.Size(226, 20);
             this.txtSearchTechnician.TabIndex = 42;
             // 
             // txtBranch
             // 
-            this.txtBranch.Location = new System.Drawing.Point(1036, 544);
-            this.txtBranch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBranch.Location = new System.Drawing.Point(777, 435);
             this.txtBranch.Name = "txtBranch";
-            this.txtBranch.Size = new System.Drawing.Size(187, 22);
+            this.txtBranch.Size = new System.Drawing.Size(141, 20);
             this.txtBranch.TabIndex = 44;
             // 
             // label1
@@ -530,10 +487,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(1031, 514);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(773, 406);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 28);
+            this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 43;
             this.label1.Text = "Branch:";
             // 
@@ -544,10 +500,10 @@
             this.btnAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAvailability.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAvailability.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAvailability.Location = new System.Drawing.Point(1036, 622);
-            this.btnAvailability.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAvailability.Location = new System.Drawing.Point(775, 505);
+            this.btnAvailability.Margin = new System.Windows.Forms.Padding(2);
             this.btnAvailability.Name = "btnAvailability";
-            this.btnAvailability.Size = new System.Drawing.Size(217, 52);
+            this.btnAvailability.Size = new System.Drawing.Size(163, 42);
             this.btnAvailability.TabIndex = 45;
             this.btnAvailability.Text = "Change Availability";
             this.btnAvailability.UseVisualStyleBackColor = false;
@@ -555,10 +511,10 @@
             // 
             // Technicians
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1268, 710);
+            this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.btnAvailability);
             this.Controls.Add(this.txtBranch);
             this.Controls.Add(this.label1);
@@ -582,7 +538,6 @@
             this.Controls.Add(this.dgvTechnicians);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Technicians";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Technicians";
@@ -627,7 +582,6 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.Button btnUpdateTechnician;
         private System.Windows.Forms.TextBox txtSearchTechnician;

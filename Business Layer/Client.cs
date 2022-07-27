@@ -10,14 +10,14 @@ namespace Project.BusinessLayer
 {
     class Client 
     {
-        private int client_id;
-        public int Client_ID { get; set; }
+        private string client_id;
+        public string Client_ID { get; set; }
         private string name;
         public  string Name { get; set; }
         private string surname;
         public string Surname { get; set; }
-        private int contract_id;
-        public int Contract_ID { get; set; }
+        private string contract_id;
+        public string Contract_ID { get; set; }
         private string address;
         public string Address { get; set; }
         private string phonenumber;
@@ -32,22 +32,27 @@ namespace Project.BusinessLayer
 
         public void AddClient()
         {
-            new DataHandler().AddClient(Name,Surname,Phonenumber,Address,Client_Type,Contract_ID);
+            new DataHandler().AddClient(Name,Surname,Phonenumber,Address,Client_Type,Convert.ToInt32(Contract_ID));
+        }
+
+        public void DeleteClient()
+        {
+            new DataHandler().DeleteClient(Convert.ToInt32(Client_ID));
         }
 
         public DataTable SearchClient()
         {
-            return new DataHandler().SearchClient(Client_ID);
+            return new DataHandler().SearchClient(Convert.ToInt32(Client_ID));
         }
 
-        public void UpdateTechnician()
+        public void UpdateClient()
         {
-            new DataHandler().UpdateClient(Client_ID,Name, Surname, Phonenumber, Address, Client_Type,Contract_ID);
+            new DataHandler().UpdateClient(Convert.ToInt32(Client_ID),Name, Surname, Phonenumber, Address, Client_Type,Convert.ToInt32(Contract_ID));
         }
 
         public DataTable ClientAgreement()
         {
-            return new DataHandler().ClientAgreement(Client_ID);
+            return new DataHandler().ClientAgreement(Convert.ToInt32(Client_ID));
         }
 
     }

@@ -78,8 +78,7 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
-            this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
+            this.txtPassword.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseEnter);
             // 
             // txtUsername
             // 
@@ -90,8 +89,7 @@
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Text = "Username";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsername.MouseEnter += new System.EventHandler(this.txtUsername_MouseEnter);
-            this.txtUsername.MouseLeave += new System.EventHandler(this.txtUsername_MouseLeave);
+            this.txtUsername.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseEnter);
             // 
             // pictureBox1
             // 

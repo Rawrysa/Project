@@ -34,52 +34,57 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnContracts.Top;
             pnlNav.Left = btnContracts.Left;
             btnContracts.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide(); btnContractAvailability.Hide(); btnContractPerformance.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dgrContracts.DataSource = new Contract().ViewContracts();
         }
 
-        private void btnContractAvailability_Click(object sender, EventArgs e)
+        public Contracts(DataTable clientagreement)
         {
-            try
-            {
-                Contract contract = new Contract();
-                contract.Contract_ID = Convert.ToInt32(dgrContracts.CurrentRow.Cells[0].Value);
+            InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            pnlNav.Height = btnContracts.Height;
+            pnlNav.Top = btnContracts.Top;
+            pnlNav.Left = btnContracts.Left;
+            btnContracts.BackColor = Color.FromArgb(46, 51, 73);
 
-                if (dgrContracts.CurrentRow.Cells[5].Value.ToString() != "Available")
-                {
-                    contract.Availability = "Available";
-                    contract.ContractAvailability();
-                }
-                else
-                {
-                    contract.Availability = "Unavailable";
-                    contract.ContractAvailability();
-                }
+            Logins credentials = new Logins().getcredentials();
 
-                dgrContracts.DataSource = contract.ViewContracts();
-            }
-            catch
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
             {
-                MessageBox.Show("Failed to change availability", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide(); btnContractAvailability.Hide(); btnContractPerformance.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
             }
+
+            dgrContracts.DataSource = clientagreement;
         }
-
-        private void btnContractPerformance_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Contract contract = new Contract();
-                contract.Contract_ID = Convert.ToInt32(dgrContracts.CurrentRow.Cells[0].Value);
-
-                MessageBox.Show($"This contract has {contract.ContractPerformance().Rows[0].ItemArray[0]} sales",null,MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show("Failed to retrieve contract information", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
@@ -138,6 +143,47 @@ namespace Project.PresentationLayer
         {
             new Services().Show();
             this.Hide();
+        }
+
+        private void btnContractAvailability_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Contract contract = new Contract();
+                contract.Contract_ID = dgrContracts.CurrentRow.Cells[0].Value.ToString();
+
+                if (dgrContracts.CurrentRow.Cells[5].Value.ToString() != "Available")
+                {
+                    contract.Availability = "Available";
+                    contract.ContractAvailability();
+                }
+                else
+                {
+                    contract.Availability = "Unavailable";
+                    contract.ContractAvailability();
+                }
+
+                dgrContracts.DataSource = contract.ViewContracts();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to change availability", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnContractPerformance_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Contract contract = new Contract();
+                contract.Contract_ID = dgrContracts.CurrentRow.Cells[0].Value.ToString();
+
+                MessageBox.Show($"This contract has {contract.ContractPerformance().Rows[0].ItemArray[0]} sales", null, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Failed to retrieve contract information", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

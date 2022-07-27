@@ -34,7 +34,25 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnCalls.Top;
             pnlNav.Left = btnCalls.Left;
             btnCalls.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    btnNewCall.Hide();
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    break;
+            }
 
             dataGridView1.DataSource = new Call().ViewCalls();
         }
@@ -113,13 +131,13 @@ namespace Project.PresentationLayer
                 call.Call_Duration = txtDuration.Text;
                 call.Client_Phonenumber = txtNumber.Text;
                 call.Client_Problem = txtProblem.Text;
-                call.Client_ID = Convert.ToInt32(txtClientID.Text);
+                call.Client_ID = txtClientID.Text;
 
                 if (new Validator().NotNull(call))
                 {
                     call.NewCall();
 
-                    dataGridView1.DataSource = new ServiceRequest().ViewRequests();
+                    dataGridView1.DataSource = call.ViewCalls();
 
                     MessageBox.Show("Call added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

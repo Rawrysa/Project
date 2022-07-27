@@ -11,7 +11,7 @@ namespace Project.DataLayer
 {
     class DataHandler
     {
-        private SqlConnection connection = new SqlConnection(@"Server= DESKTOP-M3T2E17\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
+        private SqlConnection connection = new SqlConnection(@"Server= LAPTOP-MSQIEH6G\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
 
         public DataTable ViewCalls()
         {
@@ -444,6 +444,23 @@ namespace Project.DataLayer
             }
 
             return table;
+        }
+
+        public void ContractSale(int contractid)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("spContractSale", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ContractID", contractid);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void AddEmployee(int employeeid, int branchid)

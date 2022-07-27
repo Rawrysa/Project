@@ -34,7 +34,25 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnJobs.Top;
             pnlNav.Left = btnJobs.Left;
             btnJobs.BackColor = Color.FromArgb(46, 51, 73);
-            lblLoginUsername.Text = new Logins().Username;
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide(); btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide();
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide(); btnTrackJob.Hide(); txtSearchJob.Hide();
+                    break;
+            }
 
             dgvJobs.DataSource = new Job().ViewJobs();
         }
@@ -103,13 +121,15 @@ namespace Project.PresentationLayer
             try
             {
                 Job job = new Job();
-                job.Job_ID = Convert.ToInt32(dgvJobs.CurrentRow.Cells[0].Value);
+                job.Job_ID = dgvJobs.CurrentRow.Cells[0].Value.ToString();
 
                 if (MessageBox.Show($"Are you sure you want to escalate {dgvJobs.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
                     if (dgvJobs.CurrentRow.Cells[1].Value.ToString().ToLower() != "high")
                     {
                         job.Priority = "High";
+
+                        job.EscalateJob();
 
                         dgvJobs.DataSource = job.ViewJobs();
                     }
@@ -133,20 +153,24 @@ namespace Project.PresentationLayer
                 Client client = new Client();
                 Technician technician = new Technician();
 
-                client.Client_ID = Convert.ToInt32(txtClientID.Text);
+                client.Client_ID = txtClientID.Text;
 
                 job.Priority = client.ClientAgreement().Rows[0].ItemArray[2].ToString();
-                job.Technician_ID = Convert.ToInt32(txtTechnicianID.Text);
-                job.Client_ID = Convert.ToInt32(txtClientID.Text);
-                job.Service_ID = Convert.ToInt32(txtServiceID.Text);
+                job.Technician_ID = txtTechnicianID.Text;
+                job.Client_ID = txtClientID.Text;
+                job.Service_ID = txtServiceID.Text;
 
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
+                technician.Employee_ID = txtTechnicianID.Text;
 
                 if (new Validator().NotNull(job))
                 {
                     if (technician.SearchTechnician().Rows[0].ItemArray[4].ToString() == "Available")
                     {
                         job.NewJob();
+
+                        technician.Availability = "Unavailable";
+
+                        technician.TechnicianAvailability();
 
                         dgvJobs.DataSource = job.ViewJobs();
 
@@ -180,7 +204,7 @@ namespace Project.PresentationLayer
             try
             {
                 Job job = new Job();
-                job.Job_ID = Convert.ToInt32(dgvJobs.CurrentRow.Cells[0].Value);
+                job.Job_ID = dgvJobs.CurrentRow.Cells[0].Value.ToString();
 
                 if (MessageBox.Show($"Are you sure you want to close {dgvJobs.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
@@ -200,7 +224,7 @@ namespace Project.PresentationLayer
             try
             {
                 Job job = new Job();
-                job.Job_ID = Convert.ToInt32(dgvJobs.CurrentRow.Cells[0].Value);
+                job.Job_ID = txtSearchJob.Text;
 
                 if (new Validator().NotNull(job))
                 {
@@ -222,18 +246,20 @@ namespace Project.PresentationLayer
             try
             {
                 Job job = new Job();
-                job.Job_ID = Convert.ToInt32(dgvJobs.CurrentRow.Cells[0].Value);
+                job.Job_ID = dgvJobs.CurrentRow.Cells[0].Value.ToString();
 
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
+                technician.Employee_ID = txtTechnicianID.Text;
 
                 if (MessageBox.Show($"Are you sure you want to assign {txtTechnicianID.Text} to this job?", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
                     if (technician.SearchTechnician().Rows[0].ItemArray[4].ToString() == "Available")
                     {
-                        job.Technician_ID = Convert.ToInt32(txtTechnicianID.Text);
+                        job.Technician_ID = txtTechnicianID.Text;
 
                         job.ReassignJob();
+
+                        dgvJobs.DataSource = job.ViewJobs();
                     }
                     else
                     {

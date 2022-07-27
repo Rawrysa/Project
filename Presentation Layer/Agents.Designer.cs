@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnTechnicians = new System.Windows.Forms.Button();
@@ -46,11 +45,22 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAgents = new System.Windows.Forms.Label();
-            this.cbAvailableAgent = new System.Windows.Forms.CheckBox();
-            this.cbUnavailableAgents = new System.Windows.Forms.CheckBox();
             this.btnSearchAgent = new System.Windows.Forms.Button();
             this.txtSearchAgent = new System.Windows.Forms.TextBox();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnUpdateTechnician = new System.Windows.Forms.Button();
+            this.btnDeleteTechnician = new System.Windows.Forms.Button();
+            this.btnAddAgent = new System.Windows.Forms.Button();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblTechnicianID = new System.Windows.Forms.Label();
+            this.txtAgentID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBranch = new System.Windows.Forms.TextBox();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -61,7 +71,6 @@
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.pnlSidebar.Controls.Add(this.btnServices);
-            this.pnlSidebar.Controls.Add(this.panel1);
             this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnQuit);
             this.pnlSidebar.Controls.Add(this.btnTechnicians);
@@ -95,15 +104,6 @@
             this.btnServices.UseVisualStyleBackColor = true;
             this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(108)))), ((int)(((byte)(77)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 3);
-            this.panel1.TabIndex = 5;
-            // 
             // btnLogOut
             // 
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -111,9 +111,9 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnLogOut.Location = new System.Drawing.Point(0, 517);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 483);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(186, 30);
+            this.btnLogOut.Size = new System.Drawing.Size(186, 47);
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -127,9 +127,9 @@
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnQuit.Location = new System.Drawing.Point(0, 547);
+            this.btnQuit.Location = new System.Drawing.Point(0, 530);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(186, 30);
+            this.btnQuit.Size = new System.Drawing.Size(186, 47);
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -150,7 +150,6 @@
             this.btnTechnicians.Text = "Technicians";
             this.btnTechnicians.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnTechnicians.UseVisualStyleBackColor = true;
-            this.btnTechnicians.Click += new System.EventHandler(this.btnTechnicians_Click);
             // 
             // btnRequests
             // 
@@ -266,7 +265,7 @@
             this.lblLoginUsername.AutoSize = true;
             this.lblLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.lblLoginUsername.Location = new System.Drawing.Point(25, 87);
+            this.lblLoginUsername.Location = new System.Drawing.Point(54, 87);
             this.lblLoginUsername.Name = "lblLoginUsername";
             this.lblLoginUsername.Size = new System.Drawing.Size(81, 17);
             this.lblLoginUsername.TabIndex = 1;
@@ -275,7 +274,7 @@
             // pbLoginIcon
             // 
             this.pbLoginIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLoginIcon.Image")));
-            this.pbLoginIcon.Location = new System.Drawing.Point(28, 21);
+            this.pbLoginIcon.Location = new System.Drawing.Point(63, 21);
             this.pbLoginIcon.Name = "pbLoginIcon";
             this.pbLoginIcon.Size = new System.Drawing.Size(63, 63);
             this.pbLoginIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,41 +284,22 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(222, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(510, 346);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // lblAgents
             // 
             this.lblAgents.AutoSize = true;
             this.lblAgents.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblAgents.Location = new System.Drawing.Point(192, 21);
+            this.lblAgents.Location = new System.Drawing.Point(215, 35);
             this.lblAgents.Name = "lblAgents";
             this.lblAgents.Size = new System.Drawing.Size(107, 37);
             this.lblAgents.TabIndex = 15;
             this.lblAgents.Text = "Agents";
-            // 
-            // cbAvailableAgent
-            // 
-            this.cbAvailableAgent.AutoSize = true;
-            this.cbAvailableAgent.Location = new System.Drawing.Point(293, 508);
-            this.cbAvailableAgent.Name = "cbAvailableAgent";
-            this.cbAvailableAgent.Size = new System.Drawing.Size(105, 17);
-            this.cbAvailableAgent.TabIndex = 16;
-            this.cbAvailableAgent.Text = "Available Agents";
-            this.cbAvailableAgent.UseVisualStyleBackColor = true;
-            // 
-            // cbUnavailableAgents
-            // 
-            this.cbUnavailableAgents.AutoSize = true;
-            this.cbUnavailableAgents.Location = new System.Drawing.Point(449, 508);
-            this.cbUnavailableAgents.Name = "cbUnavailableAgents";
-            this.cbUnavailableAgents.Size = new System.Drawing.Size(118, 17);
-            this.cbUnavailableAgents.TabIndex = 17;
-            this.cbUnavailableAgents.Text = "Unavailable Agents";
-            this.cbUnavailableAgents.UseVisualStyleBackColor = true;
             // 
             // btnSearchAgent
             // 
@@ -328,19 +308,20 @@
             this.btnSearchAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchAgent.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnSearchAgent.Location = new System.Drawing.Point(753, 84);
+            this.btnSearchAgent.Location = new System.Drawing.Point(753, 62);
             this.btnSearchAgent.Name = "btnSearchAgent";
             this.btnSearchAgent.Size = new System.Drawing.Size(186, 42);
             this.btnSearchAgent.TabIndex = 18;
             this.btnSearchAgent.Text = "Search";
             this.btnSearchAgent.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSearchAgent.UseVisualStyleBackColor = false;
+            this.btnSearchAgent.Click += new System.EventHandler(this.btnSearchAgent_Click);
             // 
             // txtSearchAgent
             // 
-            this.txtSearchAgent.Location = new System.Drawing.Point(583, 97);
+            this.txtSearchAgent.Location = new System.Drawing.Point(569, 75);
             this.txtSearchAgent.Name = "txtSearchAgent";
-            this.txtSearchAgent.Size = new System.Drawing.Size(126, 20);
+            this.txtSearchAgent.Size = new System.Drawing.Size(165, 20);
             this.txtSearchAgent.TabIndex = 19;
             // 
             // pnlNav
@@ -351,17 +332,166 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 20;
             // 
+            // btnUpdateTechnician
+            // 
+            this.btnUpdateTechnician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnUpdateTechnician.FlatAppearance.BorderSize = 0;
+            this.btnUpdateTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnUpdateTechnician.Location = new System.Drawing.Point(398, 505);
+            this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateTechnician.Name = "btnUpdateTechnician";
+            this.btnUpdateTechnician.Size = new System.Drawing.Size(163, 42);
+            this.btnUpdateTechnician.TabIndex = 44;
+            this.btnUpdateTechnician.Text = "Update Agent";
+            this.btnUpdateTechnician.UseVisualStyleBackColor = false;
+            this.btnUpdateTechnician.Click += new System.EventHandler(this.btnUpdateTechnician_Click);
+            // 
+            // btnDeleteTechnician
+            // 
+            this.btnDeleteTechnician.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnDeleteTechnician.FlatAppearance.BorderSize = 0;
+            this.btnDeleteTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnDeleteTechnician.Location = new System.Drawing.Point(593, 505);
+            this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteTechnician.Name = "btnDeleteTechnician";
+            this.btnDeleteTechnician.Size = new System.Drawing.Size(163, 42);
+            this.btnDeleteTechnician.TabIndex = 43;
+            this.btnDeleteTechnician.Text = "Delete Agent";
+            this.btnDeleteTechnician.UseVisualStyleBackColor = false;
+            this.btnDeleteTechnician.Click += new System.EventHandler(this.btnDeleteTechnician_Click);
+            // 
+            // btnAddAgent
+            // 
+            this.btnAddAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnAddAgent.FlatAppearance.BorderSize = 0;
+            this.btnAddAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAgent.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnAddAgent.Location = new System.Drawing.Point(213, 505);
+            this.btnAddAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddAgent.Name = "btnAddAgent";
+            this.btnAddAgent.Size = new System.Drawing.Size(163, 42);
+            this.btnAddAgent.TabIndex = 42;
+            this.btnAddAgent.Text = "Add Agent";
+            this.btnAddAgent.UseVisualStyleBackColor = false;
+            this.btnAddAgent.Click += new System.EventHandler(this.btnAddAgent_Click);
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(762, 310);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(141, 20);
+            this.txtNumber.TabIndex = 52;
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblNumber.Location = new System.Drawing.Point(758, 279);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(78, 21);
+            this.lblNumber.TabIndex = 51;
+            this.lblNumber.Text = "Number:";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(761, 249);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(141, 20);
+            this.txtSurname.TabIndex = 50;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblSurname.Location = new System.Drawing.Point(757, 218);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(82, 21);
+            this.lblSurname.TabIndex = 49;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(761, 188);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(141, 20);
+            this.txtName.TabIndex = 48;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblName.Location = new System.Drawing.Point(757, 157);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(60, 21);
+            this.lblName.TabIndex = 47;
+            this.lblName.Text = "Name:";
+            // 
+            // lblTechnicianID
+            // 
+            this.lblTechnicianID.AutoSize = true;
+            this.lblTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.lblTechnicianID.Location = new System.Drawing.Point(759, 340);
+            this.lblTechnicianID.Name = "lblTechnicianID";
+            this.lblTechnicianID.Size = new System.Drawing.Size(81, 21);
+            this.lblTechnicianID.TabIndex = 46;
+            this.lblTechnicianID.Text = "Agent ID:";
+            // 
+            // txtAgentID
+            // 
+            this.txtAgentID.Location = new System.Drawing.Point(763, 371);
+            this.txtAgentID.Name = "txtAgentID";
+            this.txtAgentID.Size = new System.Drawing.Size(141, 20);
+            this.txtAgentID.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.label1.Location = new System.Drawing.Point(759, 401);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 21);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Branch:";
+            // 
+            // txtBranch
+            // 
+            this.txtBranch.Location = new System.Drawing.Point(762, 432);
+            this.txtBranch.Name = "txtBranch";
+            this.txtBranch.Size = new System.Drawing.Size(141, 20);
+            this.txtBranch.TabIndex = 53;
+            // 
             // Agents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBranch);
+            this.Controls.Add(this.txtNumber);
+            this.Controls.Add(this.lblNumber);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblTechnicianID);
+            this.Controls.Add(this.txtAgentID);
+            this.Controls.Add(this.btnUpdateTechnician);
+            this.Controls.Add(this.btnDeleteTechnician);
+            this.Controls.Add(this.btnAddAgent);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.txtSearchAgent);
             this.Controls.Add(this.btnSearchAgent);
-            this.Controls.Add(this.cbUnavailableAgents);
-            this.Controls.Add(this.cbAvailableAgent);
             this.Controls.Add(this.lblAgents);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlSidebar);
@@ -396,12 +526,22 @@
         private System.Windows.Forms.PictureBox pbLoginIcon;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAgents;
-        private System.Windows.Forms.CheckBox cbAvailableAgent;
-        private System.Windows.Forms.CheckBox cbUnavailableAgents;
         private System.Windows.Forms.Button btnSearchAgent;
         private System.Windows.Forms.TextBox txtSearchAgent;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnUpdateTechnician;
+        private System.Windows.Forms.Button btnDeleteTechnician;
+        private System.Windows.Forms.Button btnAddAgent;
+        private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblTechnicianID;
+        private System.Windows.Forms.TextBox txtAgentID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBranch;
     }
 }
