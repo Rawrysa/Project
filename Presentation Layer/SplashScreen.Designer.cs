@@ -299,7 +299,7 @@
             this.lblDashoard.AutoSize = true;
             this.lblDashoard.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblDashoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDashoard.Location = new System.Drawing.Point(192, 21);
+            this.lblDashoard.Location = new System.Drawing.Point(217, 21);
             this.lblDashoard.Name = "lblDashoard";
             this.lblDashoard.Size = new System.Drawing.Size(157, 37);
             this.lblDashoard.TabIndex = 14;
@@ -342,7 +342,6 @@
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-            this.Load += new System.EventHandler(this.SplashScreen_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();

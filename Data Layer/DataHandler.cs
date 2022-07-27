@@ -122,12 +122,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@RequestID", requestid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{requestid} has been deleted");
             }
             catch
             {
-                MessageBox.Show($"{requestid} could not be deleted");
+                throw;
             }
 
         }
@@ -182,12 +180,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@JobID", jobid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{jobid} has been closed");
             }
             catch
             {
-                MessageBox.Show($"{jobid} could not be closed");
+                throw;
             }
 
         }
@@ -211,7 +207,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{jobid} could not be found");
+                throw;
             }
 
             return table;
@@ -228,12 +224,9 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@JobPriority", jobpriority);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{jobid} has been escalated");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Job could not be escalated");
             }
         }
 
@@ -248,12 +241,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@TechnicianID", technicianid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{jobid} has been reassigned");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Job could not be reassigned");
+                throw;
             }
         }
 
@@ -311,12 +302,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@ClientID", clientid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{clientid} has been removed");
             }
             catch
             {
-                MessageBox.Show($"{clientid} could not be removed");
+                throw;
             }
 
         }
@@ -340,7 +329,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{clientid} could not be found");
+                throw;
             }
 
             return table;
@@ -362,12 +351,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@ContractID", contractid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{clientid} has been updated");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Client could not be updated");
+                throw;
             }
         }
 
@@ -390,7 +377,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{clientid} could not be found");
+                throw;
             }
 
             return table;
@@ -453,7 +440,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{contractid} could not be found");
+                throw;
             }
 
             return table;
@@ -487,12 +474,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@EmployeeID", employeeid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{employeeid} has been removed");
             }
             catch
             {
-                MessageBox.Show($"{employeeid} could not be removed");
+                throw;
             }
 
         }
@@ -556,7 +541,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{agentid} could not be found");
+                throw;
             }
 
             return table;
@@ -575,12 +560,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@AgentID", agentid);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{agentid} has been updated");
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Agent could not be updated");
+                throw;
             }
         }
 
@@ -644,7 +627,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{technicianid} could not be found");
+                throw;
             }
 
             return table;
@@ -682,12 +665,10 @@ namespace Project.DataLayer
                 cmd.Parameters.AddWithValue("@Availability", availability);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-
-                MessageBox.Show($"{technicianid} has been assigned");
             }
             catch
             {
-                MessageBox.Show("Technician could not be updated");
+                throw;
             }
         }
 
@@ -710,7 +691,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{clientid} could not be found");
+                throw;
             }
 
             return table;
@@ -735,31 +716,7 @@ namespace Project.DataLayer
             }
             catch
             {
-                MessageBox.Show($"{serviceid} could not be found");
-            }
-
-            return table;
-        }
-
-        public DataTable ClientNumber(string number)
-        {
-            DataTable table = new DataTable();
-
-            try
-            {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("spClientNumber", connection);
-                SqlDataAdapter dataAdapter = new SqlDataAdapter();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@PhoneNumber", number);
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable tb = new DataTable();
-                tb.Load(reader);
-                table = tb;
-                connection.Close();
-            }
-            catch
-            {
+                throw;
             }
 
             return table;

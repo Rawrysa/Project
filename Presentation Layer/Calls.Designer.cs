@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calls));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CallDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.callDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientPhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientProblem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnNewCall = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnServices = new System.Windows.Forms.Button();
@@ -62,62 +55,12 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.txtClientID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CallDate,
-            this.callDuration,
-            this.clientPhoneNum,
-            this.clientProblem,
-            this.clientID,
-            this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(500, 336);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // CallDate
-            // 
-            this.CallDate.HeaderText = "Call Date";
-            this.CallDate.Name = "CallDate";
-            // 
-            // callDuration
-            // 
-            this.callDuration.HeaderText = "Call Duration";
-            this.callDuration.Name = "callDuration";
-            // 
-            // clientPhoneNum
-            // 
-            this.clientPhoneNum.HeaderText = "Client Phone Number";
-            this.clientPhoneNum.Name = "clientPhoneNum";
-            // 
-            // clientProblem
-            // 
-            this.clientProblem.HeaderText = "Client Problem";
-            this.clientProblem.Name = "clientProblem";
-            // 
-            // clientID
-            // 
-            this.clientID.HeaderText = "Client ID";
-            this.clientID.Name = "clientID";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Call Status";
-            this.Status.Items.AddRange(new object[] {
-            "Ringing",
-            "In progress",
-            "Completed"});
-            this.Status.Name = "Status";
             // 
             // btnNewCall
             // 
@@ -364,7 +307,7 @@
             this.lblCalls.AutoSize = true;
             this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblCalls.Location = new System.Drawing.Point(192, 21);
+            this.lblCalls.Location = new System.Drawing.Point(192, 31);
             this.lblCalls.Name = "lblCalls";
             this.lblCalls.Size = new System.Drawing.Size(77, 37);
             this.lblCalls.TabIndex = 14;
@@ -450,12 +393,21 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Client ID:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(234, 152);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(474, 328);
+            this.dataGridView1.TabIndex = 48;
+            // 
             // Calls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtClientID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumber);
@@ -468,31 +420,22 @@
             this.Controls.Add(this.lblCalls);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.btnNewCall);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Calls";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Calls_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CallDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn callDuration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientPhoneNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientProblem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientID;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Status;
         private System.Windows.Forms.Button btnNewCall;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogOut;
@@ -519,5 +462,6 @@
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

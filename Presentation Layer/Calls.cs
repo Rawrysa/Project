@@ -34,7 +34,7 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnCalls.Top;
             pnlNav.Left = btnCalls.Left;
             btnCalls.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
 
             dataGridView1.DataSource = new Call().ViewCalls();
         }

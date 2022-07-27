@@ -39,12 +39,12 @@ namespace Project.PresentationLayer
             try
             {
                 Logins logins = new Logins();
-                logins.username = txtUsername.Text;
-                logins.password = txtPassword.Text;
+                logins.Username = txtUsername.Text;
+                logins.Password = txtPassword.Text;
 
                 if (logins.ValidateUser())
                 {
-                    new SplashScreen(txtUsername.Text).Show();
+                    new SplashScreen().Show();
                     this.Hide();
                 }
                 else

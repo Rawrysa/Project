@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-//using Project.PresentationLayer;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -26,19 +26,14 @@ namespace Project.PresentationLayer
             int nHeightWllipse
         );
 
-        public SplashScreen(string username)
+        public SplashScreen()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             pnlNav.Height = 0;
             pnlNav.Top = 0;
             pnlNav.Left = 0;
-            lblLoginUsername.Text = username;
-        }
-
-        private void SplashScreen_Load(object sender, EventArgs e)
-        {
-        
+            lblLoginUsername.Text = new Logins().Username;
         }
 
         private void btnAgents_Click(object sender, EventArgs e)

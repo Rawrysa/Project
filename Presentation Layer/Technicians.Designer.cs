@@ -64,6 +64,7 @@
             this.txtSearchTechnician = new System.Windows.Forms.TextBox();
             this.txtBranch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAvailability = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -300,7 +301,7 @@
             this.lblTechnicianID.AutoSize = true;
             this.lblTechnicianID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblTechnicianID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblTechnicianID.Location = new System.Drawing.Point(773, 132);
+            this.lblTechnicianID.Location = new System.Drawing.Point(773, 121);
             this.lblTechnicianID.Name = "lblTechnicianID";
             this.lblTechnicianID.Size = new System.Drawing.Size(116, 21);
             this.lblTechnicianID.TabIndex = 26;
@@ -308,7 +309,7 @@
             // 
             // txtTechnicianID
             // 
-            this.txtTechnicianID.Location = new System.Drawing.Point(777, 156);
+            this.txtTechnicianID.Location = new System.Drawing.Point(777, 145);
             this.txtTechnicianID.Name = "txtTechnicianID";
             this.txtTechnicianID.Size = new System.Drawing.Size(141, 20);
             this.txtTechnicianID.TabIndex = 25;
@@ -320,7 +321,7 @@
             this.btnSearchTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnSearchTechnician.Location = new System.Drawing.Point(777, 62);
+            this.btnSearchTechnician.Location = new System.Drawing.Point(777, 42);
             this.btnSearchTechnician.Name = "btnSearchTechnician";
             this.btnSearchTechnician.Size = new System.Drawing.Size(141, 42);
             this.btnSearchTechnician.TabIndex = 24;
@@ -332,17 +333,18 @@
             // dgvTechnicians
             // 
             this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTechnicians.Location = new System.Drawing.Point(211, 132);
+            this.dgvTechnicians.Location = new System.Drawing.Point(211, 118);
             this.dgvTechnicians.Name = "dgvTechnicians";
-            this.dgvTechnicians.Size = new System.Drawing.Size(544, 336);
+            this.dgvTechnicians.Size = new System.Drawing.Size(544, 350);
             this.dgvTechnicians.TabIndex = 21;
+            this.dgvTechnicians.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellContentClick);
             // 
             // lblTechnicians
             // 
             this.lblTechnicians.AutoSize = true;
             this.lblTechnicians.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblTechnicians.Location = new System.Drawing.Point(204, 21);
+            this.lblTechnicians.Location = new System.Drawing.Point(204, 38);
             this.lblTechnicians.Name = "lblTechnicians";
             this.lblTechnicians.Size = new System.Drawing.Size(162, 37);
             this.lblTechnicians.TabIndex = 27;
@@ -355,10 +357,10 @@
             this.btnDeleteTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnDeleteTechnician.Location = new System.Drawing.Point(579, 495);
+            this.btnDeleteTechnician.Location = new System.Drawing.Point(579, 505);
             this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTechnician.Name = "btnDeleteTechnician";
-            this.btnDeleteTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnDeleteTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnDeleteTechnician.TabIndex = 29;
             this.btnDeleteTechnician.Text = "Delete Technician";
             this.btnDeleteTechnician.UseVisualStyleBackColor = false;
@@ -371,10 +373,10 @@
             this.btnAddTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAddTechnician.Location = new System.Drawing.Point(199, 495);
+            this.btnAddTechnician.Location = new System.Drawing.Point(199, 505);
             this.btnAddTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTechnician.Name = "btnAddTechnician";
-            this.btnAddTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnAddTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnAddTechnician.TabIndex = 28;
             this.btnAddTechnician.Text = "Add Technician";
             this.btnAddTechnician.UseVisualStyleBackColor = false;
@@ -382,7 +384,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(777, 211);
+            this.txtName.Location = new System.Drawing.Point(777, 200);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(141, 20);
             this.txtName.TabIndex = 33;
@@ -392,7 +394,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblName.Location = new System.Drawing.Point(773, 189);
+            this.lblName.Location = new System.Drawing.Point(773, 178);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(60, 21);
             this.lblName.TabIndex = 32;
@@ -400,7 +402,7 @@
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(777, 268);
+            this.txtSurname.Location = new System.Drawing.Point(777, 257);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(141, 20);
             this.txtSurname.TabIndex = 35;
@@ -410,7 +412,7 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblSurname.Location = new System.Drawing.Point(773, 244);
+            this.lblSurname.Location = new System.Drawing.Point(773, 233);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(82, 21);
             this.lblSurname.TabIndex = 34;
@@ -418,7 +420,7 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(777, 328);
+            this.txtNumber.Location = new System.Drawing.Point(777, 317);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(141, 20);
             this.txtNumber.TabIndex = 37;
@@ -428,7 +430,7 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblNumber.Location = new System.Drawing.Point(773, 304);
+            this.lblNumber.Location = new System.Drawing.Point(773, 293);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(78, 21);
             this.lblNumber.TabIndex = 36;
@@ -436,7 +438,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(777, 391);
+            this.txtDescription.Location = new System.Drawing.Point(777, 380);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(141, 20);
             this.txtDescription.TabIndex = 39;
@@ -446,7 +448,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDescription.Location = new System.Drawing.Point(773, 367);
+            this.lblDescription.Location = new System.Drawing.Point(773, 356);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(133, 21);
             this.lblDescription.TabIndex = 38;
@@ -467,10 +469,10 @@
             this.btnUpdateTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdateTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnUpdateTechnician.Location = new System.Drawing.Point(389, 495);
+            this.btnUpdateTechnician.Location = new System.Drawing.Point(389, 505);
             this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateTechnician.Name = "btnUpdateTechnician";
-            this.btnUpdateTechnician.Size = new System.Drawing.Size(186, 42);
+            this.btnUpdateTechnician.Size = new System.Drawing.Size(163, 42);
             this.btnUpdateTechnician.TabIndex = 41;
             this.btnUpdateTechnician.Text = "Update Technician";
             this.btnUpdateTechnician.UseVisualStyleBackColor = false;
@@ -478,14 +480,14 @@
             // 
             // txtSearchTechnician
             // 
-            this.txtSearchTechnician.Location = new System.Drawing.Point(529, 75);
+            this.txtSearchTechnician.Location = new System.Drawing.Point(529, 55);
             this.txtSearchTechnician.Name = "txtSearchTechnician";
             this.txtSearchTechnician.Size = new System.Drawing.Size(226, 20);
             this.txtSearchTechnician.TabIndex = 42;
             // 
             // txtBranch
             // 
-            this.txtBranch.Location = new System.Drawing.Point(777, 453);
+            this.txtBranch.Location = new System.Drawing.Point(777, 442);
             this.txtBranch.Name = "txtBranch";
             this.txtBranch.Size = new System.Drawing.Size(141, 20);
             this.txtBranch.TabIndex = 44;
@@ -495,11 +497,27 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(773, 429);
+            this.label1.Location = new System.Drawing.Point(773, 418);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 43;
             this.label1.Text = "Branch:";
+            // 
+            // btnAvailability
+            // 
+            this.btnAvailability.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnAvailability.FlatAppearance.BorderSize = 0;
+            this.btnAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvailability.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAvailability.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnAvailability.Location = new System.Drawing.Point(777, 505);
+            this.btnAvailability.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAvailability.Name = "btnAvailability";
+            this.btnAvailability.Size = new System.Drawing.Size(163, 42);
+            this.btnAvailability.TabIndex = 45;
+            this.btnAvailability.Text = "Change Availability";
+            this.btnAvailability.UseVisualStyleBackColor = false;
+            this.btnAvailability.Click += new System.EventHandler(this.btnAvailability_Click);
             // 
             // Technicians
             // 
@@ -507,6 +525,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.btnAvailability);
             this.Controls.Add(this.txtBranch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearchTechnician);
@@ -579,5 +598,6 @@
         private System.Windows.Forms.TextBox txtSearchTechnician;
         private System.Windows.Forms.TextBox txtBranch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAvailability;
     }
 }
