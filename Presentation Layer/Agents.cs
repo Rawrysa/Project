@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Project.BusinessLayer;
 
 namespace Project.PresentationLayer
 {
@@ -33,7 +34,7 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnAgents.Top;
             pnlNav.Left = btnAgents.Left;
             btnAgents.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

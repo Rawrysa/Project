@@ -34,7 +34,7 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnRequests.Top;
             pnlNav.Left = btnRequests.Left;
             btnRequests.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
 
             Text = "Service Requests";
 
@@ -101,15 +101,30 @@ namespace Project.PresentationLayer
         {
             try
             {
-                ServiceRequest newrequest = new ServiceRequest();
-                newrequest.Client_ID = Convert.ToInt32(txtClientID.Text);
-                newrequest.Service_ID = Convert.ToInt32(txtServiceID.Text);
+                Client client = new Client();
+                Service service = new Service();
 
-                newrequest.NewRequest();
-                dgvRequests.DataSource = new ServiceRequest().ViewRequests();
+                client.Client_ID = Convert.ToInt32(txtClientID.Text);
+                service.Service_ID = Convert.ToInt32(txtServiceID.Text);
+
+                if (Convert.ToInt32(client.ClientAgreement().Rows[0].ItemArray[0]) >= Convert.ToInt32(service.ServiceLevel().Rows[0].ItemArray[0]))
+                {
+                    ServiceRequest newrequest = new ServiceRequest();
+                    newrequest.Client_ID = Convert.ToInt32(txtClientID.Text);
+                    newrequest.Service_ID = Convert.ToInt32(txtServiceID.Text);
+
+                    newrequest.NewRequest();
+                    dgvRequests.DataSource = newrequest.ViewRequests();
+                    MessageBox.Show("Request added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Client does not qualify for this service, upgrade contract");
+                }
             }
             catch
             {
+                MessageBox.Show("Failed to add request", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -124,11 +139,12 @@ namespace Project.PresentationLayer
                     newrequest.Request_ID = Convert.ToInt32(dgvRequests.CurrentRow.Cells[0].Value);
 
                     newrequest.RemoveRequest();
-                    dgvRequests.DataSource = new ServiceRequest().ViewRequests();
+                    dgvRequests.DataSource = newrequest.ViewRequests();
                 }
             }
             catch
             {
+                MessageBox.Show("Failed to remove request", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

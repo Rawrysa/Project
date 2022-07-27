@@ -80,7 +80,7 @@
             this.clientProblem,
             this.clientID,
             this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 146);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(500, 336);
             this.dataGridView1.TabIndex = 0;
@@ -364,7 +364,7 @@
             this.lblCalls.AutoSize = true;
             this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblCalls.Location = new System.Drawing.Point(192, 21);
+            this.lblCalls.Location = new System.Drawing.Point(192, 31);
             this.lblCalls.Name = "lblCalls";
             this.lblCalls.Size = new System.Drawing.Size(77, 37);
             this.lblCalls.TabIndex = 14;

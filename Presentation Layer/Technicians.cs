@@ -34,7 +34,7 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnTechnicians.Top;
             pnlNav.Left = btnTechnicians.Left;
             btnTechnicians.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
 
             dgvTechnicians.DataSource = new Technician().ViewTechnicians();
         }
@@ -116,10 +116,9 @@ namespace Project.PresentationLayer
                     technician.AddTechnician();
                     technician.AddEmployee();
 
-                    dgvTechnicians.DataSource = new ServiceRequest().ViewRequests();
+                    dgvTechnicians.DataSource = technician.ViewTechnicians();
 
                     MessageBox.Show("Technician added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
                 else
                 {
@@ -148,7 +147,7 @@ namespace Project.PresentationLayer
                 {
                     technician.UpdateTechnician();
 
-                    dgvTechnicians.DataSource = new ServiceRequest().ViewRequests();
+                    dgvTechnicians.DataSource = technician.ViewTechnicians();
 
                     MessageBox.Show("Technician updated successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -168,13 +167,13 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
+                technician.Employee_ID = Convert.ToInt32(dgvTechnicians.CurrentRow.Cells[5].Value);
 
                 if (MessageBox.Show($"Are you sure you want to remove {dgvTechnicians.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
                     technician.DeleteEmployee();
 
-                    dgvTechnicians.DataSource = new ServiceRequest().ViewRequests();
+                    dgvTechnicians.DataSource = technician.ViewTechnicians();
                 }
             }
             catch
@@ -188,7 +187,7 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(txtTechnicianID.Text);
+                technician.Employee_ID = Convert.ToInt32(txtSearchTechnician.Text);
 
                 if (new Validator().NotNull(technician))
                 {
@@ -201,8 +200,46 @@ namespace Project.PresentationLayer
             }
             catch
             {
-                MessageBox.Show("Failed to update technician", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to search for technician", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnAvailability_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Technician technician = new Technician();
+                technician.Employee_ID = Convert.ToInt32(dgvTechnicians.CurrentRow.Cells[5].Value);
+
+                if (MessageBox.Show($"Are you sure you want to change {dgvTechnicians.CurrentRow.Cells[0].Value}'s availability", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
+                {
+                    if (dgvTechnicians.CurrentRow.Cells[4].Value.ToString() != "Available")
+                    {
+                        technician.Availability = "Available";
+                        technician.TechnicianAvailability();
+                    }
+                    else
+                    {
+                        technician.Availability = "Unavailable";
+                        technician.TechnicianAvailability();
+                    }
+
+                    dgvTechnicians.DataSource = technician.ViewTechnicians();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to search for technician", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvTechnicians_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtName.Text = dgvTechnicians.CurrentRow.Cells[0].Value.ToString();
+            txtSurname.Text = dgvTechnicians.CurrentRow.Cells[1].Value.ToString();
+            txtNumber.Text = dgvTechnicians.CurrentRow.Cells[2].Value.ToString();
+            txtDescription.Text = dgvTechnicians.CurrentRow.Cells[3].Value.ToString();
+            txtTechnicianID.Text = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

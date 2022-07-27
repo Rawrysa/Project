@@ -34,19 +34,9 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnContracts.Top;
             pnlNav.Left = btnContracts.Left;
             btnContracts.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
 
             dgrContracts.DataSource = new Contract().ViewContracts();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnViewContracts_Click(object sender, EventArgs e)
-        {
-           // dgrContracts.DataSource = new DataHandler().ViewContracts();
         }
 
         private void btnContractAvailability_Click(object sender, EventArgs e)
@@ -66,6 +56,8 @@ namespace Project.PresentationLayer
                     contract.Availability = "Unavailable";
                     contract.ContractAvailability();
                 }
+
+                dgrContracts.DataSource = contract.ViewContracts();
             }
             catch
             {
@@ -80,7 +72,7 @@ namespace Project.PresentationLayer
                 Contract contract = new Contract();
                 contract.Contract_ID = Convert.ToInt32(dgrContracts.CurrentRow.Cells[0].Value);
 
-                MessageBox.Show($"This contract has {contract.ContractPerformance().Rows[0].ItemArray[0].ToString()} sales",null,MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show($"This contract has {contract.ContractPerformance().Rows[0].ItemArray[0]} sales",null,MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch
             {
@@ -88,15 +80,6 @@ namespace Project.PresentationLayer
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            //Environment.Exit(0);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {

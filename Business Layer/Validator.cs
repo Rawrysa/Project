@@ -14,7 +14,7 @@ namespace Project.BusinessLayer
 
             foreach (var item in thisobject.GetType().GetProperties())
             {
-                if (item.GetValue(thisobject,null).ToString() == "")
+                if (String.IsNullOrEmpty(item.GetValue(thisobject, null).ToString()))
                 {
                     notnull = false;
                 }

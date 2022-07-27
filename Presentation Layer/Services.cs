@@ -34,7 +34,7 @@ namespace Project.PresentationLayer
             pnlNav.Top = btnServices.Top;
             pnlNav.Left = btnServices.Left;
             btnServices.BackColor = Color.FromArgb(46, 51, 73);
-            //lblLoginUsername.Text = username;
+            lblLoginUsername.Text = new Logins().Username;
 
             dgrViewServices.DataSource = new Service().ViewServices();
         }

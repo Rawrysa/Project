@@ -10,9 +10,17 @@ namespace Project.BusinessLayer
 {
     class Service
     {
+        private int service_id;
+        public int Service_ID { get; set; }
+
         public DataTable ViewServices()
         {
             return new DataHandler().ViewServices();
+        }
+
+        public DataTable ServiceLevel()
+        {
+            return new DataHandler().ServiceLevel(Service_ID);
         }
     }
 }
