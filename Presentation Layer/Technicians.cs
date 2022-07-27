@@ -235,11 +235,21 @@ namespace Project.PresentationLayer
 
         private void dgvTechnicians_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtName.Text = dgvTechnicians.CurrentRow.Cells[0].Value.ToString();
+            txtName.Text = Convert.ToString(dgvTechnicians.CurrentRow.Cells[0].Value);
             txtSurname.Text = dgvTechnicians.CurrentRow.Cells[1].Value.ToString();
             txtNumber.Text = dgvTechnicians.CurrentRow.Cells[2].Value.ToString();
             txtDescription.Text = dgvTechnicians.CurrentRow.Cells[3].Value.ToString();
             txtTechnicianID.Text = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void dgvTechnicians_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtName.Text = Convert.ToString(dgvTechnicians.CurrentRow.Cells[0].Value);
+            txtSurname.Text = dgvTechnicians.CurrentRow.Cells[1].Value.ToString();
+            txtNumber.Text = dgvTechnicians.CurrentRow.Cells[2].Value.ToString();
+            txtDescription.Text = dgvTechnicians.CurrentRow.Cells[3].Value.ToString();
+            txtTechnicianID.Text = dgvTechnicians.CurrentRow.Cells[5].Value.ToString();
+
         }
     }
 }
