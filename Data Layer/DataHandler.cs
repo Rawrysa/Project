@@ -11,7 +11,7 @@ namespace Project.DataLayer
 {
     class DataHandler
     {
-        private SqlConnection connection = new SqlConnection(@"Server= LAPTOP-I3T5HGE7\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
+        private SqlConnection connection = new SqlConnection(@"Server= DESKTOP-M3T2E17\SQLEXPRESS; Initial Catalog= Premier Service Solutions; Integrated Security= SSPI");
 
         public DataTable ViewCalls()
         {

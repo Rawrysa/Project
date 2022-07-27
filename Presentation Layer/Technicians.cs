@@ -187,9 +187,10 @@ namespace Project.PresentationLayer
             try
             {
                 Technician technician = new Technician();
-                technician.Employee_ID = Convert.ToInt32(txtSearchTechnician.Text);
+                technician.Employee_ID = Convert.ToInt32(txtSearchTechnician.Text.ToString());
 
-                if (new Validator().NotNull(technician))
+                //ERROR
+                if (!String.IsNullOrEmpty(txtSearchTechnician.Text))
                 {
                     dgvTechnicians.DataSource = technician.SearchTechnician();
                 }
@@ -198,9 +199,9 @@ namespace Project.PresentationLayer
                     MessageBox.Show("Please fill in all the required details", null, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            catch (Exception f)
             {
-                MessageBox.Show("Failed to search for technician", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{f}", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

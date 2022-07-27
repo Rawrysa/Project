@@ -322,6 +322,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Services";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewServices";
             ((System.ComponentModel.ISupportInitialize)(this.dgrViewServices)).EndInit();
             this.pnlSidebar.ResumeLayout(false);
