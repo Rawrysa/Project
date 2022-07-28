@@ -57,6 +57,7 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblRequests = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnAssignJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -187,7 +188,7 @@
             this.btnNewRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewRequest.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNewRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnNewRequest.Location = new System.Drawing.Point(734, 323);
+            this.btnNewRequest.Location = new System.Drawing.Point(734, 326);
             this.btnNewRequest.Name = "btnNewRequest";
             this.btnNewRequest.Size = new System.Drawing.Size(201, 42);
             this.btnNewRequest.TabIndex = 9;
@@ -202,7 +203,7 @@
             this.btnRemoveRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveRequest.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnRemoveRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnRemoveRequest.Location = new System.Drawing.Point(734, 375);
+            this.btnRemoveRequest.Location = new System.Drawing.Point(734, 384);
             this.btnRemoveRequest.Name = "btnRemoveRequest";
             this.btnRemoveRequest.Size = new System.Drawing.Size(201, 42);
             this.btnRemoveRequest.TabIndex = 10;
@@ -444,12 +445,28 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 14;
             // 
+            // btnAssignJob
+            // 
+            this.btnAssignJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnAssignJob.FlatAppearance.BorderSize = 0;
+            this.btnAssignJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAssignJob.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAssignJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnAssignJob.Location = new System.Drawing.Point(734, 268);
+            this.btnAssignJob.Name = "btnAssignJob";
+            this.btnAssignJob.Size = new System.Drawing.Size(201, 42);
+            this.btnAssignJob.TabIndex = 15;
+            this.btnAssignJob.Text = "Assign Job";
+            this.btnAssignJob.UseVisualStyleBackColor = false;
+            this.btnAssignJob.Click += new System.EventHandler(this.btnAssignJob_Click);
+            // 
             // Requests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.btnAssignJob);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblRequests);
             this.Controls.Add(this.pnlSidebar);
@@ -506,5 +523,6 @@
         private System.Windows.Forms.Label lblRequests;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnAssignJob;
     }
 }

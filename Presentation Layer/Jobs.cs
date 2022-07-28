@@ -65,6 +65,48 @@ namespace Project.PresentationLayer
             dgvJobs.DataSource = new Job().ViewJobs();
         }
 
+        public Jobs(string clientid, string serviceid)
+        {
+            InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            pnlNav.Height = btnJobs.Height;
+            pnlNav.Top = btnJobs.Top;
+            pnlNav.Left = btnJobs.Left;
+            btnJobs.BackColor = Color.FromArgb(46, 51, 73);
+
+            Logins credentials = new Logins().getcredentials();
+
+            lblLoginUsername.Text = credentials.Username;
+
+            switch (credentials.Position)
+            {
+                case "manager":
+                    break;
+
+                case "agent":
+                    btnAgents.Hide(); btnTechnicians.Hide(); btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide();
+                    pnlNav.Height = btnJobs.Height;
+                    pnlNav.Top = btnContracts.Top;
+                    pnlNav.Left = btnJobs.Left;
+                    btnJobs.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+
+                case "technician":
+                    btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide(); btnTrackJob.Hide(); txtSearchJob.Hide();
+                    pnlNav.Height = btnAgents.Height;
+                    pnlNav.Top = btnAgents.Top;
+                    pnlNav.Left = btnAgents.Left;
+                    btnAgents.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+            }
+
+            txtClientID.Text = clientid;
+            txtServiceID.Text = serviceid;
+
+            dgvJobs.DataSource = new Job().ViewJobs();
+        }
+
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);

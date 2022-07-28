@@ -46,15 +46,13 @@
             this.pbLoginIcon = new System.Windows.Forms.PictureBox();
             this.lblCalls = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
-            this.lblDuration = new System.Windows.Forms.Label();
-            this.txtDuration = new System.Windows.Forms.TextBox();
             this.lblProblem = new System.Windows.Forms.Label();
             this.txtProblem = new System.Windows.Forms.TextBox();
-            this.lblNumber = new System.Windows.Forms.Label();
-            this.txtNumber = new System.Windows.Forms.TextBox();
             this.txtClientID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnIncomingCall = new System.Windows.Forms.Button();
+            this.btnEndCall = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlLoginUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginIcon)).BeginInit();
@@ -68,12 +66,13 @@
             this.btnNewCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewCall.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnNewCall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnNewCall.Location = new System.Drawing.Point(726, 73);
+            this.btnNewCall.Location = new System.Drawing.Point(706, 483);
             this.btnNewCall.Name = "btnNewCall";
             this.btnNewCall.Size = new System.Drawing.Size(186, 42);
             this.btnNewCall.TabIndex = 1;
-            this.btnNewCall.Text = "Incoming Call";
+            this.btnNewCall.Text = "Log Call";
             this.btnNewCall.UseVisualStyleBackColor = false;
+            this.btnNewCall.Visible = false;
             this.btnNewCall.Click += new System.EventHandler(this.btnNewCall_Click);
             // 
             // pnlSidebar
@@ -296,7 +295,7 @@
             this.lblCalls.AutoSize = true;
             this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblCalls.Location = new System.Drawing.Point(192, 22);
+            this.lblCalls.Location = new System.Drawing.Point(204, 22);
             this.lblCalls.Name = "lblCalls";
             this.lblCalls.Size = new System.Drawing.Size(77, 37);
             this.lblCalls.TabIndex = 14;
@@ -310,30 +309,12 @@
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 15;
             // 
-            // lblDuration
-            // 
-            this.lblDuration.AutoSize = true;
-            this.lblDuration.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDuration.Location = new System.Drawing.Point(749, 174);
-            this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(115, 21);
-            this.lblDuration.TabIndex = 40;
-            this.lblDuration.Text = "Call Duration:";
-            // 
-            // txtDuration
-            // 
-            this.txtDuration.Location = new System.Drawing.Point(753, 196);
-            this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(141, 20);
-            this.txtDuration.TabIndex = 41;
-            // 
             // lblProblem
             // 
             this.lblProblem.AutoSize = true;
             this.lblProblem.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblProblem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblProblem.Location = new System.Drawing.Point(749, 310);
+            this.lblProblem.Location = new System.Drawing.Point(767, 198);
             this.lblProblem.Name = "lblProblem";
             this.lblProblem.Size = new System.Drawing.Size(79, 21);
             this.lblProblem.TabIndex = 42;
@@ -341,32 +322,14 @@
             // 
             // txtProblem
             // 
-            this.txtProblem.Location = new System.Drawing.Point(753, 334);
+            this.txtProblem.Location = new System.Drawing.Point(771, 222);
             this.txtProblem.Name = "txtProblem";
             this.txtProblem.Size = new System.Drawing.Size(141, 20);
             this.txtProblem.TabIndex = 43;
             // 
-            // lblNumber
-            // 
-            this.lblNumber.AutoSize = true;
-            this.lblNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblNumber.Location = new System.Drawing.Point(749, 237);
-            this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(78, 21);
-            this.lblNumber.TabIndex = 44;
-            this.lblNumber.Text = "Number:";
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Location = new System.Drawing.Point(753, 261);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(141, 20);
-            this.txtNumber.TabIndex = 45;
-            // 
             // txtClientID
             // 
-            this.txtClientID.Location = new System.Drawing.Point(752, 408);
+            this.txtClientID.Location = new System.Drawing.Point(770, 296);
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.Size = new System.Drawing.Size(141, 20);
             this.txtClientID.TabIndex = 47;
@@ -376,7 +339,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(748, 384);
+            this.label1.Location = new System.Drawing.Point(766, 272);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 46;
@@ -385,10 +348,40 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(211, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(543, 336);
             this.dataGridView1.TabIndex = 48;
+            // 
+            // btnIncomingCall
+            // 
+            this.btnIncomingCall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnIncomingCall.FlatAppearance.BorderSize = 0;
+            this.btnIncomingCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncomingCall.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnIncomingCall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnIncomingCall.Location = new System.Drawing.Point(258, 483);
+            this.btnIncomingCall.Name = "btnIncomingCall";
+            this.btnIncomingCall.Size = new System.Drawing.Size(186, 42);
+            this.btnIncomingCall.TabIndex = 49;
+            this.btnIncomingCall.Text = "Incoming Call";
+            this.btnIncomingCall.UseVisualStyleBackColor = false;
+            this.btnIncomingCall.Click += new System.EventHandler(this.btnIncomingCall_Click);
+            // 
+            // btnEndCall
+            // 
+            this.btnEndCall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
+            this.btnEndCall.FlatAppearance.BorderSize = 0;
+            this.btnEndCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEndCall.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEndCall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
+            this.btnEndCall.Location = new System.Drawing.Point(482, 483);
+            this.btnEndCall.Name = "btnEndCall";
+            this.btnEndCall.Size = new System.Drawing.Size(186, 42);
+            this.btnEndCall.TabIndex = 50;
+            this.btnEndCall.Text = "End Call";
+            this.btnEndCall.UseVisualStyleBackColor = false;
+            this.btnEndCall.Click += new System.EventHandler(this.btnEndCall_Click);
             // 
             // Calls
             // 
@@ -396,15 +389,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.btnEndCall);
+            this.Controls.Add(this.btnIncomingCall);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtClientID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNumber);
-            this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.txtProblem);
             this.Controls.Add(this.lblProblem);
-            this.Controls.Add(this.txtDuration);
-            this.Controls.Add(this.lblDuration);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.lblCalls);
             this.Controls.Add(this.pnlSidebar);
@@ -413,7 +404,6 @@
             this.Name = "Calls";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.Calls_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlLoginUser.ResumeLayout(false);
             this.pnlLoginUser.PerformLayout();
@@ -441,15 +431,13 @@
         private System.Windows.Forms.PictureBox pbLoginIcon;
         private System.Windows.Forms.Label lblCalls;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Label lblDuration;
-        private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label lblProblem;
         private System.Windows.Forms.TextBox txtProblem;
-        private System.Windows.Forms.Label lblNumber;
-        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnIncomingCall;
+        private System.Windows.Forms.Button btnEndCall;
     }
 }

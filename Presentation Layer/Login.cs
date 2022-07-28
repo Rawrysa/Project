@@ -55,8 +55,6 @@ namespace Project.PresentationLayer
             catch
             {
             }
-
-
         }
 
         private void Login_Load(object sender, EventArgs e)

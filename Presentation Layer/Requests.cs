@@ -45,7 +45,7 @@ namespace Project.PresentationLayer
                     break;
 
                 case "agent":
-                    btnAgents.Hide(); btnTechnicians.Hide();
+                    btnAgents.Hide(); btnTechnicians.Hide(); btnAssignJob.Hide();
                     pnlNav.Height = btnRequests.Height;
                     pnlNav.Top = btnJobs.Top;
                     pnlNav.Left = btnRequests.Left;
@@ -224,6 +224,27 @@ namespace Project.PresentationLayer
         {
             new Services().Show();
             this.Hide();
+        }
+
+        private void btnAssignJob_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show($"Are you sure you want to assign {dgvRequests.CurrentRow.Cells[0].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
+                {
+                    ServiceRequest request = new ServiceRequest();
+                    request.Request_ID = dgvRequests.CurrentRow.Cells[0].Value.ToString();
+
+                    request.RemoveRequest();
+
+                    new Jobs(txtClientID.Text,txtServiceID.Text).Show();
+                    this.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to assign request", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

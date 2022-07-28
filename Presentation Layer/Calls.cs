@@ -26,6 +26,8 @@ namespace Project.PresentationLayer
             int nHeightWllipse
         );
 
+        private static bool callinprogress = false;
+
         public Calls()
         {
             InitializeComponent();
@@ -64,11 +66,6 @@ namespace Project.PresentationLayer
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-        }
-
-        private void Calls_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAgents_Click(object sender, EventArgs e)
@@ -127,14 +124,14 @@ namespace Project.PresentationLayer
 
         private void btnNewCall_Click(object sender, EventArgs e)
         {
-            //https://stackoverflow.com/questions/2821040/how-do-i-get-the-time-difference-between-two-datetime-objects-using-c
             try
             {
                 Call call = new Call();
+                Simulator simulator = new Simulator();
 
                 call.Call_Date = DateTime.Today.ToString();
-                call.Call_Duration = txtDuration.Text;
-                call.Client_Phonenumber = txtNumber.Text;
+                call.Call_Duration = simulator.callinfo().Duration;
+                call.Client_Phonenumber = simulator.callinfo().CallNumber;
                 call.Client_Problem = txtProblem.Text;
                 call.Client_ID = txtClientID.Text;
 
@@ -144,7 +141,9 @@ namespace Project.PresentationLayer
 
                     dataGridView1.DataSource = call.ViewCalls();
 
-                    MessageBox.Show("Call added successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnNewCall.Visible = false;
+
+                    MessageBox.Show("Call logged successfully", "Operation Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
@@ -154,7 +153,52 @@ namespace Project.PresentationLayer
             }
             catch
             {
-                MessageBox.Show("Failed to add Call", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to log call", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnIncomingCall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (callinprogress == false)
+                {
+                    new Simulator().StartCall();
+                    callinprogress = true;
+
+                    MessageBox.Show("Call has been accepted");
+                }
+                else
+                {
+                    MessageBox.Show("Call is already in progress");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to start call", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEndCall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (callinprogress == true)
+                {
+                    new Simulator().EndCall();
+                    callinprogress = false;
+                    btnNewCall.Visible = true;
+
+                    MessageBox.Show("Call has been ended");
+                }
+                else
+                {
+                    MessageBox.Show("No call in progress");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to end call", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
