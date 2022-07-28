@@ -72,7 +72,7 @@
             this.btnNewCall.Name = "btnNewCall";
             this.btnNewCall.Size = new System.Drawing.Size(186, 42);
             this.btnNewCall.TabIndex = 1;
-            this.btnNewCall.Text = "New Call";
+            this.btnNewCall.Text = "Incoming Call";
             this.btnNewCall.UseVisualStyleBackColor = false;
             this.btnNewCall.Click += new System.EventHandler(this.btnNewCall_Click);
             // 
@@ -296,7 +296,7 @@
             this.lblCalls.AutoSize = true;
             this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblCalls.Location = new System.Drawing.Point(227, 48);
+            this.lblCalls.Location = new System.Drawing.Point(192, 22);
             this.lblCalls.Name = "lblCalls";
             this.lblCalls.Size = new System.Drawing.Size(77, 37);
             this.lblCalls.TabIndex = 14;
@@ -385,9 +385,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(234, 152);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(474, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 336);
             this.dataGridView1.TabIndex = 48;
             // 
             // Calls

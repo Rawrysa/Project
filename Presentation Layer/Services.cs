@@ -46,6 +46,10 @@ namespace Project.PresentationLayer
 
                 case "agent":
                     btnAgents.Hide(); btnTechnicians.Hide();
+                    pnlNav.Height = btnServices.Height;
+                    pnlNav.Top = btnRequests.Top;
+                    pnlNav.Left = btnServices.Left;
+                    btnServices.BackColor = Color.FromArgb(46, 51, 73);
                     break;
 
                 case "technician":

@@ -46,11 +46,19 @@ namespace Project.PresentationLayer
 
                 case "agent":
                     btnAgents.Hide(); btnTechnicians.Hide(); btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide();
+                    pnlNav.Height = btnJobs.Height;
+                    pnlNav.Top = btnContracts.Top;
+                    pnlNav.Left = btnJobs.Left;
+                    btnJobs.BackColor = Color.FromArgb(46, 51, 73);
                     break;
 
                 case "technician":
                     btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
                     btnAddJob.Hide(); btnCloseJob.Hide(); btnEscalateJob.Hide(); btnReassignJob.Hide(); btnTrackJob.Hide(); txtSearchJob.Hide();
+                    pnlNav.Height = btnAgents.Height;
+                    pnlNav.Top = btnAgents.Top;
+                    pnlNav.Left = btnAgents.Left;
+                    btnAgents.BackColor = Color.FromArgb(46, 51, 73);
                     break;
             }
 

@@ -284,9 +284,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(222, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(510, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(552, 336);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -295,7 +295,7 @@
             this.lblAgents.AutoSize = true;
             this.lblAgents.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblAgents.Location = new System.Drawing.Point(215, 35);
+            this.lblAgents.Location = new System.Drawing.Point(192, 21);
             this.lblAgents.Name = "lblAgents";
             this.lblAgents.Size = new System.Drawing.Size(107, 37);
             this.lblAgents.TabIndex = 15;
@@ -339,7 +339,7 @@
             this.btnUpdateTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdateTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnUpdateTechnician.Location = new System.Drawing.Point(398, 505);
+            this.btnUpdateTechnician.Location = new System.Drawing.Point(395, 505);
             this.btnUpdateTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateTechnician.Name = "btnUpdateTechnician";
             this.btnUpdateTechnician.Size = new System.Drawing.Size(163, 42);
@@ -355,7 +355,7 @@
             this.btnDeleteTechnician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTechnician.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteTechnician.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnDeleteTechnician.Location = new System.Drawing.Point(593, 505);
+            this.btnDeleteTechnician.Location = new System.Drawing.Point(588, 505);
             this.btnDeleteTechnician.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTechnician.Name = "btnDeleteTechnician";
             this.btnDeleteTechnician.Size = new System.Drawing.Size(163, 42);
@@ -371,7 +371,7 @@
             this.btnAddAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAgent.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAddAgent.Location = new System.Drawing.Point(213, 505);
+            this.btnAddAgent.Location = new System.Drawing.Point(199, 505);
             this.btnAddAgent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAgent.Name = "btnAddAgent";
             this.btnAddAgent.Size = new System.Drawing.Size(163, 42);

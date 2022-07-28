@@ -33,6 +33,7 @@ namespace Project.PresentationLayer
             pnlNav.Height = 0;
             pnlNav.Top = 0;
             pnlNav.Left = 0;
+            pnlNav.Visible = true;
 
             Logins credentials = new Logins().getcredentials();
 
@@ -45,10 +46,18 @@ namespace Project.PresentationLayer
 
                 case "agent":
                     btnAgents.Hide(); btnTechnicians.Hide();
+                    //pnlNav.Height = btnAgents.Height;
+                    //pnlNav.Top = btnAgents.Top;
+                    //pnlNav.Left = btnAgents.Left;
+                    //btnAgents.BackColor = Color.FromArgb(46, 51, 73);
                     break;
 
                 case "technician":
                     btnAgents.Hide(); btnCalls.Hide(); btnContracts.Hide(); btnClients.Hide(); btnRequests.Hide(); btnTechnicians.Hide(); btnServices.Hide();
+                    //pnlNav.Height = btnAgents.Height;
+                    //pnlNav.Top = btnAgents.Top;
+                    //pnlNav.Left = btnAgents.Left;
+                    //btnAgents.BackColor = Color.FromArgb(46, 51, 73);
                     break;
             }
         }

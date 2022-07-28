@@ -46,6 +46,10 @@ namespace Project.PresentationLayer
 
                 case "agent":
                     btnAgents.Hide(); btnTechnicians.Hide();
+                    pnlNav.Height = btnClients.Height;
+                    pnlNav.Top = btnCalls.Top;
+                    pnlNav.Left = btnClients.Left;
+                    btnClients.BackColor = Color.FromArgb(46, 51, 73);
                     break;
 
                 case "technician":
@@ -251,6 +255,11 @@ namespace Project.PresentationLayer
             {
                 MessageBox.Show("Failed to find client agreement", "Operation Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
