@@ -7,7 +7,7 @@ using Project.PresentationLayer;
 
 namespace Project
 {
-    static class Program
+    public class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,8 +16,15 @@ namespace Project
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+        }
+
+        private static Jobs JobsForm = new Jobs();
+
+        public Jobs GetJobs()
+        {
+            return JobsForm;
         }
     }
 }

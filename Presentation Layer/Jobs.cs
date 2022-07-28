@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Project.BusinessLayer;
@@ -25,6 +26,8 @@ namespace Project.PresentationLayer
             int nWidthEllipse,
             int nHeightWllipse
         );
+
+        Thread populate = new Thread(Populate);
 
         public Jobs()
         {
@@ -62,8 +65,27 @@ namespace Project.PresentationLayer
                     break;
             }
 
+            //Switch line
+            dgvJobs.DataSource = new Job().ViewJobs();
+
+        }
+
+        public void ThreadStart()
+        {
+            populate.Start();
+        }
+
+        public static void Populate()
+        {
+            new Program().GetJobs().UpdateDgv();
+            Thread.Sleep(5000);
+        }
+
+        public void UpdateDgv()
+        {
             dgvJobs.DataSource = new Job().ViewJobs();
         }
+
 
         private void btnQuit_Click(object sender, EventArgs e)
         {

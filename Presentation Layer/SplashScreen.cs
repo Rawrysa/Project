@@ -69,7 +69,10 @@ namespace Project.PresentationLayer
             pnlNav.Left = btnAgents.Left;
             btnAgents.BackColor = Color.FromArgb(46,51,73);
 
-            new Agents().Show();
+            //new Agents().Show();
+
+            new Program().GetJobs().Show();
+            new Program().GetJobs().ThreadStart();
             this.Hide();
         }
 
