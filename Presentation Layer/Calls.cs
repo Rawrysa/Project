@@ -127,6 +127,7 @@ namespace Project.PresentationLayer
 
         private void btnNewCall_Click(object sender, EventArgs e)
         {
+            //https://stackoverflow.com/questions/2821040/how-do-i-get-the-time-difference-between-two-datetime-objects-using-c
             try
             {
                 Call call = new Call();
