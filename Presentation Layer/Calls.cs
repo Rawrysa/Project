@@ -44,7 +44,7 @@ namespace Project.PresentationLayer
             switch (credentials.Position)
             {
                 case "manager":
-                    btnNewCall.Hide();
+                    btnNewCall.Hide(); btnIncomingCall.Hide(); btnEndCall.Hide();
                     break;
 
                 case "agent":

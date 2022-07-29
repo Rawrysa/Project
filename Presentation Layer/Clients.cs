@@ -179,7 +179,7 @@ namespace Project.PresentationLayer
                 Client client = new Client();
                 client.Client_ID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
-                if (MessageBox.Show($"Are you sure you want to close {dataGridView1.CurrentRow.Cells[1].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
+                if (MessageBox.Show($"Are you sure you want to delete {dataGridView1.CurrentRow.Cells[1].Value}", null, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString() == "Yes")
                 {
                     client.DeleteClient();
 

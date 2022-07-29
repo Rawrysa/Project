@@ -444,7 +444,7 @@
             this.btnUpdateClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdateClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnUpdateClient.Location = new System.Drawing.Point(358, 499);
+            this.btnUpdateClient.Location = new System.Drawing.Point(404, 500);
             this.btnUpdateClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateClient.Name = "btnUpdateClient";
             this.btnUpdateClient.Size = new System.Drawing.Size(143, 48);
@@ -460,7 +460,7 @@
             this.btnClientAgreement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientAgreement.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnClientAgreement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnClientAgreement.Location = new System.Drawing.Point(652, 499);
+            this.btnClientAgreement.Location = new System.Drawing.Point(764, 500);
             this.btnClientAgreement.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientAgreement.Name = "btnClientAgreement";
             this.btnClientAgreement.Size = new System.Drawing.Size(143, 48);
@@ -476,7 +476,7 @@
             this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAddClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnAddClient.Location = new System.Drawing.Point(211, 499);
+            this.btnAddClient.Location = new System.Drawing.Point(224, 500);
             this.btnAddClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(143, 48);
@@ -492,7 +492,7 @@
             this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteClient.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDeleteClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnDeleteClient.Location = new System.Drawing.Point(505, 499);
+            this.btnDeleteClient.Location = new System.Drawing.Point(584, 500);
             this.btnDeleteClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteClient.Name = "btnDeleteClient";
             this.btnDeleteClient.Size = new System.Drawing.Size(143, 48);
