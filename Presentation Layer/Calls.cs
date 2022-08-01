@@ -61,6 +61,7 @@ namespace Project.PresentationLayer
             }
 
             dataGridView1.DataSource = new Call().ViewCalls();
+            //dataGridView1.Columns.
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

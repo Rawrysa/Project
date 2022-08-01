@@ -86,9 +86,9 @@
             // dgvRequests
             // 
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRequests.Location = new System.Drawing.Point(203, 100);
+            this.dgvRequests.Location = new System.Drawing.Point(199, 132);
             this.dgvRequests.Name = "dgvRequests";
-            this.dgvRequests.Size = new System.Drawing.Size(515, 336);
+            this.dgvRequests.Size = new System.Drawing.Size(519, 336);
             this.dgvRequests.TabIndex = 3;
             // 
             // panel1
@@ -98,7 +98,7 @@
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnBefore);
             this.panel1.Controls.Add(this.btnFirst);
-            this.panel1.Location = new System.Drawing.Point(203, 468);
+            this.panel1.Location = new System.Drawing.Point(203, 483);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(515, 69);
             this.panel1.TabIndex = 6;
@@ -431,7 +431,7 @@
             this.lblRequests.AutoSize = true;
             this.lblRequests.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblRequests.Location = new System.Drawing.Point(196, 21);
+            this.lblRequests.Location = new System.Drawing.Point(192, 21);
             this.lblRequests.Name = "lblRequests";
             this.lblRequests.Size = new System.Drawing.Size(132, 37);
             this.lblRequests.TabIndex = 13;
@@ -479,6 +479,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRequests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Requests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Requests";

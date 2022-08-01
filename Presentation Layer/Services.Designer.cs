@@ -55,12 +55,12 @@
             // dgrViewServices
             // 
             this.dgrViewServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrViewServices.Location = new System.Drawing.Point(247, 135);
+            this.dgrViewServices.Location = new System.Drawing.Point(198, 132);
             this.dgrViewServices.Margin = new System.Windows.Forms.Padding(2);
             this.dgrViewServices.Name = "dgrViewServices";
             this.dgrViewServices.RowHeadersWidth = 51;
             this.dgrViewServices.RowTemplate.Height = 24;
-            this.dgrViewServices.Size = new System.Drawing.Size(645, 375);
+            this.dgrViewServices.Size = new System.Drawing.Size(742, 398);
             this.dgrViewServices.TabIndex = 1;
             // 
             // lblServices
@@ -309,6 +309,7 @@
             this.Controls.Add(this.lblServices);
             this.Controls.Add(this.dgrViewServices);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Services";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

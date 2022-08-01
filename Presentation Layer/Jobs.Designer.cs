@@ -284,7 +284,7 @@
             this.lblJobs.AutoSize = true;
             this.lblJobs.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblJobs.Location = new System.Drawing.Point(207, 37);
+            this.lblJobs.Location = new System.Drawing.Point(192, 29);
             this.lblJobs.Name = "lblJobs";
             this.lblJobs.Size = new System.Drawing.Size(75, 37);
             this.lblJobs.TabIndex = 15;
@@ -293,9 +293,9 @@
             // dgvJobs
             // 
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.Location = new System.Drawing.Point(214, 128);
+            this.dgvJobs.Location = new System.Drawing.Point(199, 132);
             this.dgvJobs.Name = "dgvJobs";
-            this.dgvJobs.Size = new System.Drawing.Size(530, 336);
+            this.dgvJobs.Size = new System.Drawing.Size(545, 336);
             this.dgvJobs.TabIndex = 22;
             this.dgvJobs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
             // 
@@ -471,6 +471,7 @@
             this.Controls.Add(this.lblJobs);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Jobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jobs";

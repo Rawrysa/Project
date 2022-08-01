@@ -290,7 +290,7 @@
             this.lblClients.AutoSize = true;
             this.lblClients.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblClients.Location = new System.Drawing.Point(204, 36);
+            this.lblClients.Location = new System.Drawing.Point(192, 21);
             this.lblClients.Name = "lblClients";
             this.lblClients.Size = new System.Drawing.Size(104, 37);
             this.lblClients.TabIndex = 14;
@@ -307,9 +307,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(211, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(192, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(519, 368);
+            this.dataGridView1.Size = new System.Drawing.Size(538, 336);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -537,6 +537,7 @@
             this.Controls.Add(this.lblClients);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Clients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clients";

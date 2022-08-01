@@ -47,7 +47,7 @@
             this.btnLogin.Location = new System.Drawing.Point(374, 330);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(187, 42);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -62,7 +62,7 @@
             this.btnQuit.Location = new System.Drawing.Point(374, 378);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(186, 42);
-            this.btnQuit.TabIndex = 2;
+            this.btnQuit.TabIndex = 4;
             this.btnQuit.Text = "Quit";
             this.btnQuit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnQuit.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(187, 25);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseEnter);
@@ -86,7 +86,7 @@
             this.txtUsername.Location = new System.Drawing.Point(374, 202);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(187, 25);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Username";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsername.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseEnter);
@@ -113,6 +113,7 @@
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

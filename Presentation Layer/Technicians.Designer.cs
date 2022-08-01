@@ -322,10 +322,10 @@
             // dgvTechnicians
             // 
             this.dgvTechnicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTechnicians.Location = new System.Drawing.Point(211, 118);
+            this.dgvTechnicians.Location = new System.Drawing.Point(199, 132);
             this.dgvTechnicians.Name = "dgvTechnicians";
             this.dgvTechnicians.RowHeadersWidth = 51;
-            this.dgvTechnicians.Size = new System.Drawing.Size(544, 350);
+            this.dgvTechnicians.Size = new System.Drawing.Size(556, 336);
             this.dgvTechnicians.TabIndex = 21;
             this.dgvTechnicians.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTechnicians_CellContentClick);
             // 
@@ -334,7 +334,7 @@
             this.lblTechnicians.AutoSize = true;
             this.lblTechnicians.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTechnicians.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblTechnicians.Location = new System.Drawing.Point(204, 38);
+            this.lblTechnicians.Location = new System.Drawing.Point(192, 21);
             this.lblTechnicians.Name = "lblTechnicians";
             this.lblTechnicians.Size = new System.Drawing.Size(162, 37);
             this.lblTechnicians.TabIndex = 27;
@@ -538,6 +538,7 @@
             this.Controls.Add(this.dgvTechnicians);
             this.Controls.Add(this.pnlSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Technicians";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Technicians";

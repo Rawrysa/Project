@@ -57,12 +57,12 @@
             // dgrContracts
             // 
             this.dgrContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrContracts.Location = new System.Drawing.Point(254, 110);
+            this.dgrContracts.Location = new System.Drawing.Point(199, 132);
             this.dgrContracts.Margin = new System.Windows.Forms.Padding(2);
             this.dgrContracts.Name = "dgrContracts";
             this.dgrContracts.RowHeadersWidth = 51;
             this.dgrContracts.RowTemplate.Height = 24;
-            this.dgrContracts.Size = new System.Drawing.Size(606, 329);
+            this.dgrContracts.Size = new System.Drawing.Size(741, 336);
             this.dgrContracts.TabIndex = 3;
             // 
             // pnlSidebar
@@ -285,7 +285,7 @@
             this.lblContracts.AutoSize = true;
             this.lblContracts.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblContracts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblContracts.Location = new System.Drawing.Point(203, 21);
+            this.lblContracts.Location = new System.Drawing.Point(192, 21);
             this.lblContracts.Name = "lblContracts";
             this.lblContracts.Size = new System.Drawing.Size(140, 37);
             this.lblContracts.TabIndex = 14;
@@ -306,7 +306,7 @@
             this.btnContractPerformance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContractPerformance.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnContractPerformance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnContractPerformance.Location = new System.Drawing.Point(561, 483);
+            this.btnContractPerformance.Location = new System.Drawing.Point(580, 483);
             this.btnContractPerformance.Margin = new System.Windows.Forms.Padding(2);
             this.btnContractPerformance.Name = "btnContractPerformance";
             this.btnContractPerformance.Size = new System.Drawing.Size(163, 42);
@@ -322,7 +322,7 @@
             this.btnContractAvailability.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContractAvailability.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnContractAvailability.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
-            this.btnContractAvailability.Location = new System.Drawing.Point(376, 483);
+            this.btnContractAvailability.Location = new System.Drawing.Point(386, 483);
             this.btnContractAvailability.Margin = new System.Windows.Forms.Padding(2);
             this.btnContractAvailability.Name = "btnContractAvailability";
             this.btnContractAvailability.Size = new System.Drawing.Size(163, 42);
@@ -344,6 +344,7 @@
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.dgrContracts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Contracts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

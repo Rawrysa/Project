@@ -29,7 +29,7 @@ namespace Project.PresentationLayer
         public Agents()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             pnlNav.Height = btnAgents.Height;
             pnlNav.Top = btnAgents.Top;
             pnlNav.Left = btnAgents.Left;

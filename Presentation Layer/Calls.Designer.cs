@@ -295,7 +295,7 @@
             this.lblCalls.AutoSize = true;
             this.lblCalls.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblCalls.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblCalls.Location = new System.Drawing.Point(204, 22);
+            this.lblCalls.Location = new System.Drawing.Point(192, 22);
             this.lblCalls.Name = "lblCalls";
             this.lblCalls.Size = new System.Drawing.Size(77, 37);
             this.lblCalls.TabIndex = 14;
@@ -314,7 +314,7 @@
             this.lblProblem.AutoSize = true;
             this.lblProblem.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblProblem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblProblem.Location = new System.Drawing.Point(767, 198);
+            this.lblProblem.Location = new System.Drawing.Point(792, 195);
             this.lblProblem.Name = "lblProblem";
             this.lblProblem.Size = new System.Drawing.Size(79, 21);
             this.lblProblem.TabIndex = 42;
@@ -322,14 +322,14 @@
             // 
             // txtProblem
             // 
-            this.txtProblem.Location = new System.Drawing.Point(771, 222);
+            this.txtProblem.Location = new System.Drawing.Point(796, 219);
             this.txtProblem.Name = "txtProblem";
             this.txtProblem.Size = new System.Drawing.Size(141, 20);
             this.txtProblem.TabIndex = 43;
             // 
             // txtClientID
             // 
-            this.txtClientID.Location = new System.Drawing.Point(770, 296);
+            this.txtClientID.Location = new System.Drawing.Point(795, 293);
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.Size = new System.Drawing.Size(141, 20);
             this.txtClientID.TabIndex = 47;
@@ -339,7 +339,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(766, 272);
+            this.label1.Location = new System.Drawing.Point(791, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 46;
@@ -348,9 +348,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(211, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 132);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(586, 336);
             this.dataGridView1.TabIndex = 48;
             // 
             // btnIncomingCall
@@ -401,6 +401,7 @@
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.btnNewCall);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Calls";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
